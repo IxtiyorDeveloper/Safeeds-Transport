@@ -23,6 +23,21 @@
         .top {
           border-bottom: 1px solid var(--border1);
           padding: 15px;
+          position: relative;
+
+          .abs {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            .icon {
+              font-size: 20px;
+
+              &.fc {
+                color: var(--fac);
+              }
+            }
+          }
 
           .name {
             font-weight: 700;

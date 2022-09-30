@@ -2,6 +2,8 @@ import React from 'react';
 import "./reviews.scss"
 import Slider from "react-slick";
 import {AiFillStar} from "react-icons/ai"
+import {FaFacebookF} from "react-icons/fa"
+import {FcGoogle} from "react-icons/fc"
 
 function Reviews(props) {
 
@@ -17,31 +19,37 @@ function Reviews(props) {
         {
             name: "Carolyn W.",
             star: 5,
+            site: "Google",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto est exercitationem facere odit optio saepe ullam! Accusantium alias dolor error, eveniet facere mollitia officia perferendis quia recusandae, repellat tempora.\n"
         },
         {
             name: "Shaun M.",
             star: 5,
+            site: "Google",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto est exercitationem facere odit optio saepe ullam! Accusantium alias dolor error, eveniet facere mollitia officia perferendis quia recusandae, repellat tempora.\n"
         },
         {
             name: "Amanda W.",
             star: 5,
+            site: "Facebook",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto est exercitationem facere odit optio saepe ullam! Accusantium alias dolor error, eveniet facere mollitia officia perferendis quia recusandae, repellat tempora.\n"
         },
         {
             name: "Carolyn W.",
             star: 5,
+            site: "Facebook",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto est exercitationem facere odit optio saepe ullam! Accusantium alias dolor error, eveniet facere mollitia officia perferendis quia recusandae, repellat tempora.\n"
         },
         {
             name: "Carolyn W.",
             star: 5,
+            site: "Facebook",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto est exercitationem facere odit optio saepe ullam! Accusantium alias dolor error, eveniet facere mollitia officia perferendis quia recusandae, repellat tempora.\n"
         },
         {
             name: "Carolyn W.",
             star: 5,
+            site: "Facebook",
             text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias architecto est exercitationem facere odit optio saepe ullam! Accusantium alias dolor error, eveniet facere mollitia officia perferendis quia recusandae, repellat tempora.\n"
         },
     ];
@@ -59,6 +67,14 @@ function Reviews(props) {
                                 <div className="card-wr" key={k}>
                                     <div className="card">
                                         <div className="top">
+                                            <div className="abs">
+                                                {
+                                                    i.site === "Facebook" ?
+                                                        <FaFacebookF className="icon fc" />
+                                                        :
+                                                        <FcGoogle className="icon"/>
+                                                }
+                                            </div>
                                             <div className="name">
                                                 {i.name}
                                             </div>
