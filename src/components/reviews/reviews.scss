@@ -1,0 +1,54 @@
+.reviews {
+  margin-top: 200px;
+  text-align: center;
+
+  .title {
+    color: var(--e-global-color-kadence2);
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+  }
+
+  .slider {
+    margin-top: 40px;
+
+    .card-wr {
+      padding: 0 20px 0 0;
+
+      .card {
+        background-color: var(--white);
+        border: 1px solid var(--border1);
+
+        .top {
+          border-bottom: 1px solid var(--border1);
+          padding: 15px;
+
+          .name {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--e-global-color-kadence1);
+            text-align: left;
+          }
+
+          .st {
+            display: flex;
+            gap: 3px;
+            margin-top: 5px;
+
+            .star {
+              color: var(--star);
+            }
+          }
+        }
+
+        .bottom {
+          padding: 15px;
+          font-size: 14px;
+          line-height: 20px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

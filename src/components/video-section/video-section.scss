@@ -1,0 +1,100 @@
+.videoSection {
+  background-color: var(--239);
+  margin-top: 100px;
+  padding: 40px 0;
+
+  .t1 {
+    color: #232b36;
+    font-family: Circular-Pro-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .t2 {
+    color: #232b36;
+    font-size: 19px;
+    line-height: 1.42;
+    margin-bottom: 16px !important;
+    text-align: center;
+  }
+
+  .vd {
+    width: 100%;
+    margin-top: 50px;
+
+    .vid {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+
+      .player {
+        width: 80% !important;
+        height: 60vh !important;
+      }
+    }
+
+    .box {
+      width: 100%;
+      background-image: url("https://d1d9oqfe9g83w6.cloudfront.net/assets/prod/images/m-bg.svg");
+      background-size: cover;
+      background-position: center;
+      background-color: var(--white);
+      padding: 20px;
+      height: 100%;
+      margin-top: 90px;
+
+      .mt {
+        font-size: 30px;
+        line-height: 1.33;
+        margin-bottom: 24px;
+      }
+
+      .steps {
+        display: flex;
+
+        .circle {
+          background-color: var(--c1);
+          width: 70px !important;
+          height: 70px !important;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .ic {
+            color: var(--white);
+            font-size: 36px;
+          }
+        }
+
+        .st {
+          margin-bottom: 25px;
+          margin-left: 30px;
+
+          .tit1 {
+            font-weight: 700;
+            color: #00a1ef;
+            font-size: 24px;
+          }
+
+          .tit2 {
+            font-size: 20px;
+            color: #232b36;
+            line-height: 1.5;
+            font-weight: 600;
+          }
+
+        }
+      }
+      .tx{
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
