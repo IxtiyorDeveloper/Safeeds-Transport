@@ -1,0 +1,44 @@
+.footer {
+  width: 100%;
+  background-color: #E0E0E0;
+  padding-bottom: 50px;
+
+  .inner {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+
+    .col {
+      img {
+        width: 176px;
+      }
+
+      .tx {
+        margin-top: 25px;
+      }
+
+      .title {
+        font-size: 24px;
+        margin-bottom: 25px;
+      }
+
+      .item {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 25px;
+
+        .icon {
+          font-size: 25px !important;
+        }
+
+        .tc {
+          a {
+            text-decoration: none;
+            color: var(--black);
+          }
+        }
+      }
+    }
+  }
+}
