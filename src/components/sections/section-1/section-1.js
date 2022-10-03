@@ -1,18 +1,22 @@
 import React from 'react';
 import "./section-1.scss"
+import bgImg from "../../../assets/imgs/covers.jpg"
 
 function Section1(props) {
     return (
         <div className="section-1">
             <div
                 className="sWr"
-                style={{backgroundImage: `url("https://sherpaautotransport-media.s3.amazonaws.com/wp-content/uploads/2022/03/21120222/sherpa-optimized-hero-compressor.jpeg")`}}>
-                <div className="bold-text">
-                    The Premiere Vehicle Shipping <br/>Experience
-                </div>
-                <div className="sText">
-                    Sherpa Auto Transport provides the best transport experience with upfront, transparent <br/> pricing
-                    backed by our Price Lock Promise.
+                style={{backgroundImage: `url(${bgImg})`}}>
+                <div className="bgMaker">
+                    <div className="bold-text">
+                        The Premiere Vehicle Shipping <br/>Experience
+                    </div>
+                    <div className="sText">
+                        Sherpa Auto Transport provides the best transport experience with upfront,
+                        transparent <br/> pricing
+                        backed by our Price Lock Promise.
+                    </div>
                 </div>
             </div>
             <div className="card">

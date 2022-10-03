@@ -1,10 +1,11 @@
 import React from 'react';
-import Section1 from "../../section-1/section-1";
+import Section1 from "../../sections/section-1/section-1";
 import "./home.scss"
-import Reviews from "../../reviews/reviews";
-import VideoSection from "../../video-section/video-section";
-import Call from "../../call/call";
-import Stories from "../../stories/stories";
+import Reviews from "../../sections/reviews/reviews";
+import VideoSection from "../../sections/video-section/video-section";
+import Call from "../../sections/call/call";
+import Stories from "../../sections/stories/stories";
+import Faqs from "../../sections/faqs/faqs";
 
 function Home(props) {
     return (
@@ -14,6 +15,7 @@ function Home(props) {
             <VideoSection/>
             <Call/>
             <Stories/>
+            <Faqs/>
         </div>
     );
 }

@@ -1,0 +1,202 @@
+.feature-section {
+  width: 100%;
+  padding: 50px 0;
+
+  .title {
+    line-height: 1.25;
+    color: #222;
+    font-weight: 700;
+    margin: 0;
+    font-size: 2.0625rem;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .row {
+    display: flex;
+    margin-bottom: 20px;
+
+    .col {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+
+      &:first-child {
+        background-color: #B8C3E9;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+
+        .icon {
+          font-size: 45px;
+          color: var(--ts);
+        }
+      }
+
+      &:nth-child(2) {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.63;
+        letter-spacing: normal;
+        color: #333;
+        width: 20%;
+        text-transform: uppercase;
+
+        .ic {
+          font-size: 30px;
+          font-weight: 700;
+          line-height: 1.63;
+          letter-spacing: normal;
+          color: #333;
+          margin-right: 10px;
+        }
+      }
+
+      &:nth-child(3) {
+        background-color: #d8d7d7;
+        font-weight: 600;
+        width: 60%;
+      }
+    }
+  }
+
+  .nx {
+    padding-top: 50px;
+    background-color: #fafafa !important;
+
+    .rw {
+      display: flex;
+
+      .on {
+        img {
+          width: 170px;
+        }
+      }
+
+      .tx {
+        color: #333;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .quote {
+    width: 100%;
+    margin-top: 90px;
+
+    .img1 {
+      width: 100%;
+      height: 600px;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+
+      .bgMaker {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 10;
+
+
+        .ct {
+          z-index: 100;
+          margin-left: 200px;
+          margin-top: 200px;
+
+          .b1 {
+            font-size: 3.625rem;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #fff;
+          }
+
+          .b2 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #fff;
+            text-transform: uppercase;
+          }
+
+          .glow-on-hover {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            margin-top: 40px;
+            background: red!important;
+            font-weight: 600;
+          }
+
+          .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+          }
+
+          .glow-on-hover:active {
+            color: #000
+          }
+
+          .glow-on-hover:active:after {
+            background: transparent;
+          }
+
+          .glow-on-hover:hover:before {
+            opacity: 1;
+          }
+
+          .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+            font-weight: 700;
+          }
+
+          @keyframes glowing {
+            0% {
+              background-position: 0 0;
+            }
+            50% {
+              background-position: 400% 0;
+            }
+            100% {
+              background-position: 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

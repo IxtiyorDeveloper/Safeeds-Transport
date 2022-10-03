@@ -5,13 +5,14 @@ import {FaFax} from "react-icons/fa"
 import {HiOutlineMail} from "react-icons/hi"
 import {BsFillCalendarFill} from "react-icons/bs"
 import "./footer.scss"
+import logo from "../../assets/imgs/logo.png"
 
 function Footer(props) {
     return (
         <div className="footer">
             <div className="pd inner">
                 <div className="col">
-                    <img src="https://mercuryautotransport.com/wp-content/uploads/2022/01/Asset-31.svg"
+                    <img src={logo}
                          alt="footerImg"/>
                     <div className="tx">
                         AmeriFreight is accredited and highly rated with the BBB. We offer REAL Discount car shipping
