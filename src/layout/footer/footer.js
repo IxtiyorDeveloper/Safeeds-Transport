@@ -1,6 +1,6 @@
 import React from 'react';
 import {GoLocation} from "react-icons/go"
-import {AiFillPhone} from "react-icons/ai"
+import {AiFillPhone, AiFillStar} from "react-icons/ai"
 import {FaFax} from "react-icons/fa"
 import {HiOutlineMail} from "react-icons/hi"
 import {BsFillCalendarFill} from "react-icons/bs"
@@ -65,6 +65,77 @@ function Footer(props) {
                 </div>
                 <div className="col">
                     <div className="title">
+                        REVEWS
+                    </div>
+                    <div className="list">
+                        <div className="item">
+                            <div className="tc">
+                                <div>
+                                    TRANSPORT REVIEWS
+                                </div>
+                                <div className="stars">
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                </div>
+                                <div className="nums">
+                                    (2735 Reviews)
+                                </div>
+                            </div>
+                        </div>
+                        <div className="item">
+                            <div className="tc">
+                                <div>
+                                    FACEBOOK
+                                </div>
+                                <div className="stars">
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                </div>
+                                <div className="nums">
+                                    (1270 Reviews)
+                                </div>
+                            </div>
+                        </div>
+                        <div className="item">
+                            <div className="tc">
+                                <div>
+                                    GOOGLE
+                                </div>
+                                <div className="stars">
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                </div>
+                                <div className="nums">
+                                    (2735 Reviews)
+                                </div>
+                            </div>
+                        </div>
+                        <div className="item">
+                            <div className="tc">
+                                <div>
+                                    BBB
+                                </div>
+                                <div className="stars">
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                    <AiFillStar className="star"/>
+                                </div>
+                                <div className="nums">
+                                    (2735 Reviews)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col">
+                    <div className="title">
                         MENU
                     </div>
                     <div className="list">
@@ -105,18 +176,33 @@ function Footer(props) {
                         </div>
                     </div>
                 </div>
-                <div className="col">
-                    <div className="title">
-                        RECENT POSTS
-                    </div>
-                    <div className="list">
-                        <div className="item">
-                            <div className="tc">
-                                Something
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div className="line pd"/>
+            <div className="term pd">
+                <div className="chl">
+                    Website Terms
                 </div>
+                <div className="chl">
+                    Privacy Policy
+                </div>
+                <div className="chl">
+                   Accessibility Statement
+                </div>
+                <div className="chl">
+                    CA Transparency in Supply Chains Act
+                </div>
+                <div className="chl">
+                    Supplier Code of Conduct
+                </div>
+                <div className="chl">
+                    Marketing to Children
+                </div>
+                <div className="chl">
+                    Do Not Sell My Information
+                </div>
+            </div>
+            <div className="rg pd">
+                &copy;2022 Safeeds Transport Inc, LLC. All Rights Reserved
             </div>
         </div>
     );

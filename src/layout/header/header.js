@@ -8,17 +8,19 @@ function Header(props) {
         <div className="header">
             <div className="content pd">
                 <div className="logo">
-                    <img
-                        src={logo}
-                        alt="logo"
-                        className="img"
-                    />
+                    <a href="/">
+                        <img
+                            src={logo}
+                            alt="logo"
+                            className="img"
+                        />
+                    </a>
                 </div>
                 <div className="pages">
                     <Link to="/about" className="lk">
                         <div className="link">About</div>
                     </Link>
-                    <Link to="/about" className="lk">
+                    <Link to="/services" className="lk">
                         <div className="link">Services</div>
                     </Link>
                     <Link to="/about" className="lk">

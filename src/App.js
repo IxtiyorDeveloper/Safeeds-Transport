@@ -9,6 +9,7 @@ import 'antd/dist/antd.css';
 
 const Home = lazy(() => import("./components/pages/home/home"))
 const About = lazy(() => import("./components/pages/about/about"))
+const Services = lazy(() => import("./components/pages/services/services"))
 
 function App(props) {
 
@@ -18,6 +19,7 @@ function App(props) {
             <Routes>
                 <Route path='/' element={<Layout><Home/></Layout>}/>
                 <Route path='/about' element={<Layout><About/></Layout>}/>
+                <Route path='/services' element={<Layout><Services/></Layout>}/>
             </Routes>
         </div>
     );
