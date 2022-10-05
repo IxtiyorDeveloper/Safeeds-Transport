@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="94" viewBox="0 0 42 94">
+  <defs>
+    <filter id="Ellipse_89" x="0" y="52" width="42" height="42" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_90" x="1" y="26" width="40" height="40" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_91" x="1" y="0" width="40" height="40" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="slider_vertical" data-name="slider vertical" transform="translate(15 4)">
+    <g transform="matrix(1, 0, 0, 1, -15, -4)" filter="url(#Ellipse_89)">
+      <circle id="Ellipse_89-2" data-name="Ellipse 89" cx="6" cy="6" r="6" transform="translate(15 67)" fill="#91e2a8"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -15, -4)" filter="url(#Ellipse_90)">
+      <circle id="Ellipse_90-2" data-name="Ellipse 90" cx="5" cy="5" r="5" transform="translate(16 41)" fill="#91e2a8" opacity="0.3"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -15, -4)" filter="url(#Ellipse_91)">
+      <circle id="Ellipse_91-2" data-name="Ellipse 91" cx="5" cy="5" r="5" transform="translate(16 15)" fill="#91e2a8" opacity="0.3"/>
+    </g>
+  </g>
+</svg>

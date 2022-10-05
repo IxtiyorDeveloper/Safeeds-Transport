@@ -6,6 +6,7 @@ import VideoSection from "../../sections/video-section/video-section";
 import Call from "../../sections/call/call";
 import Stories from "../../sections/stories/stories";
 import Faqs from "../../sections/faqs/faqs";
+import ContactUs from "../../sections/contacts/contacts";
 
 function Home(props) {
     return (
@@ -16,6 +17,7 @@ function Home(props) {
             <Call/>
             <Stories/>
             <Faqs/>
+            <ContactUs/>
         </div>
     );
 }
