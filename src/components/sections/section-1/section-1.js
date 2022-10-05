@@ -2,6 +2,8 @@ import React from 'react';
 import "./section-1.scss"
 import bgImg from "../../../assets/imgs/covers.jpg"
 import {Select} from 'antd';
+import SelectOption from "../../elements/select/select";
+import {fetchSearchFields} from "../../../utils/functions/fetchOptions";
 
 const {Option} = Select;
 
@@ -42,27 +44,17 @@ function Section1(props) {
                     Transport My Vehicle From...
                 </div>
                 <div className="inputs">
-                    <Select
-                        showSearch
-                        mode="tags"
-                        className="sl"
+                    <SelectOption
+                        fetchOptions={search => fetchSearchFields(search, "zipcode")}
                         placeholder="ENTER ZIP CODE OR CITY"
-                        onChange={handleChange}
-                    >
-                        {children}
-                    </Select>
+                    />
                     <div className="to">
                         TO
                     </div>
-                    <Select
-                        showSearch
-                        mode="tags"
-                        className="sl"
+                    <SelectOption
+                        fetchOptions={search => fetchSearchFields(search, "zipcode")}
                         placeholder="ENTER ZIP CODE OR CITY"
-                        onChange={handleChange}
-                    >
-                        {children}
-                    </Select>
+                    />
                     <div className="button">NEXT</div>
                 </div>
             </div>

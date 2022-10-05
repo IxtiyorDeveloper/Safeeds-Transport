@@ -2,6 +2,8 @@ import React from 'react';
 import "./card.scss"
 import {Select} from 'antd';
 import Button from "../../elements/button/button";
+import SelectOption from "../../elements/select/select";
+import {fetchSearchFields} from "../../../utils/functions/fetchOptions";
 
 const {Option} = Select;
 
@@ -27,31 +29,19 @@ function Card(props) {
                     <div className="t1">
                         Origin State
                     </div>
-                    <Select
-                        showSearch
-                        mode="tags"
-                        className="sl"
+                    <SelectOption
+                        fetchOptions={search => fetchSearchFields(search, "zipcode")}
                         placeholder="ENTER ZIP CODE OR CITY"
-                        onChange={handleChange}
-                        style={{width:"100%"}}
-                    >
-                        {children}
-                    </Select>
+                    />
                 </div>
                 <div className="on2">
                     <div className="t1">
-                       Destination
+                        Destination
                     </div>
-                    <Select
-                        showSearch
-                        mode="tags"
-                        className="sl"
+                    <SelectOption
+                        fetchOptions={search => fetchSearchFields(search, "zipcode")}
                         placeholder="ENTER ZIP CODE OR CITY"
-                        onChange={handleChange}
-                        style={{width:"100%"}}
-                    >
-                        {children}
-                    </Select>
+                    />
                 </div>
                 <div className="on3">
                     <Button title="Continue"/>
