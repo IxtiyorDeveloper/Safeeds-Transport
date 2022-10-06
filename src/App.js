@@ -7,9 +7,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'antd/dist/antd.css';
 
-const Home = lazy(() => import("./components/pages/home/home"))
-const About = lazy(() => import("./components/pages/about/about"))
-const Services = lazy(() => import("./components/pages/services/services"))
+const Home = lazy(() => import("./pages/home/home"))
+const About = lazy(() => import("./pages/about/about"))
+const Services = lazy(() => import("./pages/services/services"))
 
 function App(props) {
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import S1 from "../../services-sections/s1/s1";
+import S1 from "../../components/services-sections/s1/s1";
 import "./services.scss"
-import S2 from "../../services-sections/s2/s2";
-import Vd from "../../services-sections/vd/vd";
-import Cards from "../../services-sections/cards/cards";
-import SInfo from "../../services-sections/sInfo/sInfo";
-import ContactSection from "../../services-sections/contact-section/contact-section";
+import S2 from "../../components/services-sections/s2/s2";
+import Vd from "../../components/services-sections/vd/vd";
+import Cards from "../../components/services-sections/cards/cards";
+import SInfo from "../../components/services-sections/sInfo/sInfo";
+import ContactSection from "../../components/services-sections/contact-section/contact-section";
 
 function Services(props) {
     return (
