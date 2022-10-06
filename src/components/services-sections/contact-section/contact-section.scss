@@ -1,0 +1,64 @@
+.contactSection {
+  display: flex;
+  color: var(--black);
+  background-color: var(--bb-primary-color);
+  position: relative;
+
+  .bg {
+    background-image: url("https://mercuryautotransport.com/wp-content/uploads/2022/01/ShapeFooterBG-1.svg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    opacity: 0.05;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    width: 60%;
+    font-size: 30px;
+    line-height: 36px;
+    color: var(--e-global-color-7009fea);
+    font-weight: 700;
+    text-transform: none;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: 0px;
+    padding-left: 12%;
+    margin-top: 100px;
+
+    .bt {
+      width: fit-content;
+      background-color: var(--e-global-color-accent);
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-style: normal;
+      text-decoration: none;
+      letter-spacing: 0px;
+      color: var( --e-global-color-primary );
+      padding: 5px 20px;
+      margin-top: 20px;
+      cursor: pointer!important;
+    }
+  }
+
+  .img {
+    width: 40%;
+    z-index: 11;
+
+    img {
+      width: 100%;
+      height: 400px;
+      object-position: center;
+      object-fit: cover;
+      margin-top: -50px;
+      border-radius: 50px 0 0 0;
+    }
+  }
+}

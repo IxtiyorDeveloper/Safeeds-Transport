@@ -30,8 +30,29 @@
 
 
     }
+
     .on3 {
       margin-top: 20px;
+    }
+
+    .txt {
+      margin: 20px 0;
+      display: flex;
+      gap: 30px;
+
+      .t1 {
+        font-size: 14px;
+        color: #1a1a1a;
+        font-weight: 400;
+        text-align: left;
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .rd {
+
+      }
     }
   }
 }

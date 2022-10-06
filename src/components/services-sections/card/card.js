@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./card.scss"
-import {Select} from 'antd';
+import {Select,Radio} from 'antd';
 import Button from "../../elements/button/button";
 import SelectOption from "../../elements/select/select";
 import {fetchSearchFields} from "../../../utils/functions/fetchOptions";
@@ -8,6 +8,8 @@ import {fetchSearchFields} from "../../../utils/functions/fetchOptions";
 const {Option} = Select;
 
 function Card(props) {
+
+    const [value, setValue] = useState(1);
 
     const children = [];
 
@@ -17,6 +19,11 @@ function Card(props) {
 
     const handleChange = (value) => {
         console.log(`selected ${value}`);
+    };
+
+    const onChange = (e) => {
+        console.log('radio checked', e.target.value);
+        setValue(e.target.value);
     };
 
     return (
@@ -42,6 +49,17 @@ function Card(props) {
                         fetchOptions={search => fetchSearchFields(search, "zipcode")}
                         placeholder="ENTER ZIP CODE OR CITY"
                     />
+                </div>
+                <div className="txt">
+                    <div className="t1">
+                        Select <span>Transport Type</span>
+                    </div>
+                    <div className="rd">
+                        <Radio.Group onChange={onChange} value={value}>
+                            <Radio value={1}>Open</Radio>
+                            <Radio value={2}>Enclosed</Radio>
+                        </Radio.Group>
+                    </div>
                 </div>
                 <div className="on3">
                     <Button title="Continue"/>

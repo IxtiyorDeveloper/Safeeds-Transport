@@ -36,6 +36,24 @@ const Faqs = () => {
                 <Panel header="This is panel header 3" key="3">
                     <p>{text}</p>
                 </Panel>
+                <Panel header="This is panel header 10" key="10">
+                    <p>{text}</p>
+                </Panel>
+                <Panel header="This is panel header 2" key="2">
+                    <p>{text}</p>
+                </Panel>
+                <Panel header="This is panel header 3" key="3">
+                    <p>{text}</p>
+                </Panel>
+                <Panel header="This is panel header 21" key="21">
+                    <p>{text}</p>
+                </Panel>
+                <Panel header="This is panel header 2" key="2">
+                    <p>{text}</p>
+                </Panel>
+                <Panel header="This is panel header 3" key="3">
+                    <p>{text}</p>
+                </Panel>
             </Collapse>
         </div>
     );
