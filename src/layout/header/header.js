@@ -29,10 +29,10 @@ function Header(props) {
                     <Link to="/team" className="lk">
                         <div className="link">Team</div>
                     </Link>
-                    <Link to="/about" className="lk">
+                    <Link to="/contact" className="lk">
                         <div className="link">Contact</div>
                     </Link>
-                    <Link to="/about" className="lk">
+                    <Link to="/help" className="lk">
                         <div className="link">Help</div>
                     </Link>
                 </div>

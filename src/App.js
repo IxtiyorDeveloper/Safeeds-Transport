@@ -12,6 +12,8 @@ const About = lazy(() => import("./pages/about/about"))
 const Services = lazy(() => import("./pages/services/services"))
 const Blogs = lazy(() => import("./pages/blogs/blogs"))
 const Teams = lazy(() => import("./pages/teams/teams"))
+const Contact = lazy(() => import("./pages/contact/contact"))
+const Help = lazy(() => import("./pages/help/help"))
 
 function App(props) {
 
@@ -23,6 +25,8 @@ function App(props) {
                 <Route path='/services' element={<Layout><Services/></Layout>}/>
                 <Route path='/blogs' element={<Layout><Blogs/></Layout>}/>
                 <Route path='/team' element={<Layout><Teams/></Layout>}/>
+                <Route path='/contact' element={<Layout><Contact/></Layout>}/>
+                <Route path='/help' element={<Layout><Help/></Layout>}/>
             </Routes>
         </div>
     );
