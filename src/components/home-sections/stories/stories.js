@@ -1,29 +1,30 @@
 import React from 'react';
 import "./stories.scss"
+import img from "../../../assets/imgs/openhauler.jpg"
 
 function Stories(props) {
     const data = [
         {
             id: 1,
-            img: "https://www.montway.com/blog/app/uploads/motorcycle_1170x400-635x217.jpg",
+            img: img,
             text: "How Motorcycle Shipping Works",
             date: "12-18-2022",
         },
         {
             id: 1,
-            img: "https://www.montway.com/blog/app/uploads/motorcycle_1170x400-635x217.jpg",
+            img: img,
             text: "How Motorcycle Shipping Works",
             date: "12-18-2022",
         },
         {
             id: 1,
-            img: "https://www.montway.com/blog/app/uploads/motorcycle_1170x400-635x217.jpg",
+            img: img,
             text: "How Motorcycle Shipping Works",
             date: "12-18-2022",
         },
         {
             id: 1,
-            img: "https://www.montway.com/blog/app/uploads/motorcycle_1170x400-635x217.jpg",
+            img: img,
             text: "How Motorcycle Shipping Works",
             date: "12-18-2022",
         },
