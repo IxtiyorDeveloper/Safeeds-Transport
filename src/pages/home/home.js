@@ -7,6 +7,7 @@ import Call from "../../components/home-sections/call/call";
 import Stories from "../../components/home-sections/stories/stories";
 import Faqs from "../../components/home-sections/faqs/faqs";
 import ContactUs from "../../components/home-sections/contacts/contacts";
+import Partners from "../../components/home-sections/partners/partners";
 
 function Home(props) {
     return (
@@ -18,6 +19,7 @@ function Home(props) {
             <Stories/>
             <Faqs/>
             <ContactUs/>
+            <Partners/>
         </div>
     );
 }

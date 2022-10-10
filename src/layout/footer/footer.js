@@ -136,42 +136,42 @@ function Footer(props) {
                 </div>
                 <div className="col">
                     <div className="title">
-                        MENU
+                        QUICK LINKS
                     </div>
                     <div className="list">
                         <div className="item">
                             <div className="tc">
-                                <a href="">About us</a>
+                                <a href="">Our Licence</a>
                             </div>
                         </div>
                         <div className="item">
                             <div className="tc">
-                                <a href=""> Get An Instant Quote</a>
+                                <a href="">Condition Report & Checklist</a>
                             </div>
                         </div>
                         <div className="item">
                             <div className="tc">
-                                <a href="">Reviews</a>
+                                <a href="">Car Shipping Analytics</a>
                             </div>
                         </div>
                         <div className="item">
                             <div className="tc">
-                                <a href="">Discounts</a>
+                                <a href="">How Auto Transport Works</a>
                             </div>
                         </div>
                         <div className="item">
                             <div className="tc">
-                                <a href="">CARE</a>
+                                <a href="">How We Determine Your Quote</a>
                             </div>
                         </div>
                         <div className="item">
                             <div className="tc">
-                                <a href="">Job Openings</a>
+                                <a href="">Terms & Conditions</a>
                             </div>
                         </div>
                         <div className="item">
                             <div className="tc">
-                                <a href="">Contact Us</a>
+                                <a href="">The Safeeds Guarantee</a>
                             </div>
                         </div>
                     </div>

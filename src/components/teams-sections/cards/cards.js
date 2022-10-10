@@ -1,35 +1,44 @@
 import React from 'react';
 import "./cards.scss"
+import img from "../../../assets/imgs/team.jpg"
+import {AiOutlinePhone, AiOutlineMail} from "react-icons/ai"
 
 function Cards(props) {
     const data = [
         {
             name: "Damir Miller",
-            img: "https://mercuryautotransport.com/wp-content/uploads/avatars/72/633f38a7c0cf9-bpfull.jpg"
+            img: img,
+            position: "Experienced Auto transport specialist"
         },
         {
             name: "Damir Miller",
-            img: "https://mercuryautotransport.com/wp-content/uploads/avatars/72/633f38a7c0cf9-bpfull.jpg"
+            img: img,
+            position: "Experienced Auto transport specialist"
         },
         {
             name: "Damir Miller",
-            img: "https://mercuryautotransport.com/wp-content/uploads/avatars/72/633f38a7c0cf9-bpfull.jpg"
+            img: img,
+            position: "Experienced Auto transport specialist"
         },
         {
             name: "Damir Miller",
-            img: "https://mercuryautotransport.com/wp-content/uploads/avatars/72/633f38a7c0cf9-bpfull.jpg"
+            img: img,
+            position: "Experienced Auto transport specialist"
         },
         {
             name: "Damir Miller",
-            img: "https://mercuryautotransport.com/wp-content/uploads/avatars/72/633f38a7c0cf9-bpfull.jpg"
+            img: img,
+            position: "Experienced Auto transport specialist"
         },
         {
             name: "Damir Miller",
-            img: "https://mercuryautotransport.com/wp-content/uploads/avatars/72/633f38a7c0cf9-bpfull.jpg"
+            img: img,
+            position: "Experienced Auto transport specialist"
         },
         {
             name: "Damir Miller",
-            img: "https://mercuryautotransport.com/wp-content/uploads/avatars/72/633f38a7c0cf9-bpfull.jpg"
+            img: img,
+            position: "Experienced Auto transport specialist"
         },
     ]
     return (
@@ -49,7 +58,21 @@ function Cards(props) {
                         return (
                             <div key={k} className="bxs">
                                 <div style={{backgroundImage: `url(${i.img})`}} className="img"/>
-                                <div className="txt">{i.name}</div>
+                                <div className="tcw">
+                                    <div className="txt1">
+                                        <div className="name">
+                                            {i.name}
+                                        </div>
+                                        <div className="pos">
+                                            {i.position}
+                                        </div>
+                                    </div>
+                                    <div className="txt2">
+                                        <AiOutlinePhone className="icon"/>
+                                        <div className="br"/>
+                                        <AiOutlineMail className="icon"/>
+                                    </div>
+                                </div>
                             </div>
                         )
                     })

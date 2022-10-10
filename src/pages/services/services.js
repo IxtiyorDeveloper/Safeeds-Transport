@@ -6,6 +6,8 @@ import Vd from "../../components/services-sections/vd/vd";
 import Cards from "../../components/services-sections/cards/cards";
 import SInfo from "../../components/services-sections/sInfo/sInfo";
 import ContactSection from "../../components/services-sections/contact-section/contact-section";
+import ContactUs from "../../components/home-sections/contacts/contacts";
+import Partners from "../../components/home-sections/partners/partners";
 
 function Services(props) {
     return (
@@ -34,6 +36,8 @@ function Services(props) {
             <Cards/>
             <SInfo/>
             <ContactSection/>
+            <ContactUs/>
+            <Partners/>
         </div>
     );
 }
