@@ -38,3 +38,18 @@
     width: 40px;
     height: 40px;
 }
+
+.wrapperClassName {
+    width: 100%;
+    margin-inline: auto;
+    border: 1px solid #d9d9d9;
+}
+
+.editorClassName {
+    height: 200px !important;
+}
+
+.alce {
+    display: flex;
+    align-items: center;
+}

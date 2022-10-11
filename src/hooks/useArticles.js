@@ -42,6 +42,14 @@ const createArticle = async (data) => {
     }
 }
 
+const uploadFile = async (data) => {
+    try {
+        return await api.post(`/image-upload`, data)
+    } catch (err) {
+        throw err
+    }
+}
+
 export const useArticles = () => {
     return useQuery(["rates"], () => getArticles())
 }
@@ -69,9 +77,19 @@ export const useDeleteArticle = ({onSuccess, onError}) => {
 export const useCreateArticle = ({onSuccess, onError}) => {
     return useMutation(
         data => createArticle(data),
-            {
-                onSuccess,
-                onError,
-            }
+        {
+            onSuccess,
+            onError,
+        }
+    )
+}
+
+export const useUploadFile = ({onSuccess, onError}) => {
+    return useMutation(
+        data => uploadFile(data),
+        {
+            onSuccess,
+            onError,
+        }
     )
 }

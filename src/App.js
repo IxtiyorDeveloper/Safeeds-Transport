@@ -6,6 +6,7 @@ import "./assets/var.scss"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'antd/dist/antd.css';
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import Admin from "./components/admin/admin";
 import RequireAuth from "./utils/functions/requireAuth";
 
