@@ -5,12 +5,25 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import {store} from "./redux"
+import {QueryClient, QueryClientProvider} from 'react-query'
+import {Provider} from "react-redux";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
+const queryClient = new QueryClient({
+    defaultOptions: {queries: {retry: 1}},
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.Suspense fallback={"Loading"}>
         <BrowserRouter>
-            <App/>
+            <Provider store={store}>
+                <QueryClientProvider client={queryClient}>
+                    <App/>
+                    <ToastContainer/>
+                </QueryClientProvider>
+            </Provider>
         </BrowserRouter>
     </React.Suspense>
 );

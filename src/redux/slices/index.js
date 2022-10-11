@@ -1,10 +1,12 @@
 import {combineReducers} from "@reduxjs/toolkit"
 
 /** reducers */
-import reducer from "./reducer"
+import articles from "./reducer/index"
+import auth from "./reducer/auth"
 
 /** Main reducer function */
-export default combineReducers({reducer})
+export default combineReducers({articles,auth})
 
 /** Export selectors and action functions */
-export * from "./reducer"
+export * from "./reducer/index"
+export * from "./reducer/auth"

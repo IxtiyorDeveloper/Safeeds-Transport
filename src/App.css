@@ -19,6 +19,22 @@
 }
 
 .mlr20 {
-    margin-left: 20px!important;
-    margin-right: 20px!important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+
+.sidebar-logo {
+    height: 32px !important;
+    margin: 16px !important;
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.site-layout .site-layout-background {
+    background: #fff;
+    padding: 24px;
+}
+
+.t-img {
+    width: 40px;
+    height: 40px;
 }
