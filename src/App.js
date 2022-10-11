@@ -14,6 +14,7 @@ const Blogs = lazy(() => import("./pages/blogs/blogs"))
 const Teams = lazy(() => import("./pages/teams/teams"))
 const Contact = lazy(() => import("./pages/contact/contact"))
 const Help = lazy(() => import("./pages/help/help"))
+const Auth = lazy(() => import("./pages/auth/auth"))
 
 function App(props) {
 
@@ -27,6 +28,7 @@ function App(props) {
                 <Route path='/team' element={<Layout><Teams/></Layout>}/>
                 <Route path='/contact' element={<Layout><Contact/></Layout>}/>
                 <Route path='/help' element={<Layout><Help/></Layout>}/>
+                <Route path='/auth' element={<Auth/>}/>
             </Routes>
         </div>
     );
