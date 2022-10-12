@@ -1,68 +1,81 @@
 import {
-    DesktopOutlined,
-    FileOutlined,
-    PieChartOutlined,
-    TeamOutlined,
-    UserOutlined,
+    SnippetsOutlined,
+    TeamOutlined
 } from '@ant-design/icons';
-import {Breadcrumb, Layout, Menu} from 'antd';
+import {Breadcrumb, Button, Layout, Menu} from 'antd';
 import React, {useState} from 'react';
+import {Link, useLocation} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {logout} from "../../redux";
 
 const {Header, Content, Footer, Sider} = Layout;
 
-function getItem(label, key, icon, children) {
+function getItem(label, key, icon, path, children) {
     return {
         key,
         icon,
+        path,
         children,
         label,
     };
 }
 
 const items = [
-    getItem('Option 1', '1', <PieChartOutlined/>),
-    getItem('Option 2', '2', <DesktopOutlined/>),
-    getItem('User', 'sub1', <UserOutlined/>, [
-        getItem('Tom', '3'),
-        getItem('Bill', '4'),
-        getItem('Alex', '5'),
-    ]),
-    getItem('Team', 'sub2', <TeamOutlined/>, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-    getItem('Files', '9', <FileOutlined/>),
+    getItem('Articles', '1', <SnippetsOutlined/>, "/articles"),
+    getItem('Satisfied Customers', '2', <TeamOutlined/>, "/satisfied-customers")
 ];
 
 const Admin = ({children}) => {
+    const location = useLocation()
     const [collapsed, setCollapsed] = useState(false);
+    const dispatch = useDispatch()
+
     return (
         <Layout
             style={{
                 minHeight: '100vh',
             }}
         >
-            <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
+            <Sider
+                collapsible
+                collapsed={collapsed}
+                onCollapse={(value) => setCollapsed(value)}
+            >
                 <div className="sidebar-logo"/>
-                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items}/>
+                <Menu theme="dark"
+                      defaultSelectedKeys={[location.pathname]}
+                      mode="inline"
+                >
+                    {
+                        items?.map((menu, k) => {
+                            return (
+                                <Menu.Item key={menu.path} icon={menu.icon}>
+                                    <Link to={menu.path}/>
+                                    {menu.label}
+                                </Menu.Item>
+                            )
+                        })
+                    }
+                </Menu>
             </Sider>
             <Layout className="site-layout">
+
                 <Header
-                    className="site-layout-background"
-                    style={{
-                        padding: 0,
-                    }}
-                />
+                    className="mHeader"
+                    onClick={() => dispatch(logout())}
+                >
+                    <Button type="primary">
+                        Log out
+                    </Button>
+                </Header>
+                <Breadcrumb style={{margin: '16px 20px'}}>
+                    <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
+                </Breadcrumb>
                 <Content
                     style={{
                         margin: '0 16px',
                     }}
                 >
-                    <Breadcrumb
-                        style={{
-                            margin: '16px 0',
-                        }}
-                    >
-                        <Breadcrumb.Item>User</Breadcrumb.Item>
-                        <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                    </Breadcrumb>
                     <div className="site-layout-background">
                         {children}
                     </div>

@@ -13,7 +13,7 @@ import Tabs from "../../../components/tabs/tabs";
 import {useNavigate} from "react-router-dom";
 
 
-function Article(props) {
+function SatisfiedCustomer(props) {
     const [info, setInfo] = useState()
     const {data, isLoading} = useArticle()
     const [url, setUrl] = useState("")
@@ -95,7 +95,7 @@ function Article(props) {
             setIndex={setIndex}
             tabs={[
                 {
-                    title: "Article",
+                    title: "SatisfiedCustomer",
                     content: (
                         <Spin spinning={isLoading}>
                             <div>
@@ -222,4 +222,4 @@ function Article(props) {
     );
 }
 
-export default Article;
+export default SatisfiedCustomer;

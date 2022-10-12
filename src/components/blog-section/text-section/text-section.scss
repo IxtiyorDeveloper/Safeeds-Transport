@@ -1,0 +1,78 @@
+.text-section {
+  margin-top: 50px;
+  padding-bottom: 50px;
+
+  .iancard {
+    display: flex;
+
+    &:first-child {
+      align-items: center;
+    }
+
+    .iwr {
+      width: 60%;
+
+      img {
+        width: 90%;
+        border-radius: 5px;
+      }
+
+      .title {
+        font-size: 24px;
+        color: var(--header-text);
+        font-weight: 600;
+        margin-top: 30px;
+        width: 90%;
+      }
+
+      .body {
+        font-size: 16px;
+        color: var(--header-text);
+        margin-top: 20px;
+        width: 90%;
+      }
+    }
+
+    .cwr {
+      width: 40%;
+
+      .t12 {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--bb-headings-color);
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .posts {
+
+        ul {
+          list-style: none;
+
+          li {
+            .lit {
+              font-size: 20px;
+              font-weight: 600;
+              text-transform: uppercase;
+              color: var(--bb-headings-color);
+              margin-top: 40px;
+              text-align: start;
+
+              &:hover {
+                color: var(--bb-primary-color);
+                cursor: pointer;
+              }
+            }
+
+            .lid {
+              color: var(--bb-alternate-text-color);
+              line-height: 1.3em;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

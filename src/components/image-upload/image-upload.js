@@ -22,6 +22,7 @@ const ImageUpload = ({
                          url,
                          forEdit,
                          imgLoading,
+                         isCreate = false,
                          ...args
                      }) => {
     const [loading, setLoading] = useState(false)
@@ -38,7 +39,18 @@ const ImageUpload = ({
 
     const uploadButton = (
         <WrapperDefault>
-            {(uploadFile?.isLoading || imgLoading) ? <LoadingOutlined/> : <PlusOutlined/>}
+            {
+                (
+                    isCreate ?
+                        ((!isCreate || uploadFile?.isLoading) && imgLoading)
+                        :
+                        (uploadFile?.isLoading || imgLoading)
+                )
+                    ?
+                    <LoadingOutlined/>
+                    :
+                    <PlusOutlined/>
+            }
             <div style={{marginTop: 8}}>Upload</div>
         </WrapperDefault>
     )
@@ -66,10 +78,10 @@ const ImageUpload = ({
     }
 
     useEffect(() => {
-       if (!!uploadFile?.data){
-           onSetImage(uploadFile?.data?.data?.result?.url)
-       }
-    },[uploadFile])
+        if (!!uploadFile?.data) {
+            onSetImage(uploadFile?.data?.data?.result?.url)
+        }
+    }, [uploadFile])
 
     return (
         <Wrapper {...args}>

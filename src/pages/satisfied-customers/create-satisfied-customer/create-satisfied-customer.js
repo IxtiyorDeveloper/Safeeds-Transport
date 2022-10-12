@@ -1,16 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import {Button, Col, Form, Input, Row} from "antd";
 import ImageUpload from "../../../components/image-upload/image-upload";
 import {MainApi} from "../../../api";
 import {Editor} from "react-draft-wysiwyg";
-import {useArticle, useCreateArticle} from "hooks";
+import {useCreateArticle} from "hooks";
 import {toast} from "react-toastify";
 import draftToHtml from "draftjs-to-html";
 import {ContentState, convertToRaw, EditorState} from "draft-js";
 import htmlToDraft from "html-to-draftjs";
 import {useNavigate} from "react-router-dom";
 
-function CreateArticle(props) {
+function CreateSatisfiedCustomer(props) {
     const navigate = useNavigate()
 
     const [url, setUrl] = useState("")
@@ -160,4 +160,4 @@ function CreateArticle(props) {
     );
 }
 
-export default CreateArticle;
+export default CreateSatisfiedCustomer;

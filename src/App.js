@@ -14,12 +14,23 @@ const Home = lazy(() => import("./pages/home/home"))
 const About = lazy(() => import("./pages/about/about"))
 const Services = lazy(() => import("./pages/services/services"))
 const Blogs = lazy(() => import("./pages/blogs/blogs"))
+const Blog = lazy(() => import("./pages/blog/blog"))
 const Teams = lazy(() => import("./pages/teams/teams"))
 const Contact = lazy(() => import("./pages/contact/contact"))
 const Help = lazy(() => import("./pages/help/help"))
 const Auth = lazy(() => import("./pages/auth/auth"))
 const Articles = lazy(() => import("./pages/articles/articles/articles"))
 const Article = lazy(() => import("./pages/articles/article/article"))
+const CreateArticle = lazy(() => import("./pages/articles/create-article/create-article"))
+const SatisfiedCustomers = lazy(() =>
+    import("./pages/satisfied-customers/satisfied-customers/satisfied-customers")
+)
+const SatisfiedCustomer = lazy(() =>
+    import("./pages/satisfied-customers/satisfied-customer/satisfied-customer")
+)
+const CreateSatisfiedCustomer = lazy(() =>
+    import("./pages/satisfied-customers/create-satisfied-customer/create-satisfied-customer")
+)
 
 function App(props) {
 
@@ -30,6 +41,7 @@ function App(props) {
                 <Route path='/about' element={<Layout><About/></Layout>}/>
                 <Route path='/services' element={<Layout><Services/></Layout>}/>
                 <Route path='/blogs' element={<Layout><Blogs/></Layout>}/>
+                <Route path='/blogs/:id' element={<Layout><Blog/></Layout>}/>
                 <Route path='/team' element={<Layout><Teams/></Layout>}/>
                 <Route path='/contact' element={<Layout><Contact/></Layout>}/>
                 <Route path='/help' element={<Layout><Help/></Layout>}/>
@@ -39,14 +51,42 @@ function App(props) {
                         <Admin>
                             <Articles/>
                         </Admin>
-                </RequireAuth>
+                    </RequireAuth>
                 }/>
                 <Route path='/articles/:id' element={
                     <RequireAuth>
                         <Admin>
                             <Article/>
                         </Admin>
-                </RequireAuth>
+                    </RequireAuth>
+                }/>
+                <Route path='/articles/create' element={
+                    <RequireAuth>
+                        <Admin>
+                            <CreateArticle/>
+                        </Admin>
+                    </RequireAuth>
+                }/>
+                <Route path='/satisfied-customers' element={
+                    <RequireAuth>
+                        <Admin>
+                            <SatisfiedCustomers/>
+                        </Admin>
+                    </RequireAuth>
+                }/>
+                <Route path='/satisfied-customers/:id' element={
+                    <RequireAuth>
+                        <Admin>
+                            <SatisfiedCustomer/>
+                        </Admin>
+                    </RequireAuth>
+                }/>
+                <Route path='/satisfied-customers/create' element={
+                    <RequireAuth>
+                        <Admin>
+                            <CreateSatisfiedCustomer/>
+                        </Admin>
+                    </RequireAuth>
                 }/>
             </Routes>
         </div>

@@ -1,8 +1,10 @@
 import React from 'react';
 import "./sc1.scss"
 import {BsFillPersonFill} from "react-icons/bs"
+import {useNavigate} from "react-router-dom";
 
 function Sc1(props) {
+    const navigate = useNavigate()
     const data = [
         {
             id: 1,
@@ -52,7 +54,7 @@ function Sc1(props) {
             {
                 data?.map((i, k) => {
                     return (
-                        <div key={k} className="cd">
+                        <div key={k} className="cd" onClick={() => navigate(`/blogs/${i.id}`)}>
                             <div style={{backgroundImage: `url("${i.img}")`}} className="smg"/>
                             <div className="cnt">
                                 <div className="t1">

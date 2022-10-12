@@ -6,7 +6,7 @@ import {MainApi} from "api";
 import {PlusCircleOutlined} from "@ant-design/icons";
 import Tabs from "../../../components/tabs/tabs";
 
-function Articles(props) {
+function SatisfiedCustomers(props) {
     const {data, isLoading} = useArticles()
     const [index, setIndex] = useState(0)
     const navigate = useNavigate()
@@ -16,7 +16,7 @@ function Articles(props) {
             title: 'ID',
             dataIndex: 'id',
             key: 'id',
-            render: (id) => <Link to={`/articles/${id}`}>{id}</Link>,
+            render: (id) => <Link to={`/satisfied-customers/${id}`}>{id}</Link>,
         },
         {
             title: 'Title',
@@ -61,7 +61,7 @@ function Articles(props) {
             updatedAt: item?.updatedAt,
             title: item?.title,
             body: item?.body,
-            readTime: item?.readTime,
+            readTime: item?.body,
             image: item?.image,
             action: {id: item?.id},
         }))
@@ -74,7 +74,7 @@ function Articles(props) {
                 setIndex={setIndex}
                 tabs={[
                     {
-                        title: "Articles",
+                        title: "SatisfiedCustomers",
                         content: (
                             <Table columns={columns} dataSource={dataSource} loading={isLoading}/>
                         ),
@@ -91,4 +91,4 @@ function Articles(props) {
     );
 }
 
-export default Articles;
+export default SatisfiedCustomers;
