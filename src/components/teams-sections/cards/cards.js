@@ -1,7 +1,8 @@
 import React from 'react';
 import "./cards.scss"
 import img from "../../../assets/imgs/team.jpg"
-import {AiOutlinePhone, AiOutlineMail} from "react-icons/ai"
+import {AiOutlineMail} from "react-icons/ai"
+import {BsFillTelephoneFill} from "react-icons/bs"
 
 function Cards(props) {
     const data = [
@@ -67,10 +68,23 @@ function Cards(props) {
                                             {i.position}
                                         </div>
                                     </div>
-                                    <div className="txt2">
-                                        <AiOutlinePhone className="icon"/>
-                                        <div className="br"/>
-                                        <AiOutlineMail className="icon"/>
+                                </div>
+                                <div className="trew">
+                                    <div className="txt223">
+                                        <div className="iwr">
+                                            <AiOutlineMail className="icon"/>
+                                        </div>
+                                        <div className="iwr">
+                                            info@safeeds.us
+                                        </div>
+                                    </div>
+                                    <div className="txt223">
+                                        <div className="iwr">
+                                            <BsFillTelephoneFill className="icon"/>
+                                        </div>
+                                        <div className="iwr">
+                                            315 458 65-58
+                                        </div>
                                     </div>
                                 </div>
                             </div>

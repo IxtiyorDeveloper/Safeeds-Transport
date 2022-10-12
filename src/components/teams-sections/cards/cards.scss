@@ -65,6 +65,7 @@
       justify-content: flex-start;
       align-items: center;
       padding-top: 30px;
+      padding-bottom: 15px;
 
       &:hover {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -73,14 +74,14 @@
       .img {
         background-size: cover;
         background-position: center;
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
       }
 
       .tcw {
         display: flex;
-        padding: 20px 10px 25px 10px;
+        padding: 20px 10px 2px 10px;
 
         .txt1 {
           width: 80%;
@@ -102,22 +103,28 @@
             line-height: 1.2;
           }
         }
+      }
 
-        .txt2 {
+      .trew {
+        width: 100%;
+        padding: 2px 10px 2px 10px;
+
+        .txt223 {
           display: flex;
-          justify-content: space-between;
-          width: 20%;
-          align-items: center;
+          width: 100%;
+          align-items: center !important;
+          color: var(--bb-headings-color);
+          gap: 5px;
+          font-size: 16px;
+          height: 20px;
+          line-height: 20px;
 
           .icon {
-            font-size: 28px;
+            font-size: 16px;
             cursor: pointer;
+            line-height: 20px;
           }
-          .br{
-            height: 20px;
-            width: 2px;
-            background-color: var(--bb-headings-color);
-          }
+
         }
       }
     }
