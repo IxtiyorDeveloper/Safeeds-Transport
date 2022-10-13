@@ -31,7 +31,6 @@ function SelectOption({
 
 
     return (
-        <div>
             <Select
                 showSearch
                 className="sl"
@@ -44,7 +43,6 @@ function SelectOption({
                 notFoundContent={fetching ? <Spin size="small"/> : <Empty/>}
                 options={options}
             />
-        </div>
     );
 }
 

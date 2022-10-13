@@ -1,9 +1,9 @@
 import React from 'react';
 import "./button.scss"
 
-function Button({title}) {
+function Button({title,onClick}) {
     return (
-        <div className="ubutton">
+        <div className="ubutton" onClick={onClick}>
             {title}
         </div>
     );

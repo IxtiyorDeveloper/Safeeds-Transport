@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./section-1.scss"
 import bgImg from "../../../assets/imgs/covers.jpg"
-import {Select} from 'antd';
+import {Radio, Select} from 'antd';
 import SelectOption from "../../elements/select/select";
 import {fetchSearchFields} from "../../../utils/functions/fetchOptions";
 
 const {Option} = Select;
 
 function Section1(props) {
+
+    const [value, setValue] = useState(1);
 
     const children = [];
 
@@ -19,6 +21,10 @@ function Section1(props) {
         console.log(`selected ${value}`);
     };
 
+    const onChange = (e) => {
+        console.log('radio checked', e.target.value);
+        setValue(e.target.value);
+    };
     return (
         <div className="section-1">
             <div
@@ -56,6 +62,17 @@ function Section1(props) {
                         placeholder="ENTER ZIP CODE OR CITY"
                     />
                     <div className="button">NEXT</div>
+                </div>
+                <div className="txt">
+                    <div className="t1">
+                        Select <span>Transport Type</span>
+                    </div>
+                    <div className="rd">
+                        <Radio.Group onChange={onChange} value={value}>
+                            <Radio value={1}>Open</Radio>
+                            <Radio value={2}>Enclosed</Radio>
+                        </Radio.Group>
+                    </div>
                 </div>
             </div>
         </div>

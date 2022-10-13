@@ -46,7 +46,7 @@
     transform: translate(-50%, 0);
     padding: 30px 50px;
     z-index: 100;
-    bottom: -140px;
+    bottom: -180px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
 
@@ -122,6 +122,25 @@
       position: absolute;
       left: -32px;
       top: 31%;
+    }
+    .txt {
+      margin: 20px 0;
+      display: flex;
+      gap: 30px;
+
+      .t1 {
+        font-size: 14px;
+        color: #1a1a1a;
+        font-weight: 400;
+        text-align: left;
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .rd {
+
+      }
     }
   }
 }

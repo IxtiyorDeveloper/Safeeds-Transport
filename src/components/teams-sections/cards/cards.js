@@ -5,6 +5,7 @@ import {AiOutlineMail} from "react-icons/ai"
 import {BsFillTelephoneFill} from "react-icons/bs"
 
 function Cards(props) {
+
     const data = [
         {
             name: "Damir Miller",
@@ -41,7 +42,8 @@ function Cards(props) {
             img: img,
             position: "Experienced Auto transport specialist"
         },
-    ]
+    ];
+
     return (
         <div className="tcds pd">
             <div className="title">
