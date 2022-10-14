@@ -36,7 +36,7 @@ function Article(props) {
             navigate("/articles")
         },
         onError: (error) => {
-            toast.error(error)
+            toast.error(error?.data?.error)
         },
     })
 
@@ -45,6 +45,7 @@ function Article(props) {
             body: draftToHtml(convertToRaw(editorState.getCurrentContent())).toString(),
             title: values?.title,
             readTime: Number(values?.readTime),
+            name:values?.name,
             image: url
         })
     };
@@ -148,6 +149,20 @@ function Article(props) {
                                                     <Input type="number"/>
                                                 </Form.Item>
                                             </div>
+                                        </Col>
+                                        <Col span={9}>
+                                            <Form.Item
+                                                label="Name"
+                                                name="name"
+                                                rules={[
+                                                    {
+                                                        required: true,
+                                                        message: 'Please input your Name!',
+                                                    },
+                                                ]}
+                                            >
+                                                <Input/>
+                                            </Form.Item>
                                         </Col>
                                     </Row>
                                     <Row>

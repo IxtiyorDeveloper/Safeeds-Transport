@@ -21,7 +21,7 @@ function CreateArticle(props) {
             navigate(-1)
         },
         onError(err) {
-            console.log(err)
+            toast.error(err?.data?.error)
         },
     })
 
@@ -29,6 +29,7 @@ function CreateArticle(props) {
         createMutation.mutate({
             body: draftToHtml(convertToRaw(editorState.getCurrentContent())).toString(),
             title: values?.title,
+            name: values?.name,
             readTime: Number(values?.readTime),
             image: url
         })
@@ -99,6 +100,22 @@ function CreateArticle(props) {
                                 ]}
                             >
                                 <Input type="number"/>
+                            </Form.Item>
+                        </div>
+                    </Col>
+                    <Col span={9}>
+                        <div>
+                            <Form.Item
+                                label="Name"
+                                name="name"
+                                rules={[
+                                    {
+                                        required: true,
+                                        message: 'Please input your Name!',
+                                    },
+                                ]}
+                            >
+                                <Input/>
                             </Form.Item>
                         </div>
                     </Col>

@@ -12,6 +12,7 @@ function SelectOption({
     const [fetching, setFetching] = useState(false)
     const [options, setOptions] = useState([])
     const fetchRef = useRef(0)
+    const [value, setValue] = useState(undefined)
 
     const debounceFetcher = useMemo(() => {
         const loadOptions = (value = "") => {
@@ -29,20 +30,25 @@ function SelectOption({
         return debounce(loadOptions, debounceTimeout)
     }, [debounceTimeout, fetchOptions, afterFetch, options])
 
+    const onChange = (e) => {
+       setValue(e)
+    }
 
     return (
-            <Select
-                showSearch
-                className="sl"
-                style={{width: "100%", height: "40px"}}
-                placeholder={placeholder}
-                allowClear={true}
-                filterOption={false}
-                onSearch={debounceFetcher}
-                onFocus={() => !options.length && debounceFetcher("")}
-                notFoundContent={fetching ? <Spin size="small"/> : <Empty/>}
-                options={options}
-            />
+        <Select
+            showSearch
+            className="sl"
+            style={{width: "100%", height: "40px"}}
+            placeholder={placeholder}
+            allowClear={true}
+            filterOption={false}
+            onSearch={debounceFetcher}
+            onFocus={() => !options.length && debounceFetcher("")}
+            notFoundContent={fetching ? <Spin size="small"/> : <Empty/>}
+            options={options}
+            onChange={onChange}
+            value={value}
+        />
     );
 }
 

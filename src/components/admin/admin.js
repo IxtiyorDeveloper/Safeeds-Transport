@@ -4,7 +4,7 @@ import {
 } from '@ant-design/icons';
 import {Breadcrumb, Button, Layout, Menu} from 'antd';
 import React, {useState} from 'react';
-import {Link, useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {logout} from "../../redux";
 
@@ -27,8 +27,14 @@ const items = [
 
 const Admin = ({children}) => {
     const location = useLocation()
+    const navigate = useNavigate()
     const [collapsed, setCollapsed] = useState(false);
     const dispatch = useDispatch()
+
+    const handleLogout = () => {
+        dispatch(logout())
+        navigate("/login")
+    }
 
     return (
         <Layout
@@ -62,7 +68,7 @@ const Admin = ({children}) => {
 
                 <Header
                     className="mHeader"
-                    onClick={() => dispatch(logout())}
+                    onClick={() => handleLogout()}
                 >
                     <Button type="primary">
                         Log out

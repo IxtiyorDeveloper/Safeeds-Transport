@@ -3,7 +3,7 @@ import {Button, Col, Form, Input, Row} from "antd";
 import ImageUpload from "../../../components/image-upload/image-upload";
 import {MainApi} from "../../../api";
 import {Editor} from "react-draft-wysiwyg";
-import {useCreateArticle} from "hooks";
+import {useCreateSatisfied} from "hooks";
 import {toast} from "react-toastify";
 import draftToHtml from "draftjs-to-html";
 import {ContentState, convertToRaw, EditorState} from "draft-js";
@@ -15,22 +15,22 @@ function CreateSatisfiedCustomer(props) {
 
     const [url, setUrl] = useState("")
 
-    const createMutation = useCreateArticle({
+    const createMutation = useCreateSatisfied({
         onSuccess() {
             toast.success("Successfully created")
             navigate(-1)
         },
         onError(err) {
-            console.log(err)
+            toast.error(err?.data?.error)
         },
     })
 
     const onFinish = (values) => {
         createMutation.mutate({
-            body: draftToHtml(convertToRaw(editorState.getCurrentContent())).toString(),
-            title: values?.title,
-            readTime: Number(values?.readTime),
-            image: url
+            commment: draftToHtml(convertToRaw(editorState.getCurrentContent())).toString(),
+            name: values?.name,
+            star: Number(values?.star),
+            icon: url
         })
     };
 
@@ -74,12 +74,12 @@ function CreateSatisfiedCustomer(props) {
                     </Col>
                     <Col span={9}>
                         <Form.Item
-                            label="Title"
-                            name="title"
+                            label="Name"
+                            name="name"
                             rules={[
                                 {
                                     required: true,
-                                    message: 'Please input your title!',
+                                    message: 'Please input your name!',
                                 },
                             ]}
                         >
@@ -89,12 +89,12 @@ function CreateSatisfiedCustomer(props) {
                     <Col span={9}>
                         <div>
                             <Form.Item
-                                label="Read Time"
-                                name="readTime"
+                                label="Star"
+                                name="star"
                                 rules={[
                                     {
                                         required: true,
-                                        message: 'Please input your Read Time!',
+                                        message: 'Please input your star!',
                                     },
                                 ]}
                             >
@@ -105,12 +105,12 @@ function CreateSatisfiedCustomer(props) {
                 </Row>
                 <Row>
                     <Form.Item
-                        label="Body"
-                        name="body"
+                        label="Comment"
+                        name="commment"
                         rules={[
                             {
                                 required: true,
-                                message: 'Please input your body!',
+                                message: 'Please input your commment!',
                             },
                         ]}
                     >

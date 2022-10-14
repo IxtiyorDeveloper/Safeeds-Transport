@@ -21,6 +21,7 @@ const Help = lazy(() => import("./pages/help/help"))
 const Auth = lazy(() => import("./pages/auth/auth"))
 const Articles = lazy(() => import("./pages/articles/articles/articles"))
 const Article = lazy(() => import("./pages/articles/article/article"))
+const Quote = lazy(() => import("./pages/quote/quote"))
 const CreateArticle = lazy(() => import("./pages/articles/create-article/create-article"))
 const SatisfiedCustomers = lazy(() =>
     import("./pages/satisfied-customers/satisfied-customers/satisfied-customers")
@@ -45,6 +46,7 @@ function App(props) {
                 <Route path='/team' element={<Layout><Teams/></Layout>}/>
                 <Route path='/contact' element={<Layout><Contact/></Layout>}/>
                 <Route path='/help' element={<Layout><Help/></Layout>}/>
+                <Route path='/quote' element={<Layout><Quote/></Layout>}/>
                 <Route path='/login' element={<Auth/>}/>
                 <Route path='/articles' element={
                     <RequireAuth>

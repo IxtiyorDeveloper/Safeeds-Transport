@@ -1,13 +1,13 @@
 import React, {useMemo, useState} from 'react';
-import {useArticles} from "hooks";
 import {Button, Table} from 'antd';
 import {Link, useNavigate} from "react-router-dom";
 import {MainApi} from "api";
 import {PlusCircleOutlined} from "@ant-design/icons";
 import Tabs from "../../../components/tabs/tabs";
+import {useSatisfieds} from "hooks";
 
 function SatisfiedCustomers(props) {
-    const {data, isLoading} = useArticles()
+    const {data, isLoading} = useSatisfieds()
     const [index, setIndex] = useState(0)
     const navigate = useNavigate()
 
@@ -19,19 +19,19 @@ function SatisfiedCustomers(props) {
             render: (id) => <Link to={`/satisfied-customers/${id}`}>{id}</Link>,
         },
         {
-            title: 'Title',
-            dataIndex: 'title',
-            key: 'title',
+            title: 'Name',
+            dataIndex: 'name',
+            key: 'name',
         },
         {
-            title: 'Read Time',
-            dataIndex: 'readTime',
-            key: 'readTime',
+            title: 'Star',
+            dataIndex: 'star',
+            key: 'star',
         },
         {
-            title: 'Image',
-            dataIndex: 'image',
-            key: 'image',
+            title: 'Icon',
+            dataIndex: 'icon',
+            key: 'icon',
             render: (image) => {
               return(
                   <div>
@@ -44,7 +44,7 @@ function SatisfiedCustomers(props) {
             title: 'Action',
             key: 'action',
             render: (action) => (
-                <Link to={`/articles/${action?.id}`}>
+                <Link to={`/satisfied-customers/${action?.id}`}>
                     <Button type="primary">
                         More
                     </Button>
@@ -59,14 +59,14 @@ function SatisfiedCustomers(props) {
             id: item.id,
             createdAt: item?.createdAt,
             updatedAt: item?.updatedAt,
-            title: item?.title,
-            body: item?.body,
-            readTime: item?.body,
-            image: item?.image,
+            name: item?.name,
+            comment: item?.comment,
+            star: item?.star,
+            icon: item?.icon,
             action: {id: item?.id},
         }))
     }, [data])
-
+    console.log(data)
     return (
         <div>
             <Tabs
@@ -74,7 +74,7 @@ function SatisfiedCustomers(props) {
                 setIndex={setIndex}
                 tabs={[
                     {
-                        title: "SatisfiedCustomers",
+                        title: "Satisfied Customers",
                         content: (
                             <Table columns={columns} dataSource={dataSource} loading={isLoading}/>
                         ),

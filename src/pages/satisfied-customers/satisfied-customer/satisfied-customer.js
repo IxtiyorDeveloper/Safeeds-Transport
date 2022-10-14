@@ -1,5 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {useArticle, useDeleteArticle, useUpdateArticle} from "hooks";
+import {
+    useDeleteSatisfied,
+    useSatisfied,
+    useUpdateSatisfied
+} from "hooks";
 import {Button, Col, Form, Input, Modal, Row, Spin} from 'antd';
 import {Editor} from "react-draft-wysiwyg";
 import {ContentState, convertToRaw, EditorState} from "draft-js";
@@ -15,13 +19,13 @@ import {useNavigate} from "react-router-dom";
 
 function SatisfiedCustomer(props) {
     const [info, setInfo] = useState()
-    const {data, isLoading} = useArticle()
+    const {data, isLoading} = useSatisfied()
     const [url, setUrl] = useState("")
     const [index, setIndex] = useState(0)
     const [form] = Form.useForm()
     const navigate = useNavigate()
 
-    const updateMutation = useUpdateArticle({
+    const updateMutation = useUpdateSatisfied({
         onSuccess() {
             toast.success("Successfully updated")
         },
@@ -30,22 +34,22 @@ function SatisfiedCustomer(props) {
         },
     })
 
-    const deleteMutation = useDeleteArticle({
+    const deleteMutation = useDeleteSatisfied({
         onSuccess: () => {
             toast.success("Successfully deleted")
-            navigate("/articles")
+            navigate("/satisfied-customers")
         },
         onError: (error) => {
-            toast.error(error)
+            toast.error(error?.data?.error)
         },
     })
 
     const onFinish = (values) => {
         updateMutation.mutate({
-            body: draftToHtml(convertToRaw(editorState.getCurrentContent())).toString(),
-            title: values?.title,
-            readTime: Number(values?.readTime),
-            image: url
+            commment: draftToHtml(convertToRaw(editorState.getCurrentContent())).toString(),
+            name: values?.name,
+            star: values?.star,
+            icon: url
         })
     };
 
@@ -53,7 +57,7 @@ function SatisfiedCustomer(props) {
         console.log('Failed:', errorInfo);
     };
 
-    const blocks = htmlToDraft(info?.body ?? "");
+    const blocks = htmlToDraft(info?.comment ?? "");
 
     const {contentBlocks, entityMap} = blocks;
     const contentState = ContentState.createFromBlockArray(
@@ -79,8 +83,8 @@ function SatisfiedCustomer(props) {
     useEffect(() => {
         form.setFieldsValue(data?.data?.data)
         setInfo(data?.data?.data)
-        setUrl(data?.data?.data?.image)
-        const blocks = htmlToDraft(data?.data?.data?.body ?? "");
+        setUrl(data?.data?.data?.icon)
+        const blocks = htmlToDraft(data?.data?.data?.commment ?? "");
         const {contentBlocks, entityMap} = blocks;
         const contentState = ContentState.createFromBlockArray(
             contentBlocks,
@@ -95,7 +99,7 @@ function SatisfiedCustomer(props) {
             setIndex={setIndex}
             tabs={[
                 {
-                    title: "SatisfiedCustomer",
+                    title: "Satisfied Customer",
                     content: (
                         <Spin spinning={isLoading}>
                             <div>
@@ -121,12 +125,12 @@ function SatisfiedCustomer(props) {
                                         </Col>
                                         <Col span={9}>
                                             <Form.Item
-                                                label="Title"
-                                                name="title"
+                                                label="Name"
+                                                name="name"
                                                 rules={[
                                                     {
                                                         required: true,
-                                                        message: 'Please input your title!',
+                                                        message: 'Please input your name!',
                                                     },
                                                 ]}
                                             >
@@ -136,12 +140,12 @@ function SatisfiedCustomer(props) {
                                         <Col span={9}>
                                             <div>
                                                 <Form.Item
-                                                    label="Read Time"
-                                                    name="readTime"
+                                                    label="Star"
+                                                    name="star"
                                                     rules={[
                                                         {
                                                             required: true,
-                                                            message: 'Please input your Read Time!',
+                                                            message: 'Please input your star!',
                                                         },
                                                     ]}
                                                 >
@@ -152,12 +156,12 @@ function SatisfiedCustomer(props) {
                                     </Row>
                                     <Row>
                                         <Form.Item
-                                            label="Body"
-                                            name="body"
+                                            label="Comment"
+                                            name="commment"
                                             rules={[
                                                 {
                                                     required: true,
-                                                    message: 'Please input your body!',
+                                                    message: 'Please input your comment!',
                                                 },
                                             ]}
                                         >
