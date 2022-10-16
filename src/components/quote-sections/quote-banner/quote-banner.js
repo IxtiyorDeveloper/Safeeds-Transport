@@ -16,6 +16,8 @@ function QuoteBanner(props) {
 
     const {Option} = Select;
 
+    const [form] = Form.useForm();
+
     useEffect(() => {
         const date = new Date()
         if (!years.length) {
@@ -27,6 +29,10 @@ function QuoteBanner(props) {
         }
 
     }, [years])
+
+    useEffect(() => {
+        console.log(form,"form")
+    },[form])
 
     return (
         <div className="wr">
@@ -56,16 +62,17 @@ function QuoteBanner(props) {
                         onFinishFailed={onFinishFailed}
                         autoComplete="off"
                         layout="vertical"
+                        form={form}
                     >
                         <Row gutter={[20, 20]}>
                             <Col span={12}>
                                 <Form.Item
-                                    label="Username"
-                                    name="username"
+                                    label="Pickup location"
+                                    name="pickup"
                                     rules={[
                                         {
                                             required: true,
-                                            message: 'Please input your username!',
+                                            message: 'Please input your Pickup location!',
                                         },
                                     ]}
                                 >
@@ -77,12 +84,12 @@ function QuoteBanner(props) {
                             </Col>
                             <Col span={12}>
                                 <Form.Item
-                                    label="Username"
-                                    name="username"
+                                    label="Delivery location"
+                                    name="delivery"
                                     rules={[
                                         {
                                             required: true,
-                                            message: 'Please input your username!',
+                                            message: 'Please input your Delivery location!',
                                         },
                                     ]}
                                 >
@@ -94,16 +101,16 @@ function QuoteBanner(props) {
                             </Col>
                             <Col span={12}>
                                 <Form.Item
-                                    label="Username"
-                                    name="username"
+                                    label="Year"
+                                    name="year"
                                     rules={[
                                         {
                                             required: true,
-                                            message: 'Please input your username!',
+                                            message: 'Please input your year!',
                                         },
                                     ]}
                                 >
-                                    <Select>
+                                    <Select placeholder="Year">
                                         {
                                             years?.map((i, k) => {
                                                 return (

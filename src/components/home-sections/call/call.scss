@@ -56,3 +56,54 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .lock {
+    .tit {
+      font-size: 30px;
+    }
+
+    .card {
+      padding: 30px;
+
+      .f1 {
+        flex-direction: column-reverse;
+
+        .text {
+          font-size: 20px;
+          width: 100%;
+          text-align: center;
+          margin-top: 10px;
+        }
+
+        .img {
+          margin-left: 0;
+        }
+      }
+
+      .f2 {
+        padding: 10px 15px;
+        width: 100% !important;
+        color: #fff;
+        transition: ease-in-out .5s;
+        border: 0 !important;
+        border-radius: 4px;
+        margin: 0 auto;
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        box-shadow: 1px 1px 5px rgb(0 0 0 / 20%);
+        text-align: center;
+        text-decoration: none !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .lock {
+    .tit {
+      font-size: 24px;
+    }
+  }
+}

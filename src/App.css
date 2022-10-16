@@ -35,7 +35,7 @@
 }
 
 .mHeader {
-    background: #fff!important;
+    background: #fff !important;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -66,4 +66,14 @@
 .brc {
     width: 100%;
     background-color: green;
+}
+
+.w100 {
+    width: 100% !important;
+}
+
+@media (max-width: 1300px) {
+    .pd {
+        padding: 0 5%;
+    }
 }

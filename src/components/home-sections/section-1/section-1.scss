@@ -123,6 +123,7 @@
       left: -32px;
       top: 31%;
     }
+
     .txt {
       margin: 20px 0;
       display: flex;
@@ -133,6 +134,7 @@
         color: #1a1a1a;
         font-weight: 400;
         text-align: left;
+
         span {
           font-weight: 600;
         }
@@ -140,6 +142,125 @@
 
       .rd {
 
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .section-1 {
+    .sWr {
+      .bgMaker {
+
+        .bold-text {
+          font-size: 36px;
+        }
+
+        .sText {
+          font-size: 16px;
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .card {
+      padding: 30px 25px;
+      z-index: 100;
+      bottom: -260px;
+      min-width: 340px !important;
+
+      .title {
+        font-size: 20px;
+      }
+
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+
+
+        .button {
+          width: 100%;
+          max-width: unset;
+          margin-left: 0;
+          margin-top: 20px;
+        }
+
+        .to {
+          margin: 10px 0;
+        }
+      }
+
+      &:before {
+        display: none;
+      }
+
+      .txt {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .section-1 {
+    .sWr {
+      .bgMaker {
+
+        .bold-text {
+          font-size: 25px;
+          margin-top: 100px;
+          line-height: 27px;
+        }
+
+        .sText {
+          font-size: 16px;
+          margin-top: 15px;
+          br{
+            display: none;
+          }
+        }
+      }
+    }
+
+    .card {
+      padding: 30px 25px;
+      z-index: 100;
+      bottom: -260px;
+      min-width: 340px !important;
+
+      .title {
+        font-size: 20px;
+      }
+
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+
+
+        .button {
+          width: 100%;
+          max-width: unset;
+          margin-left: 0;
+          margin-top: 20px;
+        }
+
+        .to {
+          margin: 10px 0;
+        }
+      }
+
+      &:before {
+        display: none;
+      }
+
+      .txt {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
       }
     }
   }

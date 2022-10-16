@@ -97,6 +97,29 @@
         text-decoration: none;
       }
     }
+    .menu{
+      display: none;
+    }
   }
+}
 
+@media (max-width: 992px) {
+  .header {
+    .content {
+      .pages {
+        display: none;
+      }
+
+      .quote {
+        display: none;
+      }
+
+      .menu {
+        display: block;
+        .icon {
+          font-size: 27px;
+        }
+      }
+    }
+  }
 }

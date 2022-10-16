@@ -5,7 +5,6 @@
 
   .t1 {
     color: #232b36;
-    font-family: Circular-Pro-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 36px;
     line-height: 1.2;
     font-weight: 600;
@@ -89,10 +88,83 @@
 
         }
       }
-      .tx{
+
+      .tx {
         font-size: 16px;
         line-height: 1.5;
         margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .videoSection {
+    .vd {
+      width: 100%;
+      margin-top: 50px;
+
+      .vid {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .player {
+          width: 100% !important;
+          height: 50vh !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .videoSection {
+    .vd {
+      width: 100%;
+      margin-top: 50px;
+
+      .vid {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .player {
+          width: 100% !important;
+          height: 35vh !important;
+        }
+      }
+
+      .box {
+        .steps {
+
+          .circle {
+            width: 50px !important;
+            height: 50px !important;
+
+            .ic {
+              color: var(--white);
+              font-size: 24px;
+            }
+          }
+          .st{
+            margin-left: 30px;
+
+            .tit1 {
+              font-size: 18px;
+            }
+
+            .tit2 {
+              font-size: 16px;
+            }
+          }
+        }
+        .tx {
+          font-size: 13px;
+        }
+        .mt {
+          font-size: 20px;
+        }
       }
     }
   }

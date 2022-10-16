@@ -1,5 +1,5 @@
 .reviews {
-  margin-top: 200px;
+  margin-top: 250px;
   text-align: center;
 
   .title {
@@ -65,5 +65,10 @@
         }
       }
     }
+  }
+}
+@media (max-width: 900px) {
+  .reviews{
+    margin-top: 300px;
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import "./header.scss"
 import {Link} from "react-router-dom";
 import logo from "../../assets/imgs/logo.png"
+import {AiOutlineMenu} from "react-icons/ai"
 
 function Header(props) {
     return (
@@ -38,6 +39,9 @@ function Header(props) {
                 </div>
                 <div className="quote">
                     <Link className="button">get a quote</Link>
+                </div>
+                <div className="menu">
+                    <AiOutlineMenu className="icon"/>
                 </div>
             </div>
         </div>

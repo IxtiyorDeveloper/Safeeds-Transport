@@ -9,7 +9,7 @@ function Layout(props) {
             <div className="head">
                 <Header/>
             </div>
-            <div>
+            <div className="w100">
                 {props.children}
             </div>
             <div>
