@@ -5,7 +5,7 @@ import {FaFax} from "react-icons/fa"
 import {HiOutlineMail} from "react-icons/hi"
 import {BsFillCalendarFill} from "react-icons/bs"
 import "./footer.scss"
-import logo from "../../assets/imgs/logo.png"
+import logo from "../../assets/imgs/white-logo.png"
 
 function Footer(props) {
     return (

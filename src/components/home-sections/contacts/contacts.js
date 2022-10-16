@@ -28,6 +28,9 @@ export default function ContactUs() {
     }
     return (
         <div className={styles.wrapper} id="section-7">
+            <div className={styles.tit}>
+                Our contacts
+            </div>
             <GMap/>
             <div className={styles.left}>
                 <div className={styles.inner}>

@@ -1,6 +1,7 @@
 .reviews {
   margin-top: 250px;
   text-align: center;
+  overflow: hidden !important;
 
   .title {
     color: var(--e-global-color-kadence2);
@@ -67,8 +68,10 @@
     }
   }
 }
+
 @media (max-width: 900px) {
-  .reviews{
+  .reviews {
     margin-top: 300px;
+    width: 100% !important;
   }
 }
