@@ -13,7 +13,13 @@
 .ant-select {
     height: 40px !important;
 }
-
+.ant-input {
+    height: 40px !important;
+}
+.ant-picker{
+    width: 100%!important;
+    height: 40px!important;
+}
 .bgi {
     height: 25px;
 }

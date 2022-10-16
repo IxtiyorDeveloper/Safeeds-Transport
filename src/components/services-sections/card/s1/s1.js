@@ -48,8 +48,8 @@ function CardF1({setStep}) {
                     </div>
                     <div className="rd">
                         <Radio.Group onChange={onChange} value={value}>
-                            <Radio value={1}>Open</Radio>
-                            <Radio value={2}>Enclosed</Radio>
+                            <Radio value="Open">Open</Radio>
+                            <Radio value="Enclosed">Enclosed</Radio>
                         </Radio.Group>
                     </div>
                 </div>

@@ -6,7 +6,10 @@ function SelectOption({
                           fetchOptions,
                           afterFetch,
                           debounceTimeout = 400,
-                          placeholder
+                          placeholder,
+                          setD,
+                          setP,
+                          type
                       }) {
 
     const [fetching, setFetching] = useState(false)
@@ -31,7 +34,13 @@ function SelectOption({
     }, [debounceTimeout, fetchOptions, afterFetch, options])
 
     const onChange = (e) => {
-       setValue(e)
+        setValue(e);
+        if (type === "pickup") {
+            setP(e)
+        }
+        if (type === "delivery"){
+            setD(e)
+        }
     }
 
     return (
