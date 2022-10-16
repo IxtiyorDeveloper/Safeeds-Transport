@@ -2,7 +2,7 @@ import React from 'react';
 import "./cards.scss"
 import img from "../../../assets/imgs/team.jpg"
 import {AiOutlineMail} from "react-icons/ai"
-import {BsFillTelephoneFill} from "react-icons/bs"
+import Button from "../../elements/button/button";
 
 function Cards(props) {
 
@@ -66,28 +66,28 @@ function Cards(props) {
                                         <div className="name">
                                             {i.name}
                                         </div>
-                                        <div className="pos">
-                                            {i.position}
-                                        </div>
                                     </div>
                                 </div>
                                 <div className="trew">
                                     <div className="txt223">
                                         <div className="iwr">
-                                            <AiOutlineMail className="icon"/>
+                                            <AiOutlineMail className="icon"/>&nbsp;Email:
                                         </div>
-                                        <div className="iwr">
+                                        <div className="iwr1">
                                             info@safeeds.us
                                         </div>
                                     </div>
                                     <div className="txt223">
                                         <div className="iwr">
-                                            <BsFillTelephoneFill className="icon"/>
+                                            <AiOutlineMail className="icon"/>&nbsp;Phone:
                                         </div>
-                                        <div className="iwr">
+                                        <div className="iwr1">
                                             315 458 65-58
                                         </div>
                                     </div>
+                                </div>
+                                <div className="btr">
+                                    <Button title="View profile" size="18px"/>
                                 </div>
                             </div>
                         )
