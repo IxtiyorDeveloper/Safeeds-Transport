@@ -52,7 +52,7 @@ function QuoteBanner(props) {
 
 
     return (
-        <div className="wr">
+        <div className="wr-quote-sp">
             <div className="quote-wr">
                 <div className="quote-banner">
                     Get a quote
