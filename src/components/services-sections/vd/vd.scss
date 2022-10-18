@@ -6,3 +6,11 @@
     height: 80vh !important;
   }
 }
+
+@media (max-width: 992px) {
+  .vd {
+    .player {
+      height: 40vh!important;
+    }
+  }
+}

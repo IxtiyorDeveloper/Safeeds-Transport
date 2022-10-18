@@ -16,7 +16,8 @@
       color: var(--bb-headings-color);
       font-weight: 500;
       padding-bottom: 10px;
-      width: 150px;
+      width: fit-content;
+      min-width: 150px;
 
       span {
         background-color: var(--bb-primary-color);
@@ -152,6 +153,25 @@
       .btr {
         width: 100%;
         padding: 25px 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .tcds {
+
+    .title {
+      font-size: 30px;
+    }
+
+    .ty {
+
+      .tc {
+        color: var(--bb-headings-color);
+        font-weight: 500;
+        padding-bottom: 10px;
+        width: fit-content!important;
       }
     }
   }

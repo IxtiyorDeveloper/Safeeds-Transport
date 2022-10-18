@@ -59,7 +59,8 @@ function QuoteBanner(props) {
                 </div>
 
             </div>
-            <div className="frq pd">
+            <div className="pd">
+                <div className="frq">
                 <div className="tit">
                     Get a quote
                 </div>
@@ -82,7 +83,7 @@ function QuoteBanner(props) {
                         form={form}
                     >
                         <Row gutter={[20, 20]}>
-                            <Col span={12}>
+                            <Col lg={12} md={24} sm={24}>
                                 <Form.Item
                                     label="Pickup location"
                                     name="pickup"
@@ -101,7 +102,7 @@ function QuoteBanner(props) {
                                     />
                                 </Form.Item>
                             </Col>
-                            <Col span={12}>
+                            <Col lg={12} md={24} sm={24}>
                                 <Form.Item
                                     label="Delivery location"
                                     name="delivery"
@@ -130,7 +131,7 @@ function QuoteBanner(props) {
                                                 {y + 1} - car
                                             </div>
                                             <Row gutter={[20, 20]} key={index}>
-                                                <Col span={12}>
+                                                <Col lg={12} md={24} sm={24}>
                                                     <Form.Item
                                                         label="Year"
                                                         name={`year${y}`}
@@ -153,7 +154,7 @@ function QuoteBanner(props) {
                                                         </Select>
                                                     </Form.Item>
                                                 </Col>
-                                                <Col span={12}>
+                                                <Col lg={12} md={24} sm={24}>
                                                     <Form.Item
                                                         label="Make"
                                                         name={`make${y}`}
@@ -167,7 +168,7 @@ function QuoteBanner(props) {
                                                         <Input placeholder="Make"/>
                                                     </Form.Item>
                                                 </Col>
-                                                <Col span={12}>
+                                                <Col lg={12} md={24} sm={24}>
                                                     <Form.Item
                                                         label="Model"
                                                         name={`model${y}`}
@@ -183,7 +184,7 @@ function QuoteBanner(props) {
                                                 </Col>
                                                 {
                                                     y > 0 &&
-                                                    <Col span={12} style={{marginTop: "35.8px"}}>
+                                                    <Col lg={12} md={24} sm={24} style={{marginTop: "35.8px"}}>
                                                         <Button type="primary" onClick={() => setF(f.filter(p => p !== y))}>
                                                             Remove
                                                         </Button>
@@ -197,7 +198,7 @@ function QuoteBanner(props) {
                             <Button onClick={() => handleAdd()} type="primary">Add Car</Button>
                         </>
                         <Row gutter={[20, 20]} style={{marginTop: "20px"}}>
-                            <Col span={12}>
+                            <Col lg={12} md={24} sm={24}>
                                 <Form.Item
                                     label="Type"
                                     name="type"
@@ -214,7 +215,7 @@ function QuoteBanner(props) {
                                     </Radio.Group>
                                 </Form.Item>
                             </Col>
-                            <Col span={12}>
+                            <Col lg={12} md={24} sm={24}>
                                 <Form.Item
                                     label="Run and drive"
                                     name="run"
@@ -233,7 +234,7 @@ function QuoteBanner(props) {
                             </Col>
                         </Row>
                         <Row gutter={[20, 20]}>
-                            <Col span={12}>
+                            <Col lg={12} md={24} sm={24}>
                                 <Form.Item
                                     label="Ship date"
                                     name="ship_date"
@@ -247,7 +248,7 @@ function QuoteBanner(props) {
                                     <DatePicker/>
                                 </Form.Item>
                             </Col>
-                            <Col span={12}>
+                            <Col lg={12} md={24} sm={24}>
                                 <Form.Item
                                     label="Name"
                                     name="name"
@@ -261,7 +262,7 @@ function QuoteBanner(props) {
                                     <Input/>
                                 </Form.Item>
                             </Col>
-                            <Col span={12}>
+                            <Col lg={12} md={24} sm={24}>
                                 <Form.Item
                                     label="Email"
                                     name="email"
@@ -275,7 +276,7 @@ function QuoteBanner(props) {
                                     <Input type="email"/>
                                 </Form.Item>
                             </Col>
-                            <Col span={12}>
+                            <Col lg={12} md={24} sm={24}>
                                 <Form.Item
                                     label="Phone"
                                     name="phone"
@@ -303,6 +304,7 @@ function QuoteBanner(props) {
                     </Form>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

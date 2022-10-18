@@ -1,20 +1,19 @@
 import React from 'react';
 import "./header.scss"
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import logo from "../../assets/imgs/logo.png"
 import {AiOutlineMenu} from "react-icons/ai"
 
-function Header(props) {
+function Header({isOpen, setIsOpen}) {
+    const navigate = useNavigate()
     return (
         <div className="header">
             <div className="content pd">
                 <div className="logo">
                     <a href="/">
-                        <img
-                            src={logo}
-                            alt="logo"
-                            className="img"
-                        />
+                        <Link to="/">
+                            <img src={logo} alt="logo" className="img"/>
+                        </Link>
                     </a>
                 </div>
                 <div className="pages">
@@ -37,10 +36,10 @@ function Header(props) {
                         <div className="link">Help</div>
                     </Link>
                 </div>
-                <div className="quote">
+                <div className="quote" onClick={() => navigate("/quote")}>
                     <Link className="button">get a quote</Link>
                 </div>
-                <div className="menu">
+                <div className="menu" onClick={() => setIsOpen(!isOpen)}>
                     <AiOutlineMenu className="icon"/>
                 </div>
             </div>

@@ -46,3 +46,42 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .aSec1 {
+    .banner {
+      .content {
+
+        .t1 {
+          font-size: 40px;
+        }
+
+        .t2 {
+          font-size: 18px;
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .aSec1 {
+    .banner {
+      height: 400px;
+
+      .content {
+        top: 35%;
+
+        .t1 {
+          font-size: 36px;
+        }
+
+        .t2 {
+          font-size: 16px;
+          width: 90%;
+        }
+      }
+    }
+  }
+}

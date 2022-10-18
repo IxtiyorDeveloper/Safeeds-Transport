@@ -1,6 +1,7 @@
 import React from 'react';
 import "./acmem.scss"
 import {BsFillPersonFill} from "react-icons/bs"
+import img from "../../../assets/imgs/avatar.jpg"
 
 function Acmem(props) {
     const data = [
@@ -8,25 +9,25 @@ function Acmem(props) {
             name: "David Miller",
             action: "Updated their profile",
             date: "2 days ago",
-            img: "https://mercuryautotransport.com/wp-content/uploads/avatars/72/633f38a7c0cf9-bpfull.jpg"
+            img: img
         },
         {
             name: "David Miller",
             action: "Updated their profile",
             date: "2 days ago",
-            img: "https://mercuryautotransport.com/wp-content/uploads/avatars/72/633f38a7c0cf9-bpfull.jpg"
+            img: img
         },
         {
             name: "David Miller",
             action: "Updated their profile",
             date: "2 days ago",
-            img: "https://mercuryautotransport.com/wp-content/uploads/avatars/72/633f38a7c0cf9-bpfull.jpg"
+            img: img
         },
         {
             name: "David Miller",
             action: "Updated their profile",
             date: "2 days ago",
-            img: "https://mercuryautotransport.com/wp-content/uploads/avatars/72/633f38a7c0cf9-bpfull.jpg"
+            img: img
         },
     ];
     const people = [

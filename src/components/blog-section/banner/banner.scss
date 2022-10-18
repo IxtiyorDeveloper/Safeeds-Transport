@@ -66,3 +66,60 @@
     }
   }
 }
+
+@media (max-width: 800px) {
+  .bbanner{
+    .bg {
+      .con {
+
+        .title {
+          font-size: 24px;
+          line-height: 28px;
+          text-align: center;
+        }
+        .nrw {
+
+          .name {
+            font-size: 12px;
+            padding-right: 10px;
+          }
+
+          .date {
+            color: var(--e-global-color-secondary);
+            font-size: 12px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 500px) {
+  .bbanner{
+    .bg {
+      .con {
+
+        .title {
+          font-size: 20px;
+          line-height: 24px;
+          text-align: center;
+        }
+        .nrw {
+
+          .name {
+            font-size: 10px;
+            padding-right: 10px;
+          }
+
+          .date {
+            color: var(--e-global-color-secondary);
+            font-size: 10px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

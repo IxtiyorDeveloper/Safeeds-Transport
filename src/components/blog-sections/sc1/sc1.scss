@@ -14,7 +14,7 @@
     transition: all linear .2s;
     height: 100%;
 
-    &:hover{
+    &:hover {
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       cursor: pointer;
     }
@@ -70,7 +70,8 @@
           background-color: var(--F9);
           align-items: center;
           justify-content: center;
-          .icon{
+
+          .icon {
             font-size: 24px;
             color: #DCDDDF;
           }
@@ -86,6 +87,24 @@
           .date {
             color: var(--bb-alternate-text-color);
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .wr {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    .cd{
+      .cnt{
+        padding: 20px!important;
+        .t1{
+          font-size: 18px;
+        }
+
+        .tx {
+          font-size: 14px;
         }
       }
     }

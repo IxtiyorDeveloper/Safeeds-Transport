@@ -41,10 +41,10 @@
       font-style: normal;
       text-decoration: none;
       letter-spacing: 0px;
-      color: var( --e-global-color-primary );
+      color: var(--e-global-color-primary);
       padding: 5px 20px;
       margin-top: 20px;
-      cursor: pointer!important;
+      cursor: pointer !important;
     }
   }
 
@@ -62,3 +62,27 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .contactSection {
+    flex-direction: column-reverse;
+
+    .content {
+      padding-bottom: 30px;
+      width: 100%;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+      padding-left: 12%;
+      margin-top: 50px;
+    }
+    .img{
+      width: 100% !important;
+      height: 300px!important;
+      img{
+        height: 300px;
+      }
+    }
+  }
+}
+

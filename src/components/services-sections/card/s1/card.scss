@@ -56,3 +56,42 @@
     }
   }
 }
+@media (max-width: 500px) {
+  .mcard{
+    .qu {
+      font-size: 24px;
+    }
+    .inputs{
+      .txt{
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .mcard{
+    .qu {
+      font-size: 20px;
+    }
+    .inputs{
+      .txt{
+        flex-direction: column;
+        gap: 10px;
+      }
+      .on1 {
+        .t1 {
+          font-size: 14px;
+        }
+      }
+
+      .on2 {
+
+        .t1 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
