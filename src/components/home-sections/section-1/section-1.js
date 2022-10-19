@@ -9,7 +9,7 @@ const {Option} = Select;
 
 function Section1(props) {
 
-    const [value, setValue] = useState(1);
+    const [value, setValue] = useState("Open");
 
     const children = [];
 
@@ -32,10 +32,10 @@ function Section1(props) {
                 style={{backgroundImage: `url(${bgImg})`}}>
                 <div className="bgMaker">
                     <div className="bold-text">
-                        The Premiere Vehicle Shipping <br/>Experience
+                        The leading transportation company <br/> all over the states
                     </div>
                     <div className="sText">
-                        Sherpa Auto Transport provides the best transport experience with upfront,
+                        Safeeds Transport Inc provides the best transport experience with upfront,
                         transparent <br/> pricing
                         backed by our Price Lock Promise.
                     </div>

@@ -9,8 +9,17 @@ export class GMap extends Component {
             width: '100%',
             height: '70vh'
         }
+
         return (
-            <Map google={this.props.google} zoom={14} style={style}>
+            <Map
+                google={this.props.google}
+                zoom={14}
+                style={style}
+                initialCenter={{
+                    lat: 40.62284628985301,
+                    lng: -73.96335934418308
+                }}
+            >
 
                 <Marker onClick={this.onMarkerClick}
                         name={'Current location'} />
@@ -27,5 +36,5 @@ export class GMap extends Component {
 
 
 export default GoogleApiWrapper({
-    apiKey: ("AIzaSyC5vQtmGVhFWpFQk90n72latEEax4dxF7E")
+    apiKey: ("AIzaSyCB1vQhgArG3pHSL4T8_UB_E5Vghji8BBE")
 })(GMap)

@@ -14,7 +14,7 @@ function S1(props) {
                         Door-To-Door Service, 100% Bumper-To-Bumper Insurance
                     </div>
                     <div className="tx1">
-                        When you go with Mercury to ship your vehicle, you can rest assured that the carrier assigned to
+                        When you go with Safeeds Transport Inc to ship your vehicle, you can rest assured that the carrier assigned to
                         move your car is fully insured and licensed with the&nbsp;<span>FMCSA (Federal Motor Carrier and Saftey
                         Administration).
                         </span>

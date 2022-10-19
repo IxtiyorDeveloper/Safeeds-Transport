@@ -4,7 +4,7 @@
   padding: 40px 0;
 
   .t1 {
-    color: #232b36;
+    color:var(--23b);
     font-size: 36px;
     line-height: 1.2;
     font-weight: 600;
@@ -13,7 +13,7 @@
   }
 
   .t2 {
-    color: #232b36;
+    color: var(--23b);
     font-size: 19px;
     line-height: 1.42;
     margin-bottom: 16px !important;
@@ -55,7 +55,7 @@
         display: flex;
 
         .circle {
-          background-color: var(--c1);
+          background-color: var(--pr);
           width: 70px !important;
           height: 70px !important;
           border-radius: 50%;
@@ -75,7 +75,7 @@
 
           .tit1 {
             font-weight: 700;
-            color: #00a1ef;
+            color: var(--pr);
             font-size: 24px;
           }
 
@@ -100,6 +100,14 @@
 
 @media (max-width: 800px) {
   .videoSection {
+    .t1 {
+      font-size: 24px;
+    }
+    .t2 {
+      font-size: 16px;
+      line-height: 1.42;
+    }
+
     .vd {
       width: 100%;
       margin-top: 50px;

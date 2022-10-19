@@ -13,7 +13,7 @@ function VideoSection(props) {
                     How do I book with an auto transport company?
                 </div>
                 <div className="t2">
-                    Montway Auto Transport’s company guide to quick, easy and safe auto shipping
+                    Safeeds Transport Inc's guide to quick, easy and safe auto shipping
                 </div>
                 <div className="vd">
                     <div className="vid">
@@ -36,9 +36,9 @@ function VideoSection(props) {
                             </div>
                         </div>
                         <div className="tx">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut cum dolor dolorum
-                            eaque eos et, excepturi id itaque labore mollitia neque nisi repellendus similique
-                            tempora. Est ipsum laborum rerum?
+                            Ready to experience something different? Safeeds Transport Inc is an online car shipping
+                            marketplace that
+                            puts you in complete control.
                         </div>
                         <div className="steps">
                             <div className="circle">
@@ -50,9 +50,8 @@ function VideoSection(props) {
                             </div>
                         </div>
                         <div className="tx">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut cum dolor dolorum
-                            eaque eos et, excepturi id itaque labore mollitia neque nisi repellendus similique
-                            tempora. Est ipsum laborum rerum?
+                            Upon booking, you will instantly receive an Order Confirmation email. Look for that in your
+                            email inbox or drag it over from another folder.
                         </div>
                         <div className="steps">
                             <div className="circle">
@@ -64,9 +63,9 @@ function VideoSection(props) {
                             </div>
                         </div>
                         <div className="tx">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut cum dolor dolorum
-                            eaque eos et, excepturi id itaque labore mollitia neque nisi repellendus similique
-                            tempora. Est ipsum laborum rerum?
+                            The auto transporter, or carrier, is once again not supposed to just show up unannounced.
+                            The driver ideally should call the day before to alert your destination contact of his
+                            pending arrival, and will give a rough estimation of what time of day to expect.
                         </div>
                     </div>
                 </div>

@@ -10,21 +10,21 @@ import Twittertamdefult1 from "../../../assets/vectorIcons/twittertamdefult1";
 export default function ContactUs() {
     const instaGram = () => {
         // window.location.href = "https://youtu.be/CRtB7DZJqHk";
-        window.open("https://www.instagram.com");
+        window.open("https://www.instagram.com/safeedstransport");
 
     }
     const faceBook = () => {
         // window.location.href = "https://youtu.be/CRtB7DZJqHk";
-        window.open("https://www.facebook.com");
+        window.open("https://www.facebook.com/safeedstransportinc");
 
     }
     const twitTer = () => {
         // window.location.href = "https://youtu.be/CRtB7DZJqHk";
-        window.open("https://www.twitter.com");
+        window.open("https://twitter.com/safeedsus");
 
     }
     const sendMail = () => {
-        window.location.href = "mailto:info@dtmtrucking.com?subject=DtmTruckCompany";
+        window.location.href = "mailto:info@safeeds.us?subject=AutoShipping";
     }
     return (
         <div className={styles.wrapper} id="section-7">
@@ -45,8 +45,7 @@ export default function ContactUs() {
                             <Location/>
                         </div>
                         <div className={styles.text}>
-                            1275 Davis Rd, Suite 130
-                            Elgin, IL 60123
+                            1201 Avenue K 3b, Brooklyn, NY 11230, United States
                         </div>
                     </div>
                     <div className={styles.adress}>
@@ -58,7 +57,7 @@ export default function ContactUs() {
                             <div className={styles.email}
                                  onClick={sendMail}
                             >
-                                info@dtmtrucking.com
+                                info@safeeds.us
                             </div>
                         </div>
                     </div>
@@ -67,10 +66,7 @@ export default function ContactUs() {
                             <PhoneIcon/>
                         </div>
                         <div className={styles.text}>
-                            <a className={styles.phoneNumber} href="tel:+17733092111">+1 773 309 2111</a>
-                            <div>
-                                <a className={styles.phoneNumber} href="tel:+16308838733 ">+1 630 883 8733 </a>
-                            </div>
+                            <a className={styles.phoneNumber} href="tel:3153144337">(315)-314-4337</a>
                         </div>
                     </div>
                     <div className={styles.htitle}>
@@ -78,18 +74,16 @@ export default function ContactUs() {
                     </div>
                     <div className={styles.icon}>
                         <div className={styles.iconIn} onClick={faceBook}>
-                            <Facebookteamdefult1 />
+                            <Facebookteamdefult1/>
                         </div>
                         <div className={styles.iconIn} onClick={instaGram}>
-                            <Instagramteamdefult1 />
+                            <Instagramteamdefult1/>
                         </div>
                         <div className={styles.iconIn} onClick={twitTer}>
                             <Twittertamdefult1/>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
 

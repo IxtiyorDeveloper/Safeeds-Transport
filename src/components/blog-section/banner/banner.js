@@ -4,20 +4,31 @@ import img from "../../../assets/imgs/banner.webp"
 import {BsPersonCircle} from "react-icons/bs"
 import {AiOutlineCalendar} from "react-icons/ai"
 
-function Banner(props) {
+function Banner({article}) {
+    const data = article?.data?.data
     return (
         <div className="bbanner" style={{backgroundImage: `url("${img}")`}}>
             <div className="bg">
                 <div className="con">
                     <div className="title">
-                        Can you Drive Your Car in Europe
+                        {data?.title}
                     </div>
                     <div className="nrw">
                         <div className="name">
-                            <BsPersonCircle/> By Marcus Stawarski
+                            <BsPersonCircle/> {data?.name}
                         </div>
                         <div className="date">
-                            <AiOutlineCalendar/> September 7, 2022
+                            <AiOutlineCalendar/>
+                            {
+                            `${new Date(data?.createdAt).getUTCFullYear()}-${new Date(data?.createdAt).getMonth() > 9 ?
+                                new Date(data?.createdAt).getMonth():
+                                `0${new Date(data?.createdAt).getMonth()}`
+                            }-${new Date(data?.createdAt).getDate() > 9 ?
+                                new Date(data?.createdAt).getDate():
+                                `0${new Date(data?.createdAt).getDate()}`
+                            }
+                            `
+                        }
                         </div>
                     </div>
                 </div>

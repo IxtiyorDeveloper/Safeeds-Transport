@@ -76,37 +76,34 @@ function FeatureSection(props) {
                         </div>
                         <div className="tx">
                             Who We Are
-                            Built on American values, AmeriFreight was founded in 2004 in Peachtree City, Georgia, a
-                            beautiful town located south of Atlanta. From the onset, AmeriFreight’s mission was to
+                            Built on American values, Safeeds Transport Inc was founded in Brooklyn, New York, a
+                            beautiful town located south of Atlanta. From the onset, Safeeds Transport Inc’s mission was
+                            to
                             become
                             the #1 most trusted logistics service provider in the US. From our humble beginnings in
-                            2004,
-                            AmeriFreight has always brought honesty and transparency into the very complex vehicle
+                            2020
+                            Safeeds Transport Inc has always brought honesty and transparency into the very complex
+                            vehicle
                             shipping
                             industry.
                         </div>
                     </div>
-                    <div className="tx2">
-                        For the past 17 years till now, AmeriFreight has continued to disrupt the auto transport
+                    <div className="tx21">
+                        For the past many years till now, Safeeds Transport Inc has continued to disrupt the auto
+                        transport
                         industry
                         with honesty, competence, and innovation, providing high-quality service to our customers
-                        nationwide. AmeriFreight considers people first, and productivity second with a sincere intent
+                        nationwide. Safeeds Transport Inc considers people first, and productivity second with a sincere
+                        intent
                         to be
                         an accountable corporate citizen contributing towards the industry, society, and the community.
                         We
                         aspire to transform the shipping industry with a people-first approach in all things.
 
                         We CARE
-                        AmeriFreight takes its role in the community very seriously. For this reason, AmeriFreight
-                        created
-                        the Corporate Awareness and Responsibility Effort (CARE) with a mission to pay forward to the
-                        community. We enjoy supporting charities that are dear to the hearts of our employees and other
-                        wonderful Americans. Through this effort, AmeriFreight partnered with the Alzheimer’s
-                        Association’s
-                        Walk to End Alzheimer’s, Wellspring Living, and the American Society for the Prevention of
-                        Cruelty
-                        to Animals (ASPCA) to assist these nonprofit organizations toward their noble causes. We at
-                        AmeriFreight believe it is a privileged duty to help others and pay forward to our communities.
+                        Safeeds Transport Inc takes its role in the community very seriously. We at
+                        Safeeds Transport Inc believe it is a privileged duty to help others and pay forward to our
+                        communities.
                         Please visit our CARE page to learn more about the causes we support.
                     </div>
                 </div>

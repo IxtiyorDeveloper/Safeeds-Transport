@@ -18,7 +18,7 @@ function SInfo(props) {
                             />
                         </div>
                         <div className="title1">
-                            Mercury is an Auto Transport Broker
+                            Safeeds Transport Inc is an Auto Transport Broker
                         </div>
                         <div className="text1">
                             As a transport broker, we do not ship vehicles. Rather, we charge a fee and find the
@@ -45,7 +45,7 @@ function SInfo(props) {
                             Auto transport carriers do the actual work of picking up your vehicle and delivering it to
                             your chosen destination. They are on the road full time and don’t have the time, resources,
                             or desire to interact directly with customers. Drivers or their dispatch managers rely on
-                            auto transport brokers such as Mercury to find work.
+                            auto transport brokers such as Safeeds Transport Inc to find work.
                         </div>
                     </div>
                 </div>

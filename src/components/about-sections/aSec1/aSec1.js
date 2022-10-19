@@ -16,8 +16,8 @@ function ASec1(props) {
                         About Us
                     </div>
                     <div className="t2">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum error explicabo, fugit impedit
-                        nam perferendis quasi quibusdam quis quisquam recusandae?
+                        Safeeds Transport Inc has grown to one of the largest auto transport companies in the country
+                        in less than five years!
                     </div>
                 </div>
             </div>

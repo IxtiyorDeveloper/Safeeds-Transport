@@ -1,30 +1,30 @@
 import React from 'react';
 import "./acmem.scss"
 import {BsFillPersonFill} from "react-icons/bs"
-import img from "../../../assets/imgs/avatar.jpg"
+import img from "../../../assets/imgs/account.png"
 
 function Acmem(props) {
     const data = [
         {
-            name: "David Miller",
+            name: "Jake Scott",
+            action: "Posted a new blog",
+            date: "1 days ago",
+            img: img
+        },
+        {
+            name: "Richard Kane",
+            action: "Updated their profile",
+            date: "4 days ago",
+            img: img
+        },
+        {
+            name: "David Johnson",
             action: "Updated their profile",
             date: "2 days ago",
             img: img
         },
         {
-            name: "David Miller",
-            action: "Updated their profile",
-            date: "2 days ago",
-            img: img
-        },
-        {
-            name: "David Miller",
-            action: "Updated their profile",
-            date: "2 days ago",
-            img: img
-        },
-        {
-            name: "David Miller",
+            name: "Frank Lannister",
             action: "Updated their profile",
             date: "2 days ago",
             img: img
@@ -32,63 +32,63 @@ function Acmem(props) {
     ];
     const people = [
         {
-            name: "Jack Squire",
+            name: "Michael Steven",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Richard Kane",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "David Johnson",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Frank Lannister",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Jake Scott",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Tony Davis",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Trever Noah",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Rick Novak",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Ronald Barr",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Roger Lum",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Jeff Johnson",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Lena Smith",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Olivia Perry",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Melvin Forbis",
             img: ""
         },
         {
-            name: "Jack Squire",
+            name: "Obmar Wood",
             img: ""
         },
     ]

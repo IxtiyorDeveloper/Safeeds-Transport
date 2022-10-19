@@ -7,10 +7,9 @@ import {fetchSearchFields} from "../../../../utils/functions/fetchOptions";
 
 function CardF1({setStep}) {
 
-    const [value, setValue] = useState(1);
+    const [value, setValue] = useState("Open");
 
     const onChange = (e) => {
-        console.log('radio checked', e.target.value);
         setValue(e.target.value);
     };
 

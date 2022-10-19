@@ -9,7 +9,8 @@ function SelectOption({
                           placeholder,
                           setD,
                           setP,
-                          type
+                          type,
+                          defaultValue
                       }) {
 
     const [fetching, setFetching] = useState(false)
@@ -57,6 +58,7 @@ function SelectOption({
             options={options}
             onChange={onChange}
             value={value}
+            defaultValue={defaultValue}
         />
     );
 }

@@ -37,7 +37,7 @@ function Header({isOpen, setIsOpen}) {
                     </Link>
                 </div>
                 <div className="quote" onClick={() => navigate("/quote")}>
-                    <Link className="button">get a quote</Link>
+                    <button className="glow-on-hover" type="button">GET A QUOTE</button>
                 </div>
                 <div className="menu" onClick={() => setIsOpen(!isOpen)}>
                     <AiOutlineMenu className="icon"/>

@@ -1,6 +1,6 @@
 import React from 'react';
 import "./cards.scss"
-import img from "../../../assets/imgs/team.jpg"
+import img from "../../../assets/imgs/account.png"
 import {AiOutlineMail} from "react-icons/ai"
 import Button from "../../elements/button/button";
 
@@ -8,40 +8,47 @@ function Cards(props) {
 
     const data = [
         {
-            name: "Damir Miller",
+            name: "Michael Steven",
             img: img,
-            position: "Experienced Auto transport specialist"
+            position: "Managing director",
+            email: "michael@safeeds.us",
+            phone: "315-849-2823"
         },
         {
-            name: "Damir Miller",
+            name: "Richard Kane",
             img: img,
-            position: "Experienced Auto transport specialist"
+            position: "Experienced Auto transport specialist",
+            email: "richard@safeeds.us",
+            phone: "315-849-1255"
         },
         {
-            name: "Damir Miller",
+            name: "David Johnson",
             img: img,
-            position: "Experienced Auto transport specialist"
+            position: "Experienced Auto transport specialist",
+            email: "david@safeeds.us",
+            phone: "315-221-9095"
         },
         {
-            name: "Damir Miller",
+            name: "Frank Lannister",
             img: img,
-            position: "Experienced Auto transport specialist"
+            position: "Experienced Auto transport specialist",
+            email: "frank@safeeds.us",
+            phone: "315-234-0511"
         },
         {
-            name: "Damir Miller",
+            name: "Jake Scott",
             img: img,
-            position: "Experienced Auto transport specialist"
+            position: "Experienced Auto transport specialist",
+            email: "jake@safeeds.us",
+            phone: "315-314-3543"
         },
         {
-            name: "Damir Miller",
+            name: "Tony Davis",
             img: img,
-            position: "Experienced Auto transport specialist"
-        },
-        {
-            name: "Damir Miller",
-            img: img,
-            position: "Experienced Auto transport specialist"
-        },
+            position: "Experienced Auto transport specialist",
+            email: "tony@safeeds.us",
+            phone: "315-819-5263"
+        }
     ];
 
     return (
@@ -74,7 +81,7 @@ function Cards(props) {
                                             <AiOutlineMail className="icon"/>&nbsp;Email:
                                         </div>
                                         <div className="iwr1">
-                                            info@safeeds.us
+                                            {i?.email}
                                         </div>
                                     </div>
                                     <div className="txt223">
@@ -82,7 +89,7 @@ function Cards(props) {
                                             <AiOutlineMail className="icon"/>&nbsp;Phone:
                                         </div>
                                         <div className="iwr1">
-                                            315 458 65-58
+                                            {i?.phone}
                                         </div>
                                     </div>
                                 </div>

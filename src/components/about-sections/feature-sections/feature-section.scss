@@ -29,7 +29,7 @@
 
         .icon {
           font-size: 45px;
-          color: var(--ts);
+          color: var(--white);
         }
       }
 
@@ -75,12 +75,19 @@
 
       .tx {
         color: #333;
-        font-size: 0.9375rem;
+        font-size: 18px;
         line-height: 1.6;
         margin-bottom: 1rem;
         margin-left: 20px;
       }
     }
+    .tx21{
+        color: #333;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        margin-left: 20px;
+      }
   }
 
   .quote {

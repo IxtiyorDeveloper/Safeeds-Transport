@@ -19,10 +19,7 @@ function Sw1(props) {
                         Give Us A Call
                     </div>
                     <div className="tel">
-                        Local: <span>954-239-1780</span>
-                    </div>
-                    <div className="ntel">
-                        TOLL-FREE: <span>800-553-1828</span>
+                        Local: <span>315-314-4337</span>
                     </div>
                 </div>
                 <div className="bx">
@@ -33,7 +30,7 @@ function Sw1(props) {
                         Email Us
                     </div>
                     <div className="tel">
-                        info @ mercuryautotransport.com
+                        <a href="mailto:info@safeeds.us">info@safeeds.us</a>
                     </div>
                 </div>
                 <div className="bx">
@@ -47,10 +44,11 @@ function Sw1(props) {
                         Our team is worldwide and our physical office is located at:
                     </div>
                     <div className="ntel">
-                        2240 SW 70th, Ave., Suite H
+                        1201 Avenue K 3b
                     </div>
                     <div className="ntel">
-                        Davie, Florida 33317 USA
+                        Brooklyn, NY 11230,
+                        United States
                     </div>
                 </div>
             </div>

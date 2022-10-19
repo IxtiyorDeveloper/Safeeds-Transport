@@ -16,7 +16,7 @@ function Call(props) {
                             alt="img"/>
                     </div>
                 </div>
-                <a href="" className="f2">CALL NOW: 877-850-1231</a>
+                <a href="tel:3153144337" className="f2">CALL NOW: 315-314-4337</a>
             </div>
         </div>
     );

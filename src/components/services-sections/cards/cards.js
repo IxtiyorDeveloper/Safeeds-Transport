@@ -6,7 +6,7 @@ function Cards(props) {
         {
             id: 1,
             title: "Experts You Can Trust",
-            text: "Drivers and dispatch managers for carriers contact Mercury based on our Central Dispatch postings. Once we verify rates and timing on your behalf, Mercury performs a thorough carrier background check. \n" +
+            text: "Drivers and dispatch managers for carriers contact Safeeds Transport Inc based on our Central Dispatch postings. Once we verify rates and timing on your behalf, Safeeds Transport Inc performs a thorough carrier background check. \n" +
                 "\n" +
                 "As part of providing a great car transport service, it is our job to guarantee that the carrier we assign to pickup your vehicle is licensed and insured.  Click here to check out our license.\n" +
                 "\n"

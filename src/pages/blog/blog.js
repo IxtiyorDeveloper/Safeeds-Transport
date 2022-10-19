@@ -4,14 +4,19 @@ import Banner from "../../components/blog-section/banner/banner";
 import TextSection from "../../components/blog-section/text-section/text-section";
 import ContactUs from "../../components/home-sections/contacts/contacts";
 import Partners from "../../components/home-sections/partners/partners";
+import {useArticle} from "hooks";
+import {Spin} from "antd";
 
 function Blog(props) {
+    const {data:article,isLoading} = useArticle()
     return (
         <div className="blog">
-            <Banner/>
-            <TextSection/>
-            <ContactUs/>
-            <Partners/>
+            <Spin spinning={isLoading}>
+                <Banner article={article}/>
+                <TextSection article={article}/>
+                <ContactUs/>
+                <Partners/>
+            </Spin>
         </div>
     );
 }

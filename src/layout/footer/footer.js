@@ -5,7 +5,7 @@ import {FaFax} from "react-icons/fa"
 import {HiOutlineMail} from "react-icons/hi"
 import {BsFillCalendarFill} from "react-icons/bs"
 import "./footer.scss"
-import logo from "../../assets/imgs/white-logo.png"
+import logo from "../../assets/imgs/yellow-logo.png"
 
 function Footer(props) {
     return (
@@ -14,13 +14,14 @@ function Footer(props) {
                 <div className="col">
                     <img src={logo}
                          alt="footerImg"/>
-                    <div className="tx">
-                        AmeriFreight is accredited and highly rated with the BBB. We offer REAL Discount car shipping
+                    <div className="txfr">
+                        Safeeds Transport Inc is accredited and highly rated with the BBB. We offer REAL Discount car
+                        shipping
                         rates
                         and
                         Comprehensive Auto Transport Protection with the AFta PLAN. Don't ship your car before you give
                         us a
-                        call. We want to earn your Trust. MC # : 597401 USDOT # : 2238770
+                        call. We want to earn your Trust. MC # : 01462168 USDOT # : 3938800
                     </div>
                 </div>
                 <div className="col">
@@ -31,34 +32,35 @@ function Footer(props) {
                         <div className="item">
                             <GoLocation className="icon"/>
                             <div className="tc">
-                                417 Dividend Drive,
-                                Suite D,
-                                Peachtree City, GA 30269
+                                1201 Avenue K 3b,
+                                Brooklyn, NY 11230,
+                                United States
                             </div>
                         </div>
                         <div className="item">
                             <AiFillPhone className="icon"/>
                             <div className="tc">
-                                Phone: (770) 486-1010
+                                <a href="tel:3153144337">Phone: (315)-314-4337</a>
                             </div>
                         </div>
                         <div className="item">
                             <FaFax className="icon"/>
                             <div className="tc">
-                                Fax: 1 (470) 745-6078
+                                <a href="tel:3153144337">Fax: (315)-314-4337</a>
                             </div>
                         </div>
                         <div className="item">
                             <HiOutlineMail className="icon"/>
                             <div className="tc">
-                                Email: Click here
+                                <a href="mailto:info@safeeds.us">Email: info@safeeds.us</a>
                             </div>
                         </div>
                         <div className="item">
                             <BsFillCalendarFill className="icon"/>
                             <div className="tc">
-                                Mon - Fri: 8am - 9pm EST
-                                Sat: 9am - 6pm
+                                Mon - Fri: 8am - 7pm EST
+                                <br/>
+                                Sat - Sun: 9am - 5pm
                             </div>
                         </div>
                     </div>
@@ -186,7 +188,7 @@ function Footer(props) {
                     Privacy Policy
                 </div>
                 <div className="chl">
-                   Accessibility Statement
+                    Accessibility Statement
                 </div>
                 <div className="chl">
                     CA Transparency in Supply Chains Act

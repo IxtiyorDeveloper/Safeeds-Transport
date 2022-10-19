@@ -1,10 +1,10 @@
 .wrapper {
-  //height: 70vh;
+  height: 70vh;
   z-index: 9000;
   width: 100%;
 
   .tit {
-    color: #242A72;
+    color: var(--23b);
     font-weight: 600;
     line-height: 3.9em;
     font-size: 2rem;
@@ -40,7 +40,7 @@
     //top: -60vh;
     top: 10vh;
     position: relative;
-    left: 15vw;
+    left: 10%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 
@@ -135,6 +135,11 @@
 
 @media (max-width: 990px) {
   .wrapper {
+    .tit {
+      line-height: 28px;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
     .contact {
       font-size: 32px;
     }
@@ -148,6 +153,8 @@
     }
 
     .left {
+      top: 20px;
+      left: 5%;
       .inner {
 
       }
@@ -159,14 +166,9 @@
   .wrapper {
 
     .contact {
-      font-size: 28px;
+      font-size: 20px;
 
       position: relative;
-    }
-
-    .left {
-      top: 10vh;
-      left: 10vw;
     }
 
     .footer {
@@ -180,14 +182,11 @@
   .wrapper {
 
     .contact {
-      font-size: 26px;
 
       position: relative;
     }
 
     .left {
-      top: 10vh;
-      left: 0;
 
       .inner {
         width: 100%;

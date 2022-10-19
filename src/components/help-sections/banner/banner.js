@@ -2,6 +2,7 @@ import React from 'react';
 import "./banner.scss"
 
 function Banner(props) {
+
     return (
         <div style={{
             backgroundImage: `url("https://d1d9oqfe9g83w6.cloudfront.net/assets/prod/images/covers/buildings.jpg?f8edef460cdad55a")`
@@ -14,11 +15,11 @@ function Banner(props) {
                         Terms & conditions
                     </div>
                     <div className="mt">
-                        Montway Auto Transport
+                        Safeeds Transport Inc
                     </div>
-                    <div className="bt">
+                    <a href="../../../assets/termsAndConditions.pdf" download className="bt">
                         Download as PDF
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

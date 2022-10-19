@@ -99,6 +99,7 @@ function QuoteBanner(props) {
                                         placeholder="ENTER ZIP CODE OR CITY"
                                         setP={setP}
                                         type="pickup"
+                                        defaultValue={"wasgington"}
                                     />
                                 </Form.Item>
                             </Col>
@@ -118,6 +119,7 @@ function QuoteBanner(props) {
                                         placeholder="ENTER ZIP CODE OR CITY"
                                         setD={setD}
                                         type="delivery"
+                                        defaultValue={"wasgington"}
                                     />
                                 </Form.Item>
                             </Col>
