@@ -1,7 +1,7 @@
 import axios from "axios";
 import {getCookie} from "utils/cookie";
 
-export const MainApi = "http://146.190.210.197/api";
+export const MainApi = "http://67.205.154.71/api";
 
 const instance = axios.create({
     baseURL: MainApi,
