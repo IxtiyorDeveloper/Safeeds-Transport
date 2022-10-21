@@ -17,7 +17,7 @@ function Banner(props) {
                     <div className="mt">
                         Safeeds Transport Inc
                     </div>
-                    <a href="../../../assets/termsAndConditions.pdf" download className="bt">
+                    <a href="./terms_and_conditions.pdf" download className="bt">
                         Download as PDF
                     </a>
                 </div>

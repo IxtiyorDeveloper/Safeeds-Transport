@@ -32,6 +32,9 @@ const SatisfiedCustomer = lazy(() =>
 const CreateSatisfiedCustomer = lazy(() =>
     import("./pages/satisfied-customers/create-satisfied-customer/create-satisfied-customer")
 )
+const SuccessPage = lazy(() =>
+    import("./components/quote-sections/success-page/success-page")
+)
 
 function App(props) {
 
@@ -47,6 +50,7 @@ function App(props) {
                 <Route path='/contact' element={<Layout><Contact/></Layout>}/>
                 <Route path='/help' element={<Layout><Help/></Layout>}/>
                 <Route path='/quote' element={<Layout><Quote/></Layout>}/>
+                <Route path='/success' element={<Layout><SuccessPage/></Layout>}/>
                 <Route path='/login' element={<Auth/>}/>
                 <Route path='/articles' element={
                     <RequireAuth>

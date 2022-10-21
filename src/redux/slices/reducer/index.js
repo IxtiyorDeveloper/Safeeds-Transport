@@ -5,9 +5,10 @@ const initialState = {
     quote: {
         pickup: "",
         delivery: "",
-        type: "Open"
+        type: ""
     }
 }
+
 
 const slice = createSlice({
     name: "main",

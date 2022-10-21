@@ -9,6 +9,7 @@ import {toast} from "react-toastify";
 import Template from "../../services-sections/card/template";
 import moment from "moment"
 import {useSendEmail} from "hooks";
+import {useNavigate} from "react-router-dom";
 
 function QuoteBanner(props) {
     const [years, setYears] = useState([])
@@ -16,10 +17,12 @@ function QuoteBanner(props) {
     const [d, setD] = useState("")
     const [f, setF] = useState([0])
     const locations = useSelector(getQuoteLocations())
+    const navigate = useNavigate()
 
     const sendEmail = useSendEmail({
         onSuccess() {
             toast.success("Successfully sent")
+            navigate("/success")
         },
         onError(err) {
             toast.error(err?.data?.error)
