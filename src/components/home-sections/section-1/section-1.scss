@@ -46,7 +46,7 @@
     transform: translate(-50%, 0);
     padding: 30px 50px;
     z-index: 100;
-    bottom: -180px;
+    bottom: -200px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
 
@@ -73,6 +73,15 @@
     .inputs {
       display: flex;
 
+      .col {
+        &:first-child {
+          margin-right: 10px;
+        }
+        &:nth-child(2){
+          margin-left: 10px;
+        }
+      }
+
       .sl {
         color: #62717a;
         //height: 46px;
@@ -98,7 +107,7 @@
         font-weight: 700;
         text-transform: uppercase;
         transition: 0.3s;
-        height: 45px !important;
+        height: 40px !important;
         max-width: 300px;
         box-shadow: 0 2px 4px rgb(0 0 0 / 6%);
         letter-spacing: normal;
@@ -112,20 +121,21 @@
         margin-left: 30px;
         cursor: pointer;
         padding: 0 30px;
+        margin-top: 30px;
       }
     }
 
-    &:before {
-      content: url(//sherpaautotransport-media.s3.amazonaws.com/wp-content/uploads/2021/09/07155550/fast-forward.png);
-      width: 64px;
-      height: 64px;
-      position: absolute;
-      left: -32px;
-      top: 31%;
-    }
+    //&:before {
+    //  content: url(//sherpaautotransport-media.s3.amazonaws.com/wp-content/uploads/2021/09/07155550/fast-forward.png);
+    //  width: 64px;
+    //  height: 64px;
+    //  position: absolute;
+    //  left: -32px;
+    //  top: 31%;
+    //}
 
     .txt {
-      margin: 20px 0;
+      margin: 0;
       display: flex;
       gap: 30px;
 
@@ -178,6 +188,14 @@
         display: flex;
         flex-direction: column;
 
+        .col {
+          &:first-child {
+            margin-right: 0px;
+          }
+          &:nth-child(2){
+            margin-left: 0px;
+          }
+        }
 
         .button {
           width: 100%;
@@ -218,7 +236,8 @@
         .sText {
           font-size: 16px;
           margin-top: 15px;
-          br{
+
+          br {
             display: none;
           }
         }

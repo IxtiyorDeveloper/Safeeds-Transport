@@ -10,11 +10,9 @@ function Header({isOpen, setIsOpen}) {
         <div className="header">
             <div className="content pd">
                 <div className="logo">
-                    <a href="/">
                         <Link to="/">
                             <img src={logo} alt="logo" className="img"/>
                         </Link>
-                    </a>
                 </div>
                 <div className="pages">
                     <Link to="/about" className="lk">

@@ -1,11 +1,11 @@
 import React from 'react';
 import "./button.scss"
 
-function Button({title, onClick, size = "24px"}) {
+function Button({title, onClick, size = "24px",htmlType}) {
     return (
-        <div style={{fontSize: size}} className="ubutton" onClick={onClick}>
+        <button style={{fontSize: size}} className="ubutton" onClick={onClick} type={htmlType}>
             {title}
-        </div>
+        </button>
     );
 }
 
