@@ -49,6 +49,7 @@ function App(props) {
                 <Route path='/team' element={<Layout><Teams/></Layout>}/>
                 <Route path='/contact' element={<Layout><Contact/></Layout>}/>
                 <Route path='/help' element={<Layout><Help/></Layout>}/>
+                <Route path='/terms-and-conditions' element={<Layout><Help/></Layout>}/>
                 <Route path='/quote' element={<Layout><Quote/></Layout>}/>
                 <Route path='/success' element={<Layout><SuccessPage/></Layout>}/>
                 <Route path='/login' element={<Auth/>}/>

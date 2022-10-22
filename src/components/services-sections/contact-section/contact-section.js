@@ -1,6 +1,7 @@
 import React from 'react';
 import "./contact-section.scss"
 import {useNavigate} from "react-router-dom";
+import img from "../../../assets/imgs/disp.jpg"
 
 function ContactSection(props) {
     const navigate = useNavigate()
@@ -17,7 +18,7 @@ function ContactSection(props) {
                 </div>
             </div>
             <div className="img">
-                <img src="https://mercuryautotransport.com/wp-content/uploads/2022/01/happy-couple_t20_Xzndp3.jpg"
+                <img src={img}
                      alt="rq"/>
             </div>
         </div>

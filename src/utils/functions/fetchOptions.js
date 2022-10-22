@@ -16,8 +16,8 @@ export const fetchSearchFields = async (
         const res = await api.post(`/${urlKey}?search=${searchString}`)
 
         return res?.data?.city_state?.[0]?.options.map((item) => ({
-            value: item?.text,
-            label: item?.text
+            value: item?._source?.text,
+            label: item?._source?.text
         }))
 
     } catch (err) {

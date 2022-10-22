@@ -34,28 +34,131 @@ function QuoteBanner(props) {
         for (let i = 0; i < f?.length; i++) {
             v = [...v,
                 {
-                    year:values[`year${f[i]}`],
-                    make:values[`make${f[i]}`],
-                    model:values[`make${f[i]}`],
+                    year: values[`year${f[i]}`],
+                    make: values[`make${f[i]}`],
+                    model: values[`make${f[i]}`],
                 }
             ]
         }
+        let vehicles = ""
+
+        for (let i = 0; i < v?.length; i++) {
+            vehicles += `
+                <tr style="border-collapse:collapse" >
+        <td align="left"
+    style="padding:0;Margin:0;padding-top:5px;padding-left:20px;padding-right:20px;background-position:center center">
+        <table align="left" cellPadding="0" cellSpacing="0"
+    style="border-collapse:collapse;border-spacing:0px;float:left">
+        <tbody>
+        <tr style="border-collapse:collapse">
+        <td align="center"
+    style="padding:0;Margin:0;width:180px" valign="top">
+        <table cellPadding="0" cellSpacing="0"
+    role="presentation"
+    style="border-collapse:collapse;border-spacing:0px"
+    width="100%">
+        <tbody>
+        <tr style="border-collapse:collapse">
+        <td align="left"
+    style="padding:0;Margin:0;padding-left:5px">
+        <p style="Margin:0;font-size:14px;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#333333">Vehicle (${i + 1}):</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+    <table align="right" cellPadding="0" cellSpacing="0"
+           style="border-collapse:collapse;border-spacing:0px">
+        <tbody>
+        <tr style="border-collapse:collapse">
+            <td align="left" style="padding:0;Margin:0;width:380px">
+                <table cellPadding="0" cellSpacing="0"
+                       role="presentation"
+                       style="border-collapse:collapse;border-spacing:0px;background-position:left top"
+                       width="100%">
+                    <tbody>
+                    <tr style="border-collapse:collapse">
+                        <td align="left"
+                            style="padding:0;Margin:0;padding-left:5px">
+                            <p style="Margin:0;font-size:14px;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#333333">
+                                ${v[i]?.year} ${v[i]?.model} ${v[i]?.make}</p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</td>
+</tr>
+    <tr style="border-collapse:collapse">
+                                                    <td align="left"
+                                                        style="padding:0;Margin:0;padding-left:20px;padding-right:20px;background-position:left top">
+                                                        <table cellPadding="0" cellSpacing="0"
+                                                               style="border-collapse:collapse;border-spacing:0px"
+                                                               width="100%">
+                                                            <tbody>
+                                                            <tr style="border-collapse:collapse">
+                                                                <td align="center"
+                                                                    style="padding:0;Margin:0;width:560px" valign="top">
+                                                                    <table cellPadding="0" cellSpacing="0"
+                                                                           role="presentation"
+                                                                           style="border-collapse:collapse;border-spacing:0px"
+                                                                           width="100%">
+                                                                        <tbody>
+                                                                        <tr style="border-collapse:collapse">
+                                                                            <td align="center"
+                                                                                style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px">
+                                                                                <table border="0" cellPadding="0"
+                                                                                       cellSpacing="0" height="100%"
+                                                                                       role="presentation"
+                                                                                       style="border-collapse:collapse;border-spacing:0px"
+                                                                                       width="100%">
+                                                                                    <tbody>
+                                                                                    <tr style="border-collapse:collapse">
+                                                                                        <td style="padding:0;Margin:0px 0px 0px 0px;border-bottom:1px solid #cccccc;background:none;height:1px;width:100%;margin:0px">&nbsp;</td>
+                                                                                    </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+`
+        }
 
         const body = Template({
-            vehicles:v,
-            condition:values?.run,
-            origin:values?.pickup,
-            destination:values?.destination,
-            date:moment(values?.ship_date).format("dd-mm-yyyy"),
-            type:values?.type,
-            email:values?.email,
-            phone:values?.phone,
-            name:values?.name,
+            vehicles: vehicles,
+            condition: values?.run,
+            origin: values?.pickup,
+            destination: values?.delivery,
+            date: moment(values?.ship_date, "DD-MM-YYYY"),
+            type: values?.type,
+            email: values?.email,
+            phone: values?.phone,
+            name: values?.name,
         })
+        // sendEmail.mutate({
+        //     email: "ixtiyor6689@gmail.com",
+        //     body: body,
+        //     subject: "Car shipment"
+        // })
         sendEmail.mutate({
-            email:"ixtiyor6689@gmail.com",
-            body:body,
-            "subject":"Car shipment"
+            email: "contact@safeeds.us",
+            body: body,
+            subject: "New Request for Auto Shipping"
         })
     };
     const onFinishFailed = (errorInfo) => {
@@ -152,7 +255,7 @@ function QuoteBanner(props) {
                                             placeholder="ENTER ZIP CODE OR CITY"
                                             setP={setP}
                                             type="pickup"
-                                            defaultValue={locations?.pickup}
+                                            defaultValue={!!locations?.pickup ? locations.pickup : undefined}
                                         />
                                     </Form.Item>
                                 </Col>
@@ -172,7 +275,7 @@ function QuoteBanner(props) {
                                             placeholder="ENTER ZIP CODE OR CITY"
                                             setD={setD}
                                             type="delivery"
-                                            defaultValue={locations?.delivery}
+                                            defaultValue={!!locations?.delivery ? locations.delivery : undefined}
                                         />
                                     </Form.Item>
                                 </Col>
@@ -197,7 +300,7 @@ function QuoteBanner(props) {
                                                                 },
                                                             ]}
                                                         >
-                                                            <Select placeholder="Year">
+                                                            <Select placeholder="2022">
                                                                 {
                                                                     years?.map((i, k) => {
                                                                         return (
@@ -220,7 +323,7 @@ function QuoteBanner(props) {
                                                                 },
                                                             ]}
                                                         >
-                                                            <Input placeholder="Make"/>
+                                                            <Input placeholder="E.g. Tesla"/>
                                                         </Form.Item>
                                                     </Col>
                                                     <Col lg={12} md={24} sm={24}>
@@ -234,7 +337,7 @@ function QuoteBanner(props) {
                                                                 },
                                                             ]}
                                                         >
-                                                            <Input placeholder="Model"/>
+                                                            <Input placeholder="E.g. Model S"/>
                                                         </Form.Item>
                                                     </Col>
                                                     {
@@ -316,7 +419,7 @@ function QuoteBanner(props) {
                                             },
                                         ]}
                                     >
-                                        <Input/>
+                                        <Input placeholder="Enter your name"/>
                                     </Form.Item>
                                 </Col>
                                 <Col lg={12} md={24} sm={24}>
@@ -330,7 +433,7 @@ function QuoteBanner(props) {
                                             },
                                         ]}
                                     >
-                                        <Input type="email"/>
+                                        <Input type="email" placeholder="Enter your email"/>
                                     </Form.Item>
                                 </Col>
                                 <Col lg={12} md={24} sm={24}>
@@ -344,7 +447,7 @@ function QuoteBanner(props) {
                                             },
                                         ]}
                                     >
-                                        <Input/>
+                                        <Input placeholder="Enter your phone"/>
                                     </Form.Item>
                                 </Col>
                             </Row>

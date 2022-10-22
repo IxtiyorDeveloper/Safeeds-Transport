@@ -35,17 +35,29 @@
         background-position: center;
         background-size: cover;
       }
-
-      .tx-main {
-        color: #232b36;
-        font-size: 24px;
-        line-height: 1.5;
-        display: inline-flex;
-        align-items: center;
-        cursor: pointer;
-        position: relative;
-        transition: color .2s cubic-bezier(.39, .575, .565, 1);
+      .t1 {
+        font-size: 1.25rem;
+        color: var(--bb-headings-color);
+        letter-spacing: -.24px;
+        line-height: 1.31;
+        margin: 0;
+        word-break: break-word;
         padding: 10px 20px 20px 20px;
+      }
+      .tx-main {
+        margin-top: 25px;
+        padding: 0;
+        font-size: 16px;
+        color: var(--bb-body-text-color);
+        letter-spacing: -.24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4; /* number of lines to show */
+        line-height: 20px;        /* fallback */
+        max-height: 80px;       /* fallback */
+        padding: 0px 20px 0px 20px;
       }
 
       .date {

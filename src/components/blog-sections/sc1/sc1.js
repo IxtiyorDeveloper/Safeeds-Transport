@@ -23,7 +23,7 @@ function Sc1(props) {
                                     <div className="t1">
                                         {i?.title}
                                     </div>
-                                    <div className="tx" dangerouslySetInnerHTML={{__html: i?.text}}/>
+                                    <div className="tx" dangerouslySetInnerHTML={{__html: i?.body}}/>
                                     <div className="si">
                                         <div className="ic1">
                                             <BsFillPersonFill className="icon"/>

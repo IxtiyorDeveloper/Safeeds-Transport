@@ -8,15 +8,15 @@ import {useArticle} from "hooks";
 import {Spin} from "antd";
 
 function Blog(props) {
-    const {data:article,isLoading} = useArticle()
+    const {data: article, isLoading} = useArticle()
     return (
         <div className="blog">
             <Spin spinning={isLoading}>
                 <Banner article={article}/>
-                <TextSection article={article}/>
-                <ContactUs/>
-                <Partners/>
             </Spin>
+            <TextSection article={article}/>
+            <ContactUs/>
+            <Partners/>
         </div>
     );
 }

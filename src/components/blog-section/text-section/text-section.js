@@ -4,9 +4,10 @@ import "./text-section.scss"
 import {MainApi} from "../../../api";
 import {useArticles} from "../../../hooks";
 import {Spin} from "antd";
+import {useNavigate} from "react-router-dom";
 
 function TextSection({article}) {
-
+    const navigate = useNavigate()
     const data = article?.data?.data
 
     const arr = data?.body?.split(/\./);
@@ -16,6 +17,10 @@ function TextSection({article}) {
     let rest = arr?.join('. ');
 
     const {data: articles, isLoading} = useArticles()
+
+    const handlePath = (id) => {
+        navigate(`/blogs/${id}`)
+    }
 
     return (
         <Spin spinning={isLoading}>
@@ -42,8 +47,8 @@ function TextSection({article}) {
                                 {
                                     articles?.data?.data?.map((i, k) => {
                                         return (
-                                            <li>
-                                                <p className="lit">
+                                            <li key={k}>
+                                                <p className="lit" onClick={() => handlePath(i.id)}>
                                                     {i?.title}
                                                 </p>
                                                 <p className="lid">

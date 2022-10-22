@@ -51,10 +51,16 @@
       .tx {
         margin-top: 25px;
         padding: 0;
-        font-size: 1rem;
+        font-size: 16px;
         color: var(--bb-body-text-color);
         letter-spacing: -.24px;
-        line-height: 1.5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4; /* number of lines to show */
+        line-height: 20px;        /* fallback */
+        max-height: 80px;       /* fallback */
       }
 
       .si {

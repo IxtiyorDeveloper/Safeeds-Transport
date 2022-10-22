@@ -82,7 +82,7 @@ function Footer(props) {
                                     <AiFillStar className="star"/>
                                 </div>
                                 <div className="nums">
-                                    (2735 Reviews)
+                                    (225 Reviews)
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@ function Footer(props) {
                                     <AiFillStar className="star"/>
                                 </div>
                                 <div className="nums">
-                                    (1270 Reviews)
+                                    (170 Reviews)
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@ function Footer(props) {
                                     <AiFillStar className="star"/>
                                 </div>
                                 <div className="nums">
-                                    (2735 Reviews)
+                                    (284 Reviews)
                                 </div>
                             </div>
                         </div>
@@ -130,7 +130,7 @@ function Footer(props) {
                                     <AiFillStar className="star"/>
                                 </div>
                                 <div className="nums">
-                                    (2735 Reviews)
+                                    (136 Reviews)
                                 </div>
                             </div>
                         </div>
@@ -144,6 +144,11 @@ function Footer(props) {
                         <div className="item">
                             <div className="tc">
                                 <a href="">Our Licence</a>
+                            </div>
+                        </div>
+                        <div className="item">
+                            <div className="tc">
+                                <a href="/terms-and-conditions">Terms & Conditions</a>
                             </div>
                         </div>
                         <div className="item">
@@ -164,11 +169,6 @@ function Footer(props) {
                         <div className="item">
                             <div className="tc">
                                 <a href="">How We Determine Your Quote</a>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="tc">
-                                <a href="">Terms & Conditions</a>
                             </div>
                         </div>
                         <div className="item">

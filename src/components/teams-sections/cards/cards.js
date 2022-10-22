@@ -1,7 +1,7 @@
 import React from 'react';
 import "./cards.scss"
 import img from "../../../assets/imgs/account.png"
-import {AiOutlineMail} from "react-icons/ai"
+import {AiOutlineMail,AiOutlinePhone} from "react-icons/ai"
 import Button from "../../elements/button/button";
 
 function Cards(props) {
@@ -86,7 +86,7 @@ function Cards(props) {
                                     </div>
                                     <div className="txt223">
                                         <div className="iwr">
-                                            <AiOutlineMail className="icon"/>&nbsp;Phone:
+                                            <AiOutlinePhone className="icon1"/>&nbsp;Phone:
                                         </div>
                                         <div className="iwr1">
                                             {i?.phone}

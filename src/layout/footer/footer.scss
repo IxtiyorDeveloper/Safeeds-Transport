@@ -13,7 +13,7 @@
     .col {
 
       img {
-        width: 176px;
+        width: 146px;
       }
 
       .txfr {
@@ -73,5 +73,19 @@
   .rg {
     margin-top: 25px;
     color: var(--88);
+  }
+}
+@media (max-width: 992px) {
+  .footer {
+
+    .inner {
+
+      .col {
+
+        img {
+          width: 120px;
+        }
+      }
+    }
   }
 }

@@ -1,12 +1,19 @@
 import React from 'react';
 import logo from "../../assets/imgs/logo.png"
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import "./sidebar.scss"
 
 function Sidebar({isOpen, setIsOpen}) {
+    const navigate = useNavigate()
     const handleNavigate = () => {
         setIsOpen(false)
     }
+
+    const handlePath = () => {
+        navigate("/quote");
+        setIsOpen(false)
+    }
+
     return (
         <div className={`sidebar ${isOpen ? "active" : ""}`}>
             <div className="sio">
@@ -48,7 +55,7 @@ function Sidebar({isOpen, setIsOpen}) {
                     </li>
                 </ul>
                 <div className="bt">
-                    <button className="glow-on-hover" type="button">GET A QUOTE</button>
+                    <button className="glow-on-hover" type="button" onClick={() => handlePath()}>GET A QUOTE</button>
                 </div>
                 <div className="tel">
                     <a href="tel:315-314-4337">315-314-4337</a>
