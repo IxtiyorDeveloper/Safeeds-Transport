@@ -92,7 +92,7 @@ const Admin = ({children}) => {
                     }}
                 >
                     Safeeds Transport Inc ©2022 Created by
-                    &nbsp;<a href="components/admin/admin">
+                    &nbsp;<a href="https://senior-developer.vercel.app/">
                     Ikhtiyor
                 </a>
                 </Footer>

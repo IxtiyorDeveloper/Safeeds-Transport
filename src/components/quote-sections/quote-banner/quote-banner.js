@@ -10,14 +10,18 @@ import Template from "../../services-sections/card/template";
 import moment from "moment"
 import {useSendEmail} from "hooks";
 import {useNavigate} from "react-router-dom";
+import 'react-phone-number-input/style.css'
+import {StyledPhoneInput} from "./quote-banner.e";
 
 function QuoteBanner(props) {
     const [years, setYears] = useState([])
-    const [p, setP] = useState("")
-    const [d, setD] = useState("")
+    const [p, setP] = useState(undefined)
+    const [d, setD] = useState(undefined)
     const [f, setF] = useState([0])
     const locations = useSelector(getQuoteLocations())
     const navigate = useNavigate()
+    const [phone, setPhone] = useState()
+    const [phoneError, setPhoneError] = useState(false)
 
     const sendEmail = useSendEmail({
         onSuccess() {
@@ -30,6 +34,8 @@ function QuoteBanner(props) {
     })
 
     const onFinish = (values) => {
+        setP("")
+        setD("")
         let v = [];
         for (let i = 0; i < f?.length; i++) {
             v = [...v,
@@ -155,14 +161,28 @@ function QuoteBanner(props) {
         //     body: body,
         //     subject: "Car shipment"
         // })
+
         sendEmail.mutate({
             email: "contact@safeeds.us",
             body: body,
             subject: "New Request for Auto Shipping"
         })
     };
+
+    const handlePhone = (e) => {
+        setPhone(e)
+        if (!!e) {
+            setPhoneError(false)
+        } else {
+            setPhoneError(true)
+        }
+    }
     const onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
+        if (form.getFieldError("phone")) {
+            setPhoneError(true)
+        } else {
+            setPhoneError(false)
+        }
     };
 
     const {Option} = Select;
@@ -443,11 +463,19 @@ function QuoteBanner(props) {
                                         rules={[
                                             {
                                                 required: true,
-                                                message: 'Please input your name!',
+                                                message: 'Please input your phone!',
                                             },
                                         ]}
                                     >
-                                        <Input placeholder="Enter your phone"/>
+                                        <StyledPhoneInput
+                                            value={phone}
+                                            onChange={e => handlePhone(e)}
+                                            mask="-"
+                                            format="+1 ### ### ####"
+                                            country="USA"
+                                            iserr={phoneError}
+                                            placeholder="123 456 7890"
+                                        />
                                     </Form.Item>
                                 </Col>
                             </Row>

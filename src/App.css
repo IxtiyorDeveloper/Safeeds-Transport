@@ -94,6 +94,10 @@
 .ant-col {
     width: 100% !important;
 }
+.PhoneInputCountry{
+    display: none!important;
+}
+
 @media (max-width: 1300px) {
     .pd {
         padding: 0 5%;

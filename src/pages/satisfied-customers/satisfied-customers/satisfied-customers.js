@@ -66,7 +66,7 @@ function SatisfiedCustomers(props) {
             action: {id: item?.id},
         }))
     }, [data])
-    console.log(data)
+
     return (
         <div>
             <Tabs
