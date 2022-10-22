@@ -21,4 +21,4 @@ function Blog(props) {
     );
 }
 
-export default Blog;
+export default React.memo(Blog);

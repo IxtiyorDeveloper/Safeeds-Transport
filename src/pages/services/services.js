@@ -42,4 +42,4 @@ function Services(props) {
     );
 }
 
-export default Services;
+export default React.memo(Services);

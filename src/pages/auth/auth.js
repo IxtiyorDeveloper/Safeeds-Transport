@@ -4,6 +4,7 @@ import "./auth.scss"
 import {useSignIn} from "hooks/useAuth";
 import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router-dom";
+import {InputPassword} from "./auth.e"
 
 function Auth(props) {
 
@@ -68,7 +69,7 @@ function Auth(props) {
                     name="password"
                     rules={[{required: true, message: 'Please input your password!'}]}
                 >
-                    <Input.Password/>
+                    <InputPassword/>
                 </Form.Item>
 
                 <Form.Item>
@@ -86,4 +87,4 @@ function Auth(props) {
     );
 }
 
-export default Auth;
+export default React.memo(Auth);

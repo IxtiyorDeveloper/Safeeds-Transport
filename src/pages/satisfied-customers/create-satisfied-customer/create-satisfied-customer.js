@@ -160,4 +160,4 @@ function CreateSatisfiedCustomer(props) {
     );
 }
 
-export default CreateSatisfiedCustomer;
+export default React.memo(CreateSatisfiedCustomer);

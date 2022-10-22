@@ -177,4 +177,4 @@ function CreateArticle(props) {
     );
 }
 
-export default CreateArticle;
+export default React.memo(CreateArticle);

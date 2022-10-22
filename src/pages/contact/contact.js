@@ -18,4 +18,4 @@ function Contact(props) {
     );
 }
 
-export default Contact;
+export default React.memo(Contact);

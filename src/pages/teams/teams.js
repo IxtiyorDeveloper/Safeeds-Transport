@@ -16,4 +16,4 @@ function Teams(props) {
     );
 }
 
-export default Teams;
+export default React.memo(Teams);

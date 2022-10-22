@@ -10,4 +10,4 @@ function Quote(props) {
     );
 }
 
-export default Quote;
+export default React.memo(Quote);

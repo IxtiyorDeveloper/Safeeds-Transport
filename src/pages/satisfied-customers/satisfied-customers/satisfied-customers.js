@@ -91,4 +91,4 @@ function SatisfiedCustomers(props) {
     );
 }
 
-export default SatisfiedCustomers;
+export default React.memo(SatisfiedCustomers);

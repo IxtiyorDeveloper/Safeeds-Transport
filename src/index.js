@@ -12,7 +12,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import Fallback from "./components/fallback/fallback";
 
 const queryClient = new QueryClient({
-    defaultOptions: {queries: {retry: 1}},
+    defaultOptions: {
+        queries: {
+            retry: 1,
+            refetchOnWindowFocus: false,
+        }
+    },
 })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

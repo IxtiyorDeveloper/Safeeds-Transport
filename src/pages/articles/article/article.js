@@ -237,4 +237,4 @@ function Article(props) {
     );
 }
 
-export default Article;
+export default React.memo(Article);
