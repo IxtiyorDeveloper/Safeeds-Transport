@@ -5,8 +5,10 @@ import "./sidebar.scss"
 
 function Sidebar({isOpen, setIsOpen}) {
     const navigate = useNavigate()
-    const handleNavigate = () => {
+
+    const handleNavigate = (path) => {
         setIsOpen(false)
+        navigate(path)
     }
 
     const handlePath = () => {
@@ -18,40 +20,28 @@ function Sidebar({isOpen, setIsOpen}) {
         <div className={`sidebar ${isOpen ? "active" : ""}`}>
             <div className="sio">
                 <div className="lg">
-                    <Link to="/" onClick={() => handleNavigate()}>
+                    <Link to="/" onClick={() => handleNavigate("/")}>
                         <img src={logo} alt="logo"/>
                     </Link>
                 </div>
                 <ul>
-                    <li>
-                        <Link to="/about" onClick={() => handleNavigate()}>
-                            About
-                        </Link>
+                    <li onClick={() => handleNavigate("/about")}>
+                        About
                     </li>
-                    <li>
-                        <Link to="/services" onClick={() => handleNavigate()}>
-                            Services
-                        </Link>
+                    <li onClick={() => handleNavigate("/services")}>
+                        Services
                     </li>
-                    <li>
-                        <Link to="/blogs" onClick={() => handleNavigate()}>
-                            Blogs
-                        </Link>
+                    <li onClick={() => handleNavigate("/blogs")}>
+                        Blogs
                     </li>
-                    <li>
-                        <Link to="/team" onClick={() => handleNavigate()}>
-                            Team
-                        </Link>
+                    <li onClick={() => handleNavigate("/team")}>
+                        Team
                     </li>
-                    <li>
-                        <Link to="/contact" onClick={() => handleNavigate()}>
-                            Contact
-                        </Link>
+                    <li onClick={() => handleNavigate("/contact")}>
+                        Contact
                     </li>
-                    <li>
-                        <Link to="/help" onClick={() => handleNavigate()}>
+                    <li onClick={() => handleNavigate("/help")}>
                             Help
-                        </Link>
                     </li>
                 </ul>
                 <div className="bt">
@@ -61,20 +51,14 @@ function Sidebar({isOpen, setIsOpen}) {
                     <a href="tel:315-314-4337">315-314-4337</a>
                 </div>
                 <ul className="ntr">
-                    <li>
-                        <Link to="/">
-                            Our license
-                        </Link>
+                    <li onClick={() => handleNavigate("/")}>
+                        Our license
                     </li>
-                    <li>
-                        <Link to="/">
-                            Terms & Conditions
-                        </Link>
+                    <li onClick={() => handleNavigate("/")}>
+                        Terms & Conditions
                     </li>
-                    <li>
-                        <Link to="/contacts">
-                            Contact us
-                        </Link>
+                    <li onClick={() => handleNavigate("/")}>
+                        Contact us
                     </li>
                 </ul>
             </div>

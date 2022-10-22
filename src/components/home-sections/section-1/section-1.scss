@@ -53,7 +53,7 @@
     .title {
       font-weight: 700;
       font-size: 25px;
-      color: var(----pr2);
+      color: var(--pr2);
     }
 
     .line {
@@ -164,6 +164,9 @@
 
         .bold-text {
           font-size: 36px;
+          br{
+            display: none;
+          }
         }
 
         .sText {
@@ -183,6 +186,10 @@
         font-size: 20px;
       }
 
+      .tr {
+        font-size: 15px !important;
+        margin-bottom: 8px;
+      }
 
       .inputs {
         display: flex;
@@ -222,7 +229,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .section-1 {
     .sWr {
       .bgMaker {
@@ -245,13 +252,15 @@
     }
 
     .card {
-      padding: 30px 25px;
+      padding: 20px 25px;
       z-index: 100;
       bottom: -260px;
       min-width: 340px !important;
 
       .title {
         font-size: 20px;
+        font-weight: 600;
+        line-height: 22px;
       }
 
 

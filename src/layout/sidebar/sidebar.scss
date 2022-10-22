@@ -31,15 +31,12 @@
         letter-spacing: 1.5px;
         border-bottom: 1px solid var(--88);
         padding: 4px 0;
+        color: var(--23b) !important;
+        font-size: 16px;
+        text-transform: uppercase;
 
-        a {
-          color: var(--23b) !important;
-          font-size: 16px;
-          text-transform: uppercase;
-
-          &:hover {
-            color: var(--e-global-color-kadence1) !important;
-          }
+        &:hover {
+          color: var(--e-global-color-kadence1) !important;
         }
       }
     }
