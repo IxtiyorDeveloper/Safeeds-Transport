@@ -103,9 +103,19 @@
     .wr {
       .latest {
         .tx-main {
-          color: #232b36;
-          font-size: 20px;
-          padding: 10px 20px 10px 20px;
+          margin-top: 25px;
+          padding: 0;
+          font-size: 16px;
+          color: var(--bb-body-text-color);
+          letter-spacing: -.24px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4; /* number of lines to show */
+          line-height: 20px;        /* fallback */
+          max-height: 80px;       /* fallback */
+          padding: 0px 20px 0px 20px;
         }
         .date {
           font-size: 14px;
