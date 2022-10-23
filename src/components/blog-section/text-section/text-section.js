@@ -48,7 +48,7 @@ function TextSection({article}) {
                                     articles?.data?.data?.map((i, k) => {
                                         return (
                                             <li key={k}>
-                                                <p className="lit" onClick={() => handlePath(i.id)}>
+                                                <p className="lit" onClick={() => handlePath(i?.title?.replace(/\s/g, '-'))}>
                                                     {i?.title}
                                                 </p>
                                                 <p className="lid">

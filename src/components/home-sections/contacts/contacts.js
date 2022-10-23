@@ -26,6 +26,7 @@ export default function ContactUs() {
     const sendMail = () => {
         window.location.href = "mailto:info@safeeds.us?subject=AutoShipping";
     }
+
     return (
         <div className={styles.wrapper} id="section-7">
             <div className={styles.tit}>

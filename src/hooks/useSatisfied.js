@@ -46,8 +46,9 @@ export const useSatisfieds = () => {
     return useQuery(["satisfieds"], () => getSatisfieds())
 }
 
-export const useSatisfied = () => {
-    const {id} = useParams()
+export const useSatisfied = (pid) => {
+    const {id: id1} = useParams()
+    const id = pid ?? id1
     return useQuery(["satisfied", id], () => getSatisfied(id), {
         enabled: !!id,
     })

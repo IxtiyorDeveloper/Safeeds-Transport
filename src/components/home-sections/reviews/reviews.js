@@ -20,8 +20,6 @@ function Reviews(props) {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
                 }
             },
             {
@@ -69,7 +67,7 @@ function Reviews(props) {
                                                     }
                                                 </div>
                                             </div>
-                                            <div className="bottom" dangerouslySetInnerHTML={{__html:i?.commment}}/>
+                                            <div className="bottom" dangerouslySetInnerHTML={{__html: i?.commment}}/>
                                         </div>
                                     </div>
                                 )

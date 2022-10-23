@@ -85,18 +85,22 @@
     .iancard {
       display: flex;
       flex-direction: column;
-      &:nth-child(1){
-        .cwr{
+
+      &:nth-child(1) {
+        .cwr {
           max-width: 400px;
           margin-top: 50px;
         }
       }
+
       .cwr {
         width: 100%;
       }
-      .iwr{
+
+      .iwr {
         width: 100%;
-        .body{
+
+        .body {
           width: 95%;
         }
       }
@@ -112,15 +116,18 @@
     .iancard {
       display: flex;
       flex-direction: column;
-      &:nth-child(1){
-        .cwr{
+
+      &:nth-child(1) {
+        .cwr {
           max-width: 400px;
           margin-top: 50px;
         }
       }
+
       .cwr {
         width: 100%;
-        .posts{
+
+        .posts {
           ul {
 
             li {
@@ -137,8 +144,10 @@
           }
         }
       }
-      .iwr{
+
+      .iwr {
         width: 100%;
+
         img {
           width: 100%;
         }

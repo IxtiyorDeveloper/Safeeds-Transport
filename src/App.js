@@ -24,6 +24,7 @@ const Articles = lazy(() => import("./pages/articles/articles/articles"))
 const Article = lazy(() => import("./pages/articles/article/article"))
 const Quote = lazy(() => import("./pages/quote/quote"))
 const CreateArticle = lazy(() => import("./pages/articles/create-article/create-article"))
+const Team = lazy(() => import("./pages/team/team"))
 const SatisfiedCustomers = lazy(() =>
     import("./pages/satisfied-customers/satisfied-customers/satisfied-customers")
 )
@@ -43,8 +44,8 @@ function App(props) {
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>My Title</title>
-                <link rel="canonical" href="http://mysite.com/example" />
+                <title>Safeeds Transport Inc</title>
+                <link rel="canonical" href="https://safeeds.us/" />
             </Helmet>
             <Routes>
                 <Route path='/' element={<Layout><Home/></Layout>}/>
@@ -58,6 +59,7 @@ function App(props) {
                 <Route path='/terms-and-conditions' element={<Layout><Help/></Layout>}/>
                 <Route path='/quote' element={<Layout><Quote/></Layout>}/>
                 <Route path='/success' element={<Layout><SuccessPage/></Layout>}/>
+                <Route path='/team/:id' element={<Layout><Team/></Layout>}/>
                 <Route path='/login' element={<Auth/>}/>
                 <Route path='/articles' element={
                     <RequireAuth>

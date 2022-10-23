@@ -17,7 +17,7 @@ function Sc1(props) {
                 {
                     articles?.data?.data?.map((i, k) => {
                         return (
-                            <div key={k} className="cd" onClick={() => navigate(`/blogs/${i?.id}`)}>
+                            <div key={k} className="cd" onClick={() => navigate(`/blogs/${i?.title?.replace(/\s/g, '-')}`)}>
                                 <div style={{backgroundImage: `url("${MainApi}/${i?.image}")`}} className="smg"/>
                                 <div className="cnt">
                                     <div className="t1">

@@ -1,56 +1,12 @@
 import React from 'react';
 import "./cards.scss"
-import img from "../../../assets/imgs/account.png"
 import {AiOutlineMail,AiOutlinePhone} from "react-icons/ai"
 import Button from "../../elements/button/button";
+import {data} from "../data";
+import {useNavigate} from "react-router-dom";
 
 function Cards(props) {
-
-    const data = [
-        {
-            name: "Michael Steven",
-            img: img,
-            position: "Managing director",
-            email: "michael@safeeds.us",
-            phone: "315-849-2823"
-        },
-        {
-            name: "Richard Kane",
-            img: img,
-            position: "Experienced Auto transport specialist",
-            email: "richard@safeeds.us",
-            phone: "315-849-1255"
-        },
-        {
-            name: "David Johnson",
-            img: img,
-            position: "Experienced Auto transport specialist",
-            email: "david@safeeds.us",
-            phone: "315-221-9095"
-        },
-        {
-            name: "Frank Lannister",
-            img: img,
-            position: "Experienced Auto transport specialist",
-            email: "frank@safeeds.us",
-            phone: "315-234-0511"
-        },
-        {
-            name: "Jake Scott",
-            img: img,
-            position: "Experienced Auto transport specialist",
-            email: "jake@safeeds.us",
-            phone: "315-314-3543"
-        },
-        {
-            name: "Tony Davis",
-            img: img,
-            position: "Experienced Auto transport specialist",
-            email: "tony@safeeds.us",
-            phone: "315-819-5263"
-        }
-    ];
-
+    const navigate = useNavigate()
     return (
         <div className="tcds pd">
             <div className="title">
@@ -94,7 +50,7 @@ function Cards(props) {
                                     </div>
                                 </div>
                                 <div className="btr">
-                                    <Button title="View profile" size="18px"/>
+                                    <Button title="View profile" size="18px" onClick={() => navigate(`/team/${i?.id}`)}/>
                                 </div>
                             </div>
                         )

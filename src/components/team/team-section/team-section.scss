@@ -1,3 +1,212 @@
 .team-section {
   padding-top: 50px;
+  padding-bottom: 120px;
+
+  .content {
+    display: flex;
+    gap: 40px;
+
+    .card {
+      width: fit-content;
+      position: sticky;
+    }
+
+    .info {
+      width: fit-content;
+      flex: 1;
+
+      .img {
+        height: 200px;
+        width: 100%;
+        background:url("../../../assets/imgs/sh1.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .bt {
+        width: 100%;
+        padding-left: 10%;
+        display: flex;
+        padding-bottom: 50px;
+        border: 1px solid var(--bb-content-border-color);;
+
+        .iwr {
+          img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid var(--white);
+            margin-top: -50px;
+            background-color: var(--pr);
+          }
+        }
+
+        .name {
+          padding-left: 10%;
+          padding-top: 10px;
+
+          .law {
+            font-size: 1.8rem;
+            position: relative;
+            color: var(--bb-headings-color);
+            text-shadow: none;
+          }
+
+          .link {
+            color: var(--bb-alternate-text-color);
+          }
+        }
+      }
+
+      .tab-menu {
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        gap: 5px;
+      }
+
+      .prteam {
+        padding: 30px 10px;
+        border: 1px solid var(--bb-content-border-color);
+
+        .line {
+          margin: 30px 0;
+          background: var(--bb-content-border-color);
+          width: 100%;
+          height: 1px;
+        }
+
+        .list {
+          .label {
+            color: var(--bb-content-border-color);
+          }
+
+          .value {
+
+          }
+        }
+
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr {
+          .label {
+            color: var(--bb-alternate-text-color);
+            width: 30%;
+          }
+        }
+      }
+
+      .timeline {
+        display: flex;
+        flex-direction: column;
+
+        .card {
+          display: flex;
+          padding: 20px;
+          border: 1px solid var(--bb-content-border-color);
+          width: 100%;
+          margin-bottom: 20px;
+
+          .imgWr {
+            width: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+          }
+
+          .con {
+            flex: 1;
+
+            .f {
+              span {
+                font-weight: 600;
+              }
+            }
+
+            .t {
+              color: var(--bb-alternate-text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .team-section {
+    .content {
+      flex-direction: column;
+
+      .card {
+        width: 100%;
+      }
+
+      .info {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .team-section {
+    .content {
+      .info {
+
+        .bt {
+          padding-bottom: 25px;
+
+          .iwr {
+            margin-top: 20px;
+
+            img {
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              border: 2px solid var(--white);
+              margin-top: 0px;
+            }
+          }
+
+          .name {
+            padding-left: 10%;
+            padding-top: 20px;
+
+            .law {
+              font-size: 20px;
+              position: relative;
+              color: var(--bb-headings-color);
+              text-shadow: none;
+            }
+
+            .link {
+              color: var(--bb-alternate-text-color);
+            }
+          }
+        }
+        .timeline {
+
+          .card {
+            padding: 10px 10px 10px 0;
+          }
+        }
+      }
+    }
+  }
 }

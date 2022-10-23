@@ -3,8 +3,10 @@ import "./stories.scss"
 import {useArticles} from "../../../hooks";
 import {Spin} from "antd";
 import {MainApi} from "../../../api";
+import {useNavigate} from "react-router-dom";
 
 function Stories(props) {
+    const navigate = useNavigate()
 
     const {data: articles, isLoading} = useArticles()
 
@@ -18,7 +20,7 @@ function Stories(props) {
                     {
                         articles?.data?.data?.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())?.slice(0,3)?.map((i, k) => {
                             return (
-                                <div className="latest" key={k}>
+                                <div className="latest" key={k} onClick={() => navigate(`/blogs/${i?.title?.replace(/\s/g, '-')}`)}>
                                     <div style={{backgroundImage: `url(${MainApi}/${i?.image})`}} className="img"/>
                                     <div className="t1">
                                         {i?.title}

@@ -10,6 +10,7 @@ import {Provider} from "react-redux";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Fallback from "./components/fallback/fallback";
+import ScrollToTop from "./components/scrollToTop/scrollToTop";
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -26,6 +27,7 @@ root.render(
         <BrowserRouter>
             <Provider store={store}>
                 <QueryClientProvider client={queryClient}>
+                    <ScrollToTop />
                     <App/>
                     <ToastContainer/>
                 </QueryClientProvider>

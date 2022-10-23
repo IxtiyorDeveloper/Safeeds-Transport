@@ -54,8 +54,9 @@ export const useArticles = () => {
     return useQuery(["rates"], () => getArticles())
 }
 
-export const useArticle = () => {
-    const {id} = useParams()
+export const useArticle = (pid) => {
+    const {id: id1} = useParams()
+    const id = pid ?? id1
     return useQuery(["rate", id], () => getArticle(id), {
         enabled: !!id,
     })
