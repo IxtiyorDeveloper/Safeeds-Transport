@@ -9,6 +9,7 @@ import 'antd/dist/antd.css';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import Admin from "./components/admin/admin";
 import RequireAuth from "./utils/functions/requireAuth";
+import {Helmet} from "react-helmet";
 
 const Home = lazy(() => import("./pages/home/home"))
 const About = lazy(() => import("./pages/about/about"))
@@ -40,6 +41,11 @@ function App(props) {
 
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>My Title</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <Routes>
                 <Route path='/' element={<Layout><Home/></Layout>}/>
                 <Route path='/about' element={<Layout><About/></Layout>}/>
