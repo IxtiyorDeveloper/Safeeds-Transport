@@ -10,6 +10,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import Admin from "./components/admin/admin";
 import RequireAuth from "./utils/functions/requireAuth";
 import {Helmet} from "react-helmet";
+import img from "./assets/imgs/photo.jpg"
 
 const Home = lazy(() => import("./pages/home/home"))
 const About = lazy(() => import("./pages/about/about"))
@@ -46,6 +47,7 @@ function App(props) {
                 <meta charSet="utf-8" />
                 <title>Safeeds Transport Inc</title>
                 <link rel="canonical" href="https://safeeds.us/" />
+                <meta property="og:image" content={img}/>
             </Helmet>
             <Routes>
                 <Route path='/' element={<Layout><Home/></Layout>}/>
