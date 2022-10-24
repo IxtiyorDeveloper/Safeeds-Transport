@@ -1,10 +1,11 @@
 import React from 'react';
-import {Button, Form, Input} from "antd";
+import {Button, Form} from "antd";
 import {useResetPassword} from "../../hooks";
 import {toast} from "react-toastify";
 import {useDispatch} from "react-redux";
 import {getCookie, removeCookie} from "../../utils/cookie";
 import {useNavigate} from "react-router-dom";
+import {InputPassword} from "../auth/auth.e";
 
 function PutPassword(props) {
     const dispatch = useDispatch()
@@ -58,7 +59,7 @@ function PutPassword(props) {
                     ]}
                     hasFeedback
                 >
-                    <Input.Password/>
+                    <InputPassword/>
                 </Form.Item>
                 <Form.Item
                     name="confirm"
@@ -80,7 +81,7 @@ function PutPassword(props) {
                         }),
                     ]}
                 >
-                    <Input.Password/>
+                    <InputPassword/>
                 </Form.Item>
                 <Form.Item>
                     <Button
