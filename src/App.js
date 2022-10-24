@@ -1,5 +1,5 @@
 import React, {lazy} from 'react';
-import {Route, Routes} from "react-router-dom"
+import {Navigate, Route, Routes} from "react-router-dom"
 import Layout from "./layout"
 import "./App.css"
 import "./assets/var.scss"
@@ -11,6 +11,8 @@ import Admin from "./components/admin/admin";
 import RequireAuth from "./utils/functions/requireAuth";
 import {Helmet} from "react-helmet";
 import img from "./assets/imgs/photo.jpg"
+import {useSelector} from "react-redux";
+import {_getMe} from "./redux";
 
 const Home = lazy(() => import("./pages/home/home"))
 const About = lazy(() => import("./pages/about/about"))
@@ -26,6 +28,7 @@ const Article = lazy(() => import("./pages/articles/article/article"))
 const Quote = lazy(() => import("./pages/quote/quote"))
 const CreateArticle = lazy(() => import("./pages/articles/create-article/create-article"))
 const Team = lazy(() => import("./pages/team/team"))
+const ResetPassword = lazy(() => import("./pages/reset-password/reset-password"))
 const SatisfiedCustomers = lazy(() =>
     import("./pages/satisfied-customers/satisfied-customers/satisfied-customers")
 )
@@ -41,12 +44,14 @@ const SuccessPage = lazy(() =>
 
 function App(props) {
 
+    const user = useSelector(_getMe)
+
     return (
         <div>
             <Helmet>
-                <meta charSet="utf-8" />
+                <meta charSet="utf-8"/>
                 <title>Safeeds Transport Inc</title>
-                <link rel="canonical" href="https://safeeds.us/" />
+                <link rel="canonical" href="https://safeeds.us/"/>
                 <meta property="og:image" content={img}/>
             </Helmet>
             <Routes>
@@ -62,7 +67,8 @@ function App(props) {
                 <Route path='/quote' element={<Layout><Quote/></Layout>}/>
                 <Route path='/success' element={<Layout><SuccessPage/></Layout>}/>
                 <Route path='/team/:id' element={<Layout><Team/></Layout>}/>
-                <Route path='/login' element={<Auth/>}/>
+                <Route path='/login' element={user ? <Navigate to="/articles"/> : <Auth/>}/>
+                <Route path='/reset-password' element={<ResetPassword/>}/>
                 <Route path='/articles' element={
                     <RequireAuth>
                         <Admin>

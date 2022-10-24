@@ -451,6 +451,10 @@ function QuoteBanner(props) {
                                                 required: true,
                                                 message: 'Please input your email!',
                                             },
+                                            {
+                                                type: 'email',
+                                                message: 'The input is not valid E-mail!',
+                                            },
                                         ]}
                                     >
                                         <Input type="email" placeholder="Enter your email"/>

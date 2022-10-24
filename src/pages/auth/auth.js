@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Button, Form, Input} from 'antd';
 import "./auth.scss"
 import {useSignIn} from "hooks/useAuth";
 import {useDispatch} from "react-redux";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {InputPassword} from "./auth.e"
 
 function Auth(props) {
@@ -13,7 +13,6 @@ function Auth(props) {
 
     const signIn = useSignIn({
         onSuccess: () => {
-            console.log("success")
             navigate("/articles")
         },
         onError: (err) => {
@@ -34,10 +33,6 @@ function Auth(props) {
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
     };
-
-    useEffect(() => {
-        console.log(signIn, "sign")
-    }, [signIn])
 
     return (
         <div className="auth">
@@ -82,6 +77,10 @@ function Auth(props) {
                         Login
                     </Button>
                 </Form.Item>
+                <div className="forget-password">
+                    <p>Did you forget the password?</p>
+                    <Link to="/reset-password">Reset</Link>
+                </div>
             </Form>
         </div>
     );

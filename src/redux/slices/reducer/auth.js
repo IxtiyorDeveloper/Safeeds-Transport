@@ -13,6 +13,7 @@ const loadUser = () => {
 
 const initialState = {
     user: loadUser(),
+    reset_unique: ""
 }
 
 /**
@@ -26,6 +27,10 @@ const authSlice = createSlice({
             setCookie("user", JSON.stringify(action?.payload))
             state.user = JSON.stringify(action?.payload)
         },
+        reset: (state, action) => {
+            setCookie("reset_unique", JSON.stringify(action?.payload?.uniqueId))
+            state.reset_unique = JSON.stringify(action?.payload?.uniqueId)
+        },
         logout: (authStore) => {
             removeCookie("access_token")
             removeCookie("refresh_token")
@@ -35,11 +40,15 @@ const authSlice = createSlice({
     },
 })
 
-export const {login, logout} = authSlice.actions
+export const {login, logout,reset} = authSlice.actions
 export default authSlice.reducer
 
 // Selectors
 export const _getMe = createSelector(
     (store) => store.auth,
     authStore => authStore.user
+)
+export const _getUnique = createSelector(
+    (store) => store.auth,
+    authStore => authStore.reset_unique
 )
