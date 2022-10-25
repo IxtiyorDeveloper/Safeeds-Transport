@@ -11,7 +11,6 @@ import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Fallback from "./components/fallback/fallback";
 import ScrollToTop from "./components/scrollToTop/scrollToTop";
-import {HelmetProvider} from 'react-helmet-async';
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -28,13 +27,11 @@ root.render(
     <React.Suspense fallback={<Fallback/>}>
         <BrowserRouter>
             <Provider store={store}>
-                <HelmetProvider context={helmetContext}>
                     <QueryClientProvider client={queryClient}>
                         <ScrollToTop/>
                         <App/>
                         <ToastContainer/>
                     </QueryClientProvider>
-                </HelmetProvider>
             </Provider>
         </BrowserRouter>
     </React.Suspense>
