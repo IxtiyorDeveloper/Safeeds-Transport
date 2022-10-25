@@ -47,6 +47,10 @@ function EmailForm({setStep,setEmail}) {
                             required: true,
                             message: 'Please input your email!',
                         },
+                        {
+                            type: 'email',
+                            message: 'The input is not valid E-mail!',
+                        },
                     ]}
                 >
                     <Input width="200"/>
