@@ -23,7 +23,6 @@ const queryClient = new QueryClient({
 })
 
 const helmetContext = {};
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.Suspense fallback={<Fallback/>}>
