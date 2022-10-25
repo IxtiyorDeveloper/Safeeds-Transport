@@ -47,7 +47,11 @@ const Admin = ({children}) => {
                 collapsed={collapsed}
                 onCollapse={(value) => setCollapsed(value)}
             >
-                <div className="sidebar-logo"/>
+                <div className="sidebar-logo">
+                    {
+                        !collapsed ? " Safeeds Transport Inc" : "SFT"
+                    }
+                </div>
                 <Menu theme="dark"
                       defaultSelectedKeys={[location.pathname]}
                       mode="inline"
@@ -68,9 +72,8 @@ const Admin = ({children}) => {
 
                 <Header
                     className="mHeader"
-                    onClick={() => handleLogout()}
                 >
-                    <Button type="primary">
+                    <Button type="primary" onClick={() => handleLogout()}>
                         Log out
                     </Button>
                 </Header>

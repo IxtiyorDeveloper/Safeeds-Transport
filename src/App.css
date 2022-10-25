@@ -41,6 +41,10 @@
     height: 32px !important;
     margin: 16px !important;
     background: rgba(255, 255, 255, 0.3) !important;
+    display: flex;
+    color: whitesmoke;
+    justify-content: center;
+    align-items: center;
 }
 
 .site-layout .site-layout-background {
