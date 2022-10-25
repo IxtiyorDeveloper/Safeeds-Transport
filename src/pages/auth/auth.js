@@ -5,6 +5,7 @@ import {useSignIn} from "hooks/useAuth";
 import {useDispatch} from "react-redux";
 import {Link, useNavigate} from "react-router-dom";
 import {InputPassword} from "./auth.e"
+import {toast} from "react-toastify";
 
 function Auth(props) {
 
@@ -16,7 +17,8 @@ function Auth(props) {
             navigate("/articles")
         },
         onError: (err) => {
-            console.log("err", err)
+            console.log(err)
+            toast.error(err?.error)
         },
     })
 

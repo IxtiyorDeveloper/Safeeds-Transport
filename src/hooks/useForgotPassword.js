@@ -3,7 +3,7 @@ import {useMutation} from "react-query";
 
 const sendCode = async (data) => {
     try {
-        return await api.post(`/auth/send-code`, data)
+         await api.post(`/auth/send-code`, data)
     } catch (err) {
         throw err
     }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Button, Form, Input} from "antd";
 import {useSendCode} from "hooks";
 import {toast} from "react-toastify";
