@@ -49,60 +49,60 @@ function App(props) {
             <Routes>
                 <Route path='/' element={<Layout><Home/></Layout>}/>
                 <Route path='/about' element={<Layout><About/></Layout>}/>
-                <Route path='/services' element={<Layout><Services/></Layout>}/>
-                <Route path='/blogs' element={<Layout><Blogs/></Layout>}/>
-                <Route path='/blogs/:id' element={<Layout><Blog/></Layout>}/>
-                <Route path='/team' element={<Layout><Teams/></Layout>}/>
-                <Route path='/contact' element={<Layout><Contact/></Layout>}/>
-                <Route path='/help' element={<Layout><Help/></Layout>}/>
-                <Route path='/terms-and-conditions' element={<Layout><Help/></Layout>}/>
-                <Route path='/quote' element={<Layout><Quote/></Layout>}/>
-                <Route path='/success' element={<Layout><SuccessPage/></Layout>}/>
-                <Route path='/team/:id' element={<Layout><Team/></Layout>}/>
-                <Route path='/login' element={!!user ? <Navigate to="/articles"/> : <Auth/>}/>
-                <Route path='/reset-password' element={<ResetPassword/>}/>
-                <Route path='/articles' element={
-                    <RequireAuth>
-                        <Admin>
-                            <Articles/>
-                        </Admin>
-                    </RequireAuth>
-                }/>
-                <Route path='/articles/:id' element={
-                    <RequireAuth>
-                        <Admin>
-                            <Article/>
-                        </Admin>
-                    </RequireAuth>
-                }/>
-                <Route path='/articles/create' element={
-                    <RequireAuth>
-                        <Admin>
-                            <CreateArticle/>
-                        </Admin>
-                    </RequireAuth>
-                }/>
-                <Route path='/satisfied-customers' element={
-                    <RequireAuth>
-                        <Admin>
-                            <SatisfiedCustomers/>
-                        </Admin>
-                    </RequireAuth>
-                }/>
-                <Route path='/satisfied-customers/:id' element={
-                    <RequireAuth>
-                        <Admin>
-                            <SatisfiedCustomer/>
-                        </Admin>
-                    </RequireAuth>
-                }/>
-                <Route path='/satisfied-customers/create' element={
-                    <RequireAuth>
-                        <Admin>
-                            <CreateSatisfiedCustomer/>
-                        </Admin>
-                    </RequireAuth>
-                }/>
+                {/*<Route path='/services' element={<Layout><Services/></Layout>}/>*/}
+                {/*<Route path='/blogs' element={<Layout><Blogs/></Layout>}/>*/}
+                {/*<Route path='/blogs/:id' element={<Layout><Blog/></Layout>}/>*/}
+                {/*<Route path='/team' element={<Layout><Teams/></Layout>}/>*/}
+                {/*<Route path='/contact' element={<Layout><Contact/></Layout>}/>*/}
+                {/*<Route path='/help' element={<Layout><Help/></Layout>}/>*/}
+                {/*<Route path='/terms-and-conditions' element={<Layout><Help/></Layout>}/>*/}
+                {/*<Route path='/quote' element={<Layout><Quote/></Layout>}/>*/}
+                {/*<Route path='/success' element={<Layout><SuccessPage/></Layout>}/>*/}
+                {/*<Route path='/team/:id' element={<Layout><Team/></Layout>}/>*/}
+                {/*<Route path='/login' element={!!user ? <Navigate to="/articles"/> : <Auth/>}/>*/}
+                {/*<Route path='/reset-password' element={<ResetPassword/>}/>*/}
+                {/*<Route path='/articles' element={*/}
+                {/*    <RequireAuth>*/}
+                {/*        <Admin>*/}
+                {/*            <Articles/>*/}
+                {/*        </Admin>*/}
+                {/*    </RequireAuth>*/}
+                {/*}/>*/}
+                {/*<Route path='/articles/:id' element={*/}
+                {/*    <RequireAuth>*/}
+                {/*        <Admin>*/}
+                {/*            <Article/>*/}
+                {/*        </Admin>*/}
+                {/*    </RequireAuth>*/}
+                {/*}/>*/}
+                {/*<Route path='/articles/create' element={*/}
+                {/*    <RequireAuth>*/}
+                {/*        <Admin>*/}
+                {/*            <CreateArticle/>*/}
+                {/*        </Admin>*/}
+                {/*    </RequireAuth>*/}
+                {/*}/>*/}
+                {/*<Route path='/satisfied-customers' element={*/}
+                {/*    <RequireAuth>*/}
+                {/*        <Admin>*/}
+                {/*            <SatisfiedCustomers/>*/}
+                {/*        </Admin>*/}
+                {/*    </RequireAuth>*/}
+                {/*}/>*/}
+                {/*<Route path='/satisfied-customers/:id' element={*/}
+                {/*    <RequireAuth>*/}
+                {/*        <Admin>*/}
+                {/*            <SatisfiedCustomer/>*/}
+                {/*        </Admin>*/}
+                {/*    </RequireAuth>*/}
+                {/*}/>*/}
+                {/*<Route path='/satisfied-customers/create' element={*/}
+                {/*    <RequireAuth>*/}
+                {/*        <Admin>*/}
+                {/*            <CreateSatisfiedCustomer/>*/}
+                {/*        </Admin>*/}
+                {/*    </RequireAuth>*/}
+                {/*}/>*/}
             </Routes>
         </div>
     );

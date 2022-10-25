@@ -8,10 +8,15 @@ import Stories from "../../components/home-sections/stories/stories";
 import Faqs from "../../components/home-sections/faqs/faqs";
 import ContactUs from "../../components/home-sections/contacts/contacts";
 import Partners from "../../components/home-sections/partners/partners";
+import { Helmet } from 'react-helmet-async';
 
 function Home(props) {
     return (
         <div className="home">
+            <Helmet>
+                <title>Hello World</title>
+                <link rel="canonical" href="https://www.tacobell.com/" />
+            </Helmet>
             <Section1/>
             <Reviews/>
             <VideoSection/>
