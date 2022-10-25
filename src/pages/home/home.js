@@ -8,18 +8,10 @@ import Stories from "../../components/home-sections/stories/stories";
 import Faqs from "../../components/home-sections/faqs/faqs";
 import ContactUs from "../../components/home-sections/contacts/contacts";
 import Partners from "../../components/home-sections/partners/partners";
-import {Helmet} from 'react-helmet';
 
 function Home(props) {
     return (
         <div className="home">
-            <Helmet>
-                <title>Unlocked Academy: Login to the Platform</title>
-                <meta
-                    name="description"
-                    content="Welcome to Unlocked Academy!  Login here to access your account and prepare the flashcards you will engage with after each phone unlock and passing screen time!"
-                />
-            </Helmet>
             <Section1/>
             <Reviews/>
             <VideoSection/>
