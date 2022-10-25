@@ -13,7 +13,8 @@ import {Helmet} from 'react-helmet';
 function Home(props) {
     return (
         <div className="home">
-            <Helmet>git
+            <Helmet>
+                <meta name="robots" content="noindex" data-react-helmet="true" />
                 <meta property="og:title"
                       content="Safeeds Transport Inc & Auto Shipping broker company | Over 1000+ 5-Star Reviews"/>
                 <meta property="og:description"
