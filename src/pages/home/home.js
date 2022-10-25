@@ -14,11 +14,11 @@ function Home(props) {
     return (
         <div className="home">
             <Helmet>
-                <meta name="robots" content="noindex" data-react-helmet="true" />
-                <meta property="og:title"
-                      content="Safeeds Transport Inc & Auto Shipping broker company | Over 1000+ 5-Star Reviews"/>
-                <meta property="og:description"
-                      content="One of the leading car transportation companies all over the states. We ship all types of vehicles CARs SUVs. Motorcycles Trucks ATVs ☎️ (315)314 43 37."/>
+                <title>Unlocked Academy: Login to the Platform</title>
+                <meta
+                    name="description"
+                    content="Welcome to Unlocked Academy!  Login here to access your account and prepare the flashcards you will engage with after each phone unlock and passing screen time!"
+                />
             </Helmet>
             <Section1/>
             <Reviews/>
