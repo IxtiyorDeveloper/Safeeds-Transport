@@ -9,8 +9,6 @@ import 'antd/dist/antd.css';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import Admin from "./components/admin/admin";
 import RequireAuth from "./utils/functions/requireAuth";
-import {Helmet} from "react-helmet";
-import img from "./assets/imgs/photo.jpg"
 import {useSelector} from "react-redux";
 import {_getMe} from "./redux";
 
@@ -48,12 +46,6 @@ function App(props) {
 
     return (
         <div>
-            <Helmet>
-                <meta charSet="utf-8"/>
-                <title>Safeeds Transport Inc</title>
-                <link rel="canonical" href="https://safeeds.us/"/>
-                <meta property="og:image" content={img}/>
-            </Helmet>
             <Routes>
                 <Route path='/' element={<Layout><Home/></Layout>}/>
                 <Route path='/about' element={<Layout><About/></Layout>}/>
