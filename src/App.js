@@ -67,7 +67,7 @@ function App(props) {
                 <Route path='/quote' element={<Layout><Quote/></Layout>}/>
                 <Route path='/success' element={<Layout><SuccessPage/></Layout>}/>
                 <Route path='/team/:id' element={<Layout><Team/></Layout>}/>
-                <Route path='/login' element={user ? <Navigate to="/articles"/> : <Auth/>}/>
+                <Route path='/login' element={!!user ? <Navigate to="/articles"/> : <Auth/>}/>
                 <Route path='/reset-password' element={<ResetPassword/>}/>
                 <Route path='/articles' element={
                     <RequireAuth>

@@ -1,7 +1,4 @@
-import {
-    SnippetsOutlined,
-    TeamOutlined
-} from '@ant-design/icons';
+import {SnippetsOutlined, TeamOutlined} from '@ant-design/icons';
 import {Breadcrumb, Button, Layout, Menu} from 'antd';
 import React, {useState} from 'react';
 import {Link, useLocation, useNavigate} from "react-router-dom";
@@ -36,6 +33,11 @@ const Admin = ({children}) => {
         navigate("/login")
     }
 
+    const handleMainPage = () => {
+        dispatch(logout())
+        navigate("/")
+    }
+
     return (
         <Layout
             style={{
@@ -47,7 +49,7 @@ const Admin = ({children}) => {
                 collapsed={collapsed}
                 onCollapse={(value) => setCollapsed(value)}
             >
-                <div className="sidebar-logo">
+                <div className="sidebar-logo" onClick={() => handleMainPage()}>
                     {
                         !collapsed ? " Safeeds Transport Inc" : "SFT"
                     }
