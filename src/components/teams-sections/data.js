@@ -13,7 +13,7 @@ export const data = [
                 "First Name": "Michael",
                 "Last Name": "Steven",
                 "User Name": "Safeeds Transport Inc",
-                "Employed since": "2022",
+                "Employed since": "2020",
                 Introduction: "Hello guys, My name is Michael and I have been in the shipping and trucking Industry for over 2 years, I started as a loader/carrier for UPS while in college and then went on to FedEx as a carrier for many years and finally ended up at Evo Transportation and Energy Services where I have been for over 1 year as a US mail Dispatcher. I am also an avid car lover and enthusiast and this hobby led me into the car hauling world, where I was fortunate to meet the great team here at Safeeds Transport Inc, and it has been my sincere please to meet many other car loving enthusiast who ship their beautiful cars all over this great country we live in.",
                 Direct: "(315)-849-2823",
                 "Hobbies & Interests": "When I am not working which is not often… lol, I enjoy going to car shows and meets to gaze at all of my favorite exotic, muscle and sports cars that I love."
@@ -50,7 +50,7 @@ export const data = [
                 "First Name": "Richard",
                 "Last Name": "Kane",
                 "User Name": "Safeeds Transport Inc",
-                "Employed since": "2022",
+                "Employed since": "2020",
                 Introduction: "Hello guys, My name is Richard and I have been in the shipping and trucking Industry for over 2 years, I started as a loader/carrier for UPS while in college and then went on to FedEx as a carrier for many years and finally ended up at Evo Transportation and Energy Services where I have been for over 1 year as a US mail Dispatcher. I am also an avid car lover and enthusiast and this hobby led me into the car hauling world, where I was fortunate to meet the great team here at Safeeds Transport Inc, and it has been my sincere please to meet many other car loving enthusiast who ship their beautiful cars all over this great country we live in.",
                 Direct: "(315)-849-1255",
                 "Hobbies & Interests": "When I am not working which is not often… lol, I enjoy going to car shows and meets to gaze at all of my favorite exotic, muscle and sports cars that I love."
@@ -87,7 +87,7 @@ export const data = [
                 "First Name": "David",
                 "Last Name": "Johnson",
                 "User Name": "Safeeds Transport Inc",
-                "Employed since": "2022",
+                "Employed since": "2020",
                 Introduction: "Hello guys, My name is David and I have been in the shipping and trucking Industry for over 2 years, I started as a loader/carrier for UPS while in college and then went on to FedEx as a carrier for many years and finally ended up at Evo Transportation and Energy Services where I have been for over 1 year as a US mail Dispatcher. I am also an avid car lover and enthusiast and this hobby led me into the car hauling world, where I was fortunate to meet the great team here at Safeeds Transport Inc, and it has been my sincere please to meet many other car loving enthusiast who ship their beautiful cars all over this great country we live in.",
                 Direct: "(315)-221-9095",
                 "Hobbies & Interests": "When I am not working which is not often… lol, I enjoy going to car shows and meets to gaze at all of my favorite exotic, muscle and sports cars that I love."
@@ -124,7 +124,7 @@ export const data = [
                 "First Name": "Frank",
                 "Last Name": "Lannister",
                 "User Name": "Safeeds Transport Inc",
-                "Employed since": "2022",
+                "Employed since": "2020",
                 Introduction: "Hello guys, My name is Frank and I have been in the shipping and trucking Industry for over 2 years, I started as a loader/carrier for UPS while in college and then went on to FedEx as a carrier for many years and finally ended up at Evo Transportation and Energy Services where I have been for over 1 year as a US mail Dispatcher. I am also an avid car lover and enthusiast and this hobby led me into the car hauling world, where I was fortunate to meet the great team here at Safeeds Transport Inc, and it has been my sincere please to meet many other car loving enthusiast who ship their beautiful cars all over this great country we live in.",
                 Direct: "(315)-234-0511",
                 "Hobbies & Interests": "When I am not working which is not often… lol, I enjoy going to car shows and meets to gaze at all of my favorite exotic, muscle and sports cars that I love."
@@ -155,15 +155,15 @@ export const data = [
         img: img,
         position: "Experienced Auto transport specialist",
         email: "jake@safeeds.us",
-        phone: "315-314-3543",
+        phone: "315-634-5776",
         data: {
             profile: {
                 "First Name": "Jake",
                 "Last Name": "Scott",
                 "User Name": "Safeeds Transport Inc",
-                "Employed since": "2022",
+                "Employed since": "2020",
                 Introduction: "Hello guys, My name is Jake and I have been in the shipping and trucking Industry for over 2 years, I started as a loader/carrier for UPS while in college and then went on to FedEx as a carrier for many years and finally ended up at Evo Transportation and Energy Services where I have been for over 1 year as a US mail Dispatcher. I am also an avid car lover and enthusiast and this hobby led me into the car hauling world, where I was fortunate to meet the great team here at Safeeds Transport Inc, and it has been my sincere please to meet many other car loving enthusiast who ship their beautiful cars all over this great country we live in.",
-                Direct: "(315)-314-3543",
+                Direct: "(315)-634-5776",
                 "Hobbies & Interests": "When I am not working which is not often… lol, I enjoy going to car shows and meets to gaze at all of my favorite exotic, muscle and sports cars that I love."
             },
             timeline: [
@@ -188,19 +188,19 @@ export const data = [
     },
     {
         id: 6,
-        name: "Tony Davis",
+        name: "Tom Smith",
         img: img,
         position: "Experienced Auto transport specialist",
         email: "tony@safeeds.us",
-        phone: "315-819-5263",
+        phone: "315-634-4645",
         data: {
             profile: {
-                "First Name": "Tony",
-                "Last Name": "Davis",
+                "First Name": "Tom",
+                "Last Name": "Smith",
                 "User Name": "Safeeds Transport Inc",
-                "Employed since": "2022",
+                "Employed since": "2020",
                 Introduction: "Hello guys, My name is Tony and I have been in the shipping and trucking Industry for over 2 years, I started as a loader/carrier for UPS while in college and then went on to FedEx as a carrier for many years and finally ended up at Evo Transportation and Energy Services where I have been for over 1 year as a US mail Dispatcher. I am also an avid car lover and enthusiast and this hobby led me into the car hauling world, where I was fortunate to meet the great team here at Safeeds Transport Inc, and it has been my sincere please to meet many other car loving enthusiast who ship their beautiful cars all over this great country we live in.",
-                Direct: "(315)-819-5263",
+                Direct: "(315)-634-4645",
                 "Hobbies & Interests": "When I am not working which is not often… lol, I enjoy going to car shows and meets to gaze at all of my favorite exotic, muscle and sports cars that I love."
             },
             timeline: [
