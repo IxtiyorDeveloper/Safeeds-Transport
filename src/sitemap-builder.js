@@ -7,6 +7,6 @@ const Sitemap = require('react-router-sitemap').default;
 
 (
     new Sitemap(router)
-        .build('https://mi-awesome-website.com')
+        .build('https://safeeds.us')
         .save('./public/sitemap.xml')
 );
