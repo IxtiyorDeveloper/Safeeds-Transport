@@ -143,7 +143,7 @@ function Footer(props) {
                     <div className="list">
                         <div className="item">
                             <div className="tc">
-                                <a href="https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&original_query_param=NAME&query_string=3938800&original_query_string=SAFEEDS%20TRANSPORT%20INC">Our Licence</a>
+                                <a>Our Licence</a>
                             </div>
                         </div>
                         <div className="item">
@@ -153,7 +153,7 @@ function Footer(props) {
                         </div>
                         <div className="item">
                             <div className="tc">
-                                <a href="https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&original_query_param=NAME&query_string=3938800&original_query_string=SAFEEDS%20TRANSPORT%20INC">Condition Report & Checklist</a>
+                                <a>Condition Report & Checklist</a>
                             </div>
                         </div>
                         <div className="item">
