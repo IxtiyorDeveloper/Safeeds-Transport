@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import "./section-1.scss"
 import bgImg from "../../../assets/imgs/covers.jpg"
-import {Button, Form, Radio, Select} from 'antd';
+import {Button, Form, Radio} from 'antd';
 import SelectOption from "../../elements/select/select";
 import {fetchSearchFields} from "../../../utils/functions/fetchOptions";
 import {useDispatch} from "react-redux";
 import {setQuoteLocations} from "../../../redux";
 import {useNavigate} from "react-router-dom";
 
-const {Option} = Select;
 
 function Section1(props) {
     const dispatch = useDispatch()
