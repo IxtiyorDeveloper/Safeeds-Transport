@@ -1,16 +1,14 @@
-
-
 function Template(props) {
 
- const tfunc = (props) =>{
-     return(
-         `<!DOCTYPE html>
+    const tfunc = (props) => {
+        return (
+            `<!DOCTYPE html>
                 <html>
                 <head>
                     <title>Page Title</title>
                 </head>
                 <body>
-                <div style="background-color:#e4e5e7">
+                <div style="background-color:#e4e5e7;border-top: 1px solid #cccccc; border-bottom: 1px solid 1px solid #cccccc">
                     <table cellPadding="0" cellSpacing="0"
                            style="border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top"
                            width="100%">
@@ -42,7 +40,7 @@ function Template(props) {
                                                                         <tbody>
                                                                         <tr style="border-collapse:collapse">
                                                                             <td align="center"
-                                                                                style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px">
+                                                                                style="padding:0;Margin:0;padding-bottom:15px">
                                                                                 <table border="0" cellPadding="0"
                                                                                        cellSpacing="0" height="100%"
                                                                                        role="presentation"
@@ -812,8 +810,8 @@ function Template(props) {
             </div>
              </body>
                 </html>`
-     )
- }
+        )
+    }
     return tfunc(props)
 }
 

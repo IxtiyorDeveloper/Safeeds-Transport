@@ -9,24 +9,22 @@ import {toast} from "react-toastify";
 import Template from "../../services-sections/card/template";
 import moment from "moment"
 import {useSendEmail} from "hooks";
-import {useNavigate} from "react-router-dom";
 import 'react-phone-number-input/style.css'
 import {StyledPhoneInput} from "./quote-banner.e";
 
-function QuoteBanner(props) {
+function QuoteBanner({setStep}) {
     const [years, setYears] = useState([])
     const [p, setP] = useState(undefined)
     const [d, setD] = useState(undefined)
     const [f, setF] = useState([0])
     const locations = useSelector(getQuoteLocations())
-    const navigate = useNavigate()
     const [phone, setPhone] = useState()
     const [phoneError, setPhoneError] = useState(false)
 
     const sendEmail = useSendEmail({
         onSuccess() {
             toast.success("Successfully sent")
-            navigate("/success")
+            setStep("success")
         },
         onError(err) {
             toast.error(err?.data?.error)
@@ -156,17 +154,17 @@ function QuoteBanner(props) {
             phone: values?.phone,
             name: values?.name,
         })
-        // sendEmail.mutate({
-        //     email: "ixtiyor6689@gmail.com",
-        //     body: body,
-        //     subject: "Car shipment"
-        // })
-
         sendEmail.mutate({
-            email: "contact@safeeds.us",
+            email: "ixtiyor6689@gmail.com",
             body: body,
-            subject: "New Request for Auto Shipping"
+            subject: "Car shipment"
         })
+
+        // sendEmail.mutate({
+        //     email: "contact@safeeds.us",
+        //     body: body,
+        //     subject: "New Request for Auto Shipping"
+        // })
     };
 
     const handlePhone = (e) => {
@@ -489,7 +487,7 @@ function QuoteBanner(props) {
                                     span: 24,
                                 }}
                             >
-                                <Button type="primary" htmlType="submit">
+                                <Button type="primary" htmlType="submit" loading={sendEmail?.isLoading}>
                                     Submit
                                 </Button>
                             </Form.Item>

@@ -7,6 +7,7 @@ import Partners from "../../components/home-sections/partners/partners";
 import {useArticle, useArticles} from "hooks";
 import {Spin} from "antd";
 import {useLocation} from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 function Blog(props) {
     const location = useLocation()
@@ -22,6 +23,12 @@ function Blog(props) {
 
     return (
         <div className="blog">
+            <Helmet>
+                <title>Turbo Todo</title>
+                <meta name="description" content={article?.data?.data?.body?.split('\.', 1)[0]} />
+                <meta name="title" content={article?.data?.data?.title} />
+                <meta name="theme-color" content="#ccc" />
+            </Helmet>
             <Spin spinning={isLoading || isLoading1}>
                 <Banner article={article}/>
             </Spin>
