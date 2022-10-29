@@ -38,7 +38,18 @@ function Blog(props) {
                 <meta property="og:description"
                       content={getText(article?.data?.data?.body)}
                 />
-                <meta property="og:url" content={`https://safeeds.us/blogs/${location.pathname.split("/")[2].replace(/-/g, " ")}`} />
+                <meta property="og:type" content="article"/>
+                <meta property="og:site_name" content="Blog"/>
+                <meta property="article:section" content="Blog"/>
+                <meta property="article:published_time" content=""/>
+                <meta property="article:modified_time" content="2022-04-04T08:10:05-05:00"/>
+                <meta property="og:updated_time" content="2022-04-04T08:10:05-05:00"/>
+                <meta property="og:image:secure_url"
+                      content={`${MainApi}/${article?.data?.data?.image}`}
+                />
+                <meta property="og:url"
+                      content={`https://safeeds.us/blogs/${location.pathname.split("/")[2].replace(/-/g, " ")}`}
+                />
                 <meta name="robots"
                       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
                 />
