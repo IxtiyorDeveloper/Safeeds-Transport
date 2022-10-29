@@ -9,8 +9,6 @@ import {Spin} from "antd";
 import {useLocation} from "react-router-dom";
 import {Helmet} from 'react-helmet';
 import {MainApi} from "../../api";
-import { EditorState, ContentState } from 'draft-js';
-import htmlToDraft from 'html-to-draftjs';
 
 function Blog(props) {
     const location = useLocation()
@@ -24,10 +22,9 @@ function Blog(props) {
         `${location.pathname.split("/")[2].replace(/-/g, "").toLowerCase().toString()}`)?.id
     const {data: article, isLoading} = useArticle(id)
 
-    const blocksFromHtml = htmlToDraft(article?.data?.data?.body ?? "");
-    const { contentBlocks, entityMap } = blocksFromHtml;
-    const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
-    const editorState = EditorState.createWithContent(contentState);
+    const editorState = () => {
+        return {__html: article?.data?.data?.body}
+    };
 
     return (
         <div className="blog">
