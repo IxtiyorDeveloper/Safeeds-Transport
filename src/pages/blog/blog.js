@@ -8,6 +8,7 @@ import {useArticle, useArticles} from "hooks";
 import {Spin} from "antd";
 import {useLocation} from "react-router-dom";
 import {Helmet} from 'react-helmet';
+import {MainApi} from "../../api";
 
 function Blog(props) {
     const location = useLocation()
@@ -36,13 +37,13 @@ function Blog(props) {
                       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
                 />
                 <meta property="og:image"
-                      content={article?.data?.data?.image}
+                      content={`${MainApi}/${article?.data?.data?.image}`}
                       />
                 <meta property="og:image:width" content="2000"/>
                 <meta property="og:image:height" content="2000"/>
                 <meta property="og:image:type" content="image/jpg"/>
                 <meta name="twitter:card"
-                      content={article?.data?.data?.image}
+                      content={`${MainApi}/${article?.data?.data?.image}`}
                 />
                 <meta name="twitter:title"
                       content={article?.data?.data?.title}
@@ -64,10 +65,10 @@ function Blog(props) {
                       content={article?.data?.data?.body}
                 />
                 <meta name="twitter:image"
-                      content={article?.data?.data?.image}
+                      content={`${MainApi}/${article?.data?.data?.image}`}
                 />
                 <meta name="twitter:card"
-                      content={article?.data?.data?.image}
+                      content={`${MainApi}/${article?.data?.data?.image}`}
                 />
             </Helmet>
             <Spin spinning={isLoading || isLoading1}>
