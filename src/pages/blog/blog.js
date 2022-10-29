@@ -22,9 +22,11 @@ function Blog(props) {
         `${location.pathname.split("/")[2].replace(/-/g, "").toLowerCase().toString()}`)?.id
     const {data: article, isLoading} = useArticle(id)
 
-    const editorState = () => {
-        return {__html: article?.data?.data?.body}
-    };
+    function getText(html){
+        var divContainer= document.createElement("div");
+        divContainer.innerHTML = html;
+        return divContainer.textContent || divContainer.innerText || "";
+    }
 
     return (
         <div className="blog">
@@ -34,7 +36,7 @@ function Blog(props) {
                       content={article?.data?.data?.title}
                 />
                 <meta property="og:description"
-                      content={editorState}
+                      content={getText(article?.data?.data?.body)}
                 />
                 <meta property="og:url" content={`https://safeeds.us/blogs/${location.pathname.split("/")[2].replace(/-/g, " ")}`} />
                 <meta name="robots"
@@ -53,20 +55,20 @@ function Blog(props) {
                       content={article?.data?.data?.title}
                 />
                 <meta name="twitter:description"
-                      content={editorState}
+                      content={getText(article?.data?.data?.body)}
                 />
                 <meta name="twitter:site" content="@safeeds"/>
                 <meta name="twitter:label1" content="Est. reading time"/>
                 <meta name="twitter:data1" content="10 minutes"/>
                 <meta
                     name="description"
-                    content={editorState}
+                    content={getText(article?.data?.data?.body)}
                 />
                 <meta name="twitter:title"
                       content={article?.data?.data?.title}
                 />
                 <meta name="twitter:description"
-                      content={editorState}
+                      content={getText(article?.data?.data?.body)}
                 />
                 <meta name="twitter:image"
                       content={`${MainApi}/${article?.data?.data?.image}`}
