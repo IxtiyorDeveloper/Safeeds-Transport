@@ -9,6 +9,8 @@ import {Spin} from "antd";
 import {useLocation} from "react-router-dom";
 import {Helmet} from 'react-helmet';
 import {MainApi} from "../../api";
+import { EditorState, ContentState } from 'draft-js';
+import htmlToDraft from 'html-to-draftjs';
 
 function Blog(props) {
     const location = useLocation()
@@ -22,6 +24,11 @@ function Blog(props) {
         `${location.pathname.split("/")[2].replace(/-/g, "").toLowerCase().toString()}`)?.id
     const {data: article, isLoading} = useArticle(id)
 
+    const blocksFromHtml = htmlToDraft(article?.data?.data?.body);
+    const { contentBlocks, entityMap } = blocksFromHtml;
+    const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
+    const editorState = EditorState.createWithContent(contentState);
+
     return (
         <div className="blog">
             <Helmet>
@@ -30,7 +37,7 @@ function Blog(props) {
                       content={article?.data?.data?.title}
                 />
                 <meta property="og:description"
-                      content={article?.data?.data?.body}
+                      content={editorState}
                 />
                 <meta property="og:url" content={`https://safeeds.us/blogs/${location.pathname.split("/")[2].replace(/-/g, " ")}`} />
                 <meta name="robots"
@@ -49,20 +56,20 @@ function Blog(props) {
                       content={article?.data?.data?.title}
                 />
                 <meta name="twitter:description"
-                      content={article?.data?.data?.body}
+                      content={editorState}
                 />
                 <meta name="twitter:site" content="@safeeds"/>
                 <meta name="twitter:label1" content="Est. reading time"/>
                 <meta name="twitter:data1" content="10 minutes"/>
                 <meta
                     name="description"
-                    content={article?.data?.data?.body}
+                    content={editorState}
                 />
                 <meta name="twitter:title"
                       content={article?.data?.data?.title}
                 />
                 <meta name="twitter:description"
-                      content={article?.data?.data?.body}
+                      content={editorState}
                 />
                 <meta name="twitter:image"
                       content={`${MainApi}/${article?.data?.data?.image}`}
