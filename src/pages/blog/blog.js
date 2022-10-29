@@ -24,7 +24,7 @@ function Blog(props) {
         `${location.pathname.split("/")[2].replace(/-/g, "").toLowerCase().toString()}`)?.id
     const {data: article, isLoading} = useArticle(id)
 
-    const blocksFromHtml = htmlToDraft(article?.data?.data?.body);
+    const blocksFromHtml = htmlToDraft(article?.data?.data?.body ?? "");
     const { contentBlocks, entityMap } = blocksFromHtml;
     const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
     const editorState = EditorState.createWithContent(contentState);
