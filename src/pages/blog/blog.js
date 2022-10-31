@@ -25,7 +25,13 @@ function Blog(props) {
     function getText(html){
         var divContainer= document.createElement("div");
         divContainer.innerHTML = html;
-        return divContainer.textContent || divContainer.innerText || "";
+        return divContainer.textContent.split(
+            /[\.!\?]+/ ).slice(0,2)
+            ||
+            divContainer.innerText.split(
+                /[\.!\?]+/ ).slice(0,2)
+            ||
+            "";
     }
 
     return (
@@ -48,7 +54,7 @@ function Blog(props) {
                       content={`${MainApi}/${article?.data?.data?.image}`}
                 />
                 <meta property="og:url"
-                      content={`https://safeeds.us/blogs/${location.pathname.split("/")[2].replace(/-/g, " ")}`}
+                      content={`https://safeeds.us/blogs/${location.pathname.split("/")[2]}`}
                 />
                 <meta name="robots"
                       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
