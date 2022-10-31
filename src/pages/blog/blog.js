@@ -22,16 +22,8 @@ function Blog(props) {
         `${location.pathname.split("/")[2].replace(/-/g, "").toLowerCase().toString()}`)?.id
     const {data: article, isLoading} = useArticle(id)
 
-    function getText(html){
-        var divContainer= document.createElement("div");
-        divContainer.innerHTML = html;
-        return divContainer.textContent.split(
-            /[\.!\?]+/ ).slice(0,2)
-            ||
-            divContainer.innerText.split(
-                /[\.!\?]+/ ).slice(0,2)
-            ||
-            "";
+    function getText(html) {
+        return "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur eius maiores officia officiis quas quibusdam sed tenetur, voluptates voluptatum? Cupiditate delectus doloremque explicabo illo magnam officiis pariatur praesentium quasi.\n";
     }
 
     return (
@@ -61,7 +53,7 @@ function Blog(props) {
                 />
                 <meta property="og:image"
                       content={`${MainApi}/${article?.data?.data?.image}`}
-                      />
+                />
                 <meta property="og:image:width" content="2000"/>
                 <meta property="og:image:height" content="2000"/>
                 <meta property="og:image:type" content="image/jpg"/>
