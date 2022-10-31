@@ -9,6 +9,7 @@ import {Spin} from "antd";
 import {useLocation} from "react-router-dom";
 import {Helmet} from 'react-helmet';
 import {MainApi} from "../../api";
+import logo100 from "../../assets/imgs/logo100.png"
 
 function Blog(props) {
     const location = useLocation()
@@ -22,14 +23,14 @@ function Blog(props) {
         `${location.pathname.split("/")[2].replace(/-/g, "").toLowerCase().toString()}`)?.id
     const {data: article, isLoading} = useArticle(id)
 
-    function getText(html){
-        var divContainer= document.createElement("div");
+    function getText(html) {
+        var divContainer = document.createElement("div");
         divContainer.innerHTML = html;
         return divContainer.textContent.split(
-            /[\.!\?]+/ ).slice(0,2)
+                /[\.!\?]+/).slice(0, 2)
             ||
             divContainer.innerText.split(
-                /[\.!\?]+/ ).slice(0,2)
+                /[\.!\?]+/).slice(0, 2)
             ||
             "";
     }
@@ -37,53 +38,76 @@ function Blog(props) {
     return (
         <div className="blog">
             <Helmet>
-                <title>{article?.data?.data?.title}</title>
+                <meta charSet="utf-8"/>
+                <link rel="icon" href={logo100}/>
+                <meta name="keywords"
+                      content="auto transport company, car shipping company, car shipping companies, companies that ship cars, auto transport companies, car transport companies, best car shipping company, best company to ship a car, car moving companies, car hauling companies, auto shipping companies, vehicle transport company, vehicle transportation company, safeeds, safeeds transport, safeeds transport inc, vehicle shipping, new york auto shipping"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta name="theme-color" content="#000000"/>
+                <meta property="og:type" content="website" data-react-helmet="true"/>
                 <meta property="og:title"
-                      content={article?.data?.data?.title}
-                />
+                      content="Safeeds Transport Inc & Auto Shipping broker company | Over 1000+ 5-Star Reviews"
+                      data-react-helmet="true"/>
                 <meta property="og:description"
-                      content={getText(article?.data?.data?.body)}
-                />
-                <meta property="og:type" content="article"/>
-                <meta property="og:site_name" content="Blog"/>
-                <meta property="article:section" content="Blog"/>
-                <meta property="article:published_time" content=""/>
-                <meta property="article:modified_time" content="2022-04-04T08:10:05-05:00"/>
-                <meta property="og:updated_time" content="2022-04-04T08:10:05-05:00"/>
-                <meta property="og:image:secure_url"
-                      content={`${MainApi}/${article?.data?.data?.image}`}
-                />
-                <meta property="og:url"
-                      content={`https://majft.vercel.app/blogs/${location.pathname.split("/")[2]}`}
-                />
+                      content="One of the leading car transportation companies all over the states. We ship all types of vehicles CARs SUVs. Motorcycles Trucks ATVs ☎️ (315)314 43 37."
+                      data-react-helmet="true"/>
+                <meta property="og:url" content="https://majfty.vercel.app/How-long-it-takes-to-deliver-my-vehicle"
+                      data-react-helmet="true"/>
                 <meta name="robots"
                       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-                />
-                <meta property="og:image:width" content="2000"/>
-                <meta property="og:image:height" content="2000"/>
-                <meta property="og:image:type" content="image/jpg"/>
+                      data-react-helmet="true"/>
+                <meta property="og:site_name" content="Safeeds Transport Inc" data-react-helmet="true"/>
+                <meta property="article:publisher"
+                      content="https://www.facebook.com/safeedstransportinc" data-react-helmet="true"/>
+                <meta property="og:image"
+                      content="https://safeeds-transport-ixtiyordeveloper.vercel.app/static/media/covers.44a7090a89d8f297b2d0.jpg"
+                      data-react-helmet="true"/>
+                <meta property="og:image:width" content="2000" data-react-helmet="true"/>
+                <meta property="og:image:height" content="2000" data-react-helmet="true"/>
+                <meta property="og:image:type" content="image/jpg"
+                      data-react-helmet="true"/>
                 <meta name="twitter:card"
-                      content={`${MainApi}/${article?.data?.data?.image}`}
-                />
+                      content="https://safeeds-transport-ixtiyordeveloper.vercel.app/static/media/covers.44a7090a89d8f297b2d0.jpg"
+                      data-react-helmet="true"/>
                 <meta name="twitter:title"
-                      content={article?.data?.data?.title}
-                />
+                      content="Safeeds Transport Inc & Auto Shipping broker company | Over 1000+ 5-Star Reviews"
+                      data-react-helmet="true"/>
                 <meta name="twitter:description"
-                      content={getText(article?.data?.data?.body)}
-                />
-                <meta name="twitter:site" content="@safeeds"/>
-                <meta name="twitter:label1" content="Est. reading time"/>
-                <meta name="twitter:data1" content="10 minutes"/>
+                      content="One of the leading car transportation companies all over the states. We ship all types of vehicles CARs SUVs. Motorcycles Trucks ATVs ☎️ (315)314 43 37."
+                      data-react-helmet="true"/>
+                <meta name="twitter:site" content="@safeeds"
+                      data-react-helmet="true"/>
+                <meta name="twitter:label1"
+                      content="Est. reading time"
+                      data-react-helmet="true"/>
+                <meta name="twitter:data1" content="10 minutes"
+                      data-react-helmet="true"/>
                 <meta
                     name="description"
-                    content={getText(article?.data?.data?.body)}
+                    content="One of the leading car transportation companies all over the states. We ship all types of vehicles CARs SUVs. Motorcycles Trucks ATVs ☎️ (315)314 43 37."
+                    data-react-helmet="true"
+                />
+                <meta name="twitter:title"
+                      content="Safeeds Transport Inc & Auto Shipping broker company | Over 1000+ 5-Star Reviews"
+                      data-react-helmet="true"
+                />
+                <meta name="twitter:description"
+                      content="One of the leading car transportation companies all over the states. We ship all types of vehicles CARs SUVs. Motorcycles Trucks ATVs ☎️ (315)314 43 37."
+                      data-react-helmet="true"
                 />
                 <meta name="twitter:image"
-                      content={`${MainApi}/${article?.data?.data?.image}`}
+                      content="https://safeeds-transport-ixtiyordeveloper.vercel.app/static/media/covers.44a7090a89d8f297b2d0.jpg"
+                      data-react-helmet="true"
                 />
                 <meta name="twitter:card"
-                      content={`${MainApi}/${article?.data?.data?.image}`}
+                      content="https://safeeds-transport-ixtiyordeveloper.vercel.app/static/media/covers.44a7090a89d8f297b2d0.jpg"
+                      data-react-helmet="true"
                 />
+                <link rel="apple-touch-icon" href={logo100}/>
+                {/*<link rel="manifest"*/}
+                {/*      href="%PUBLIC_URL%/manifest.json"/>*/}
+                <title
+                    data-react-helmet="true">Safeeds Transport</title>
             </Helmet>
             <Spin spinning={isLoading || isLoading1}>
                 <Banner article={article}/>
