@@ -22,8 +22,16 @@ function Blog(props) {
         `${location.pathname.split("/")[2].replace(/-/g, "").toLowerCase().toString()}`)?.id
     const {data: article, isLoading} = useArticle(id)
 
-    function getText(html) {
-        return "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur eius maiores officia officiis quas quibusdam sed tenetur, voluptates voluptatum? Cupiditate delectus doloremque explicabo illo magnam officiis pariatur praesentium quasi.\n";
+    function getText(html){
+        var divContainer= document.createElement("div");
+        divContainer.innerHTML = html;
+        return divContainer.textContent.split(
+            /[\.!\?]+/ ).slice(0,2)
+            ||
+            divContainer.innerText.split(
+                /[\.!\?]+/ ).slice(0,2)
+            ||
+            "";
     }
 
     return (
@@ -46,13 +54,10 @@ function Blog(props) {
                       content={`${MainApi}/${article?.data?.data?.image}`}
                 />
                 <meta property="og:url"
-                      content={`https://safeeds.us/blogs/${location.pathname.split("/")[2]}`}
+                      content={`https://majft.vercel.app/blogs/${location.pathname.split("/")[2]}`}
                 />
                 <meta name="robots"
                       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-                />
-                <meta property="og:image"
-                      content={`${MainApi}/${article?.data?.data?.image}`}
                 />
                 <meta property="og:image:width" content="2000"/>
                 <meta property="og:image:height" content="2000"/>
@@ -72,12 +77,6 @@ function Blog(props) {
                 <meta
                     name="description"
                     content={getText(article?.data?.data?.body)}
-                />
-                <meta name="twitter:title"
-                      content={article?.data?.data?.title}
-                />
-                <meta name="twitter:description"
-                      content={getText(article?.data?.data?.body)}
                 />
                 <meta name="twitter:image"
                       content={`${MainApi}/${article?.data?.data?.image}`}
