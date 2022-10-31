@@ -51,7 +51,7 @@ function Blog(props) {
                 <meta property="og:description"
                       content="One of the leading car transportation companies all over the states. We ship all types of vehicles CARs SUVs. Motorcycles Trucks ATVs ☎️ (315)314 43 37."
                       data-react-helmet="true"/>
-                <meta property="og:url" content="https://majfty.vercel.app/How-long-it-takes-to-deliver-my-vehicle"
+                <meta property="og:url" content="https://majftyr.vercel.app/blogs/How-long-it-takes-to-deliver-my-vehicle"
                       data-react-helmet="true"/>
                 <meta name="robots"
                       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
