@@ -46,12 +46,12 @@ function Blog(props) {
                 <meta name="theme-color" content="#000000"/>
                 <meta property="og:type" content="website" />
                 <meta property="og:title"
-                      content="Safeeds Transport Inc & Auto Shipping broker company | Over 1000+ 5-Star Reviews"
+                      content="Safeeds Transport Inc Blog Title"
                       />
                 <meta property="og:description"
                       content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consectetur error explicabo fuga in quia repellat tempora totam. Ab atque dicta doloribus eveniet hic laborum laudantium numquam rerum sapiente veritatis!"
                       />
-                <meta property="og:url" content="https://matur.vercel.app/blogs/How-long-it-takes-to-deliver-my-vehicle"
+                <meta property="og:url" content="https://matur1.vercel.app/blogs/How-long-it-takes-to-deliver-my-vehicle"
                       />
                 <meta name="robots"
                       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
@@ -104,7 +104,7 @@ function Blog(props) {
 
                 />
                 <link rel="apple-touch-icon" href={logo100}/>
-                <link rel="canonical" href="https://matur.vercel.app/blogs/How-long-it-takes-to-deliver-my-vehicle" />
+                <link rel="canonical" href="https://matur1.vercel.app/blogs/How-long-it-takes-to-deliver-my-vehicle" />
                 {/*<link rel="manifest"*/}
                 {/*      href="%PUBLIC_URL%/manifest.json"/>*/}
                 <title>Blog</title>
